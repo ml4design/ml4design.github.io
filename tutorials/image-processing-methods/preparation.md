@@ -92,4 +92,4 @@ First, go to the following page to register a Hugging Face account. If you alrea
 
  ![create token]({{site.baseurl}}/assets/images/image27.png)
 
-[Next: Tutorial]({{site.baseurl}}/tutorials/multimedia-processing/tutorial){: .btn .btn-purple }
+[Next: Tutorial]({{site.baseurl}}/tutorials/image-processing-methods/tutorial){: .btn .btn-purple }
