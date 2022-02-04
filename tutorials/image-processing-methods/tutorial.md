@@ -180,4 +180,4 @@ Run the code again by clicking on the “Run” button at the top of the Replit 
 
 The model output is similar to the one that we got before, except that now we get an extra “box” field in the returned data, which means the location of an object in the image. For example, the first item in the array shows that the model predicts a bicycle at the location {'xmin': 333, 'ymin': 216, 'xmax': 522, 'ymax': 531} with probability 0.9970716238021851. The numbers in the “box” field mean pixel coordinates, with the top-left point of the image being the origin. So, “xmin” and “ymin” represent the top-left corner of the bounding box, and “xmax” and “ymax” represent the bottom-right corner of the bounding box.
 
-[Next: Assignments]({{site.baseurl}}/assignments/multimedia-processing/){: .btn .btn-purple }
+[Next: Assignments]({{site.baseurl}}/assignments/image-processing-methods/){: .btn .btn-purple }
