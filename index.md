@@ -6,7 +6,9 @@ nav_order: 0
 
 # Welcome to the 2021/2022 Edition of the Machine Learning for Design Course
 
-
+<p align="center">
+  <img src="{{site.baseurl}}/assets/images/ml4d_home.png" />
+</p>
 
 ## The Course
 
