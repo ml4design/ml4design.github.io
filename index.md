@@ -8,5 +8,7 @@ nav_order: 0
 
 On this website you will find some stuff.
 
-* [Multimedia Processing]({{site.baseurl}}/multimedia-processing/) 
+* [Lectures]({{site.baseurl}}/lectures/) 
+* [Tutorials]({{site.baseurl}}/tutorials/) 
+* [Assignments]({{site.baseurl}}/assignments/) 
 

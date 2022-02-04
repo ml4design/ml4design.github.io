@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Replit Environment
-nav_order: 10
-parent: "Multimedia Processing"
+nav_order: 2
+parent: "Tutorials"
 ---
 
 # Software Development Environment
