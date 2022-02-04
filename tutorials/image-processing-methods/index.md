@@ -1,10 +1,14 @@
 ---
 layout: default
-title: Learning Goals
-has_children: false
-parent: "Lectures"
+title: "Tutorial 1: Image Processing Methods for IPPSs"
+has_children: true
+nav_order: 2
+parent: "Tutorials"
 ---
-# Learning Goals
+
+# Tutorial 1: Image Processing Methods for Intelligent Product Services and Systems
+
+## Learning Goals
 
 Welcome to the multimedia processing module. This handout contains information for the image process tutorial, individual assignment, and group assignment. This module has the following learning goals:  
 

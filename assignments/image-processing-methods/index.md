@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Multimedia Processing"
+title: "Assignment 1: Image Processing Methods for IPPs"
 has_children: true
-nav_order: 2
-parent: "Tutorials"
+nav_order: 1
+parent: "Assignments"
 ---
 
-# Multimedia Processing
+# Image Processing Methods for IPPs
 
 ## Learning Goals
 

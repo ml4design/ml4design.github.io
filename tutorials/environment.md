@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Replit Environment
+title: Coding Environment
 nav_order: 1
 parent: "Tutorials"
 ---

@@ -3,7 +3,7 @@ layout: default
 title: "Lecture 3: Image Processing Methods"
 has_children: false
 parent: "Lectures"
-nav_order: 1
+nav_order: 3
 ---
 
 # Image Processing Methods
