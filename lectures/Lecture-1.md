@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Artificial Intelligence and Machine Learning in Intelligent Products, Services, and Systems (design)
+title: "Lecture 1: Artificial Intelligence and Machine Learning in Intelligent Products, Services, and Systems (design)"
 has_children: false
 parent: "Lectures"
 nav_order: 1
@@ -16,4 +16,6 @@ nav_order: 1
 __Work in Progress__
 
 # Additional Reading Material
+
+- [Trustworthy Machine Learning: Machine Learning Lifecycle](http://www.trustworthymachinelearning.com/trustworthymachinelearning-02.htm)
 
