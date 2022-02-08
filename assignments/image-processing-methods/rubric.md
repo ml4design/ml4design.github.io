@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Group Assignment Grading Rubric
+title: Grading Rubric (Group Assignment)
 nav_order: 3
 grand_parent: "Assignments"
 parent: "Assignment 1: Image Processing Methods for IPPs"
 ---
 
-# Group Assignment Grading Rubric
+# Grading Rubric (Group Assignment)
 
 **Assessment of Learning Goal 1: Quality of describing how image processing can be used in the design process (weight 40%)**
 - Excellent (9-10)
