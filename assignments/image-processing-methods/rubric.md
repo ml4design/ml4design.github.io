@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Group Assignment Grading Rubric
-nav_order: 1
+nav_order: 3
 grand_parent: "Assignments"
 parent: "Assignment 1: Image Processing Methods for IPPs"
 ---
