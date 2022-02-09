@@ -8,7 +8,7 @@ parent: "Assignment 1: Image Processing Methods for IPPs"
 
 # Grading Rubric (Group Assignment)
 
-**Assessment of Learning Goal 1: Quality of describing how image processing can be used in the design process (weight 40%)**
+**Assessment of Learning Goal 1: Quality of describing how image processing can be used in the design process (weight 45%)**
 - Excellent (9-10)
   - Take a set of photos that have very diverse conditions (e.g., weather, lighting, location, angle, scale, etc.)
   - Summarize the model output into convincing findings that can inform the design of the product-service system
@@ -22,7 +22,7 @@ parent: "Assignment 1: Image Processing Methods for IPPs"
   - No photos or only a few photos are taken with poor diversity
   - Have no summarization of the findings from the model output, or the summarization has poor quality
 
-**Assessment of Learning Goal 2: Quality of the critical reflection of model capability (weight 40%)**
+**Assessment of Learning Goal 2: Quality of the critical reflection of model capability (weight 45%)**
 - Excellent (9-10)
   - Use rich examples with different variety to reflect on model capability in a great detail
   - Have convincing insights about how to create a good dataset for training models 
@@ -36,7 +36,7 @@ parent: "Assignment 1: Image Processing Methods for IPPs"
   - No examples or no reflections on model capability, or the reflections have poor quality
   - Have no insights about dataset creation, or the insights have poor quality
 
-**Assessment of Learning Goal 3: Ability to automate the image processing pipeline (weight 20%)**
+**Assessment of Learning Goal 3: Ability to automate the image processing pipeline (weight 10%)**
 - Excellent (9-10)
   - Fully automate the image processing pipeline
   - Have good documentation about how the code works
