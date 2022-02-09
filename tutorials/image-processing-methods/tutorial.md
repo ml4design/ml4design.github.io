@@ -25,6 +25,10 @@ This section explains the tasks that we will give to you with the guidance of co
 
 In this task, we will teach you how to automate the image processing pipeline using Python and the Replit online tool [https://replit.com](https://replit.com). We will give you a script that can process an image using a deployed Hugging Face model. We will guide you through editing the script on Replit to make it work for the bike images that we will provide.
 
+![replit how to]({{site.baseurl}}/assets/images/coding-pipeline.png)
+
+The above figure shows the pipeline. The Python code and the bike image data sit on your coding environment, which is the Replit online tool in our case. Then, when running the code from Replit, the computer that hosts your code will request the Hugging Face API to send and process your data. Once the request is confirmed valid (for example, through the API token), the Hugging Face API will tell a deployed machine learning model to process your data. Finally, the Hugging Face API will collect the results returned by the model and return the results to your coding environment.
+
 First, download the bike images from the link below. The bike images are in the “data/bike” folder. You should already have downloaded the data in the Preparation section.
 
  - Link to code and images: [https://github.com/yenchiah/image-processing-tutorial](https://github.com/yenchiah/image-processing-tutorial)
