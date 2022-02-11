@@ -22,7 +22,7 @@ nav_order: 2
 
 ## Lecture Slides
 
-__Work in Progress__
+- [Lecture 2 Slides]({{site.baseurl}}/assets/slides/ML4D-L2.pdf) (PDF - 30 Mb)
 
 ## Lecture Notes
 
