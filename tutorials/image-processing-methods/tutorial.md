@@ -29,32 +29,35 @@ In this task, we will teach you how to automate the image processing pipeline us
 
 The above figure shows the pipeline. The Python code and the bike image data sit on your coding environment, which is the Replit online tool in our case. Then, when running the code from Replit, the computer that hosts your code will request the Hugging Face API to send and process your data. Once the request is confirmed valid (for example, through the API token), the Hugging Face API will tell a deployed machine learning model to process your data. Finally, the Hugging Face API will collect the results returned by the model and return the results to your coding environment.
 
-First, download the bike images from the link below. The bike images are in the “data/bike” folder. You should already have downloaded the data in the Preparation section.
+First, [check the code on Replit](https://replit.com/@ML4Design/image-processing-tutorial). This repl contains the code and images that we want to use in this task. Press the fork button and it will copy the code and images to your own Replit project. 
 
- - Link to code and images: [https://github.com/yenchiah/image-processing-tutorial](https://github.com/yenchiah/image-processing-tutorial)
+![replit how to]({{site.baseurl}}/assets/images/fork_button.png)
 
-Next, create a new project on Replit and name it “image-processing”, as shown in the following screenshot. Remember to use the “Python” template.
+<!-- First, download the bike images from the link below. The bike images are in the “data/bike” folder. You should already have downloaded the data in the Preparation section. -->
 
-![replit how to]({{site.baseurl}}/assets/images/replit1.png)
+ - The code and images can also be found here: [https://github.com/yenchiah/image-processing-tutorial](https://github.com/yenchiah/image-processing-tutorial)
 
-Then, copy the code from the following script on the GitHub repository.
+<!-- Next, create a new project on Replit and name it “image-processing”, as shown in the following screenshot. Remember to use the “Python” template. -->
 
- - [https://github.com/yenchiah/image-processing-tutorial/blob/main/main.py](https://github.com/yenchiah/image-processing-tutorial/blob/main/main.py)
- - or fork this [repl](https://replit.com/@ML4Design/image-processing-tutorial). 
+<!-- ![replit how to]({{site.baseurl}}/assets/images/replit1.png) -->
 
-![replit how to]({{site.baseurl}}/assets/images/image13.png)
+<!-- Then, copy the code from the following script on the GitHub repository. -->
 
-Next, paste the code that you just copied from GitHub to the Replit project (to the “main.py” file) that you just created, as shown below.
+ <!-- - [https://github.com/yenchiah/image-processing-tutorial/blob/main/main.py](https://github.com/yenchiah/image-processing-tutorial/blob/main/main.py)  -->
 
-![replit how to]({{site.baseurl}}/assets/images/image19.png)
+<!-- ![replit how to]({{site.baseurl}}/assets/images/image13.png) -->
 
-Next, upload the entire “data” folder to Replit, as shown below.
+<!-- Next, paste the code that you just copied from GitHub to the Replit project (to the “main.py” file) that you just created, as shown below. -->
 
-![replit how to]({{site.baseurl}}/assets/images/image12.png)
+<!-- ![replit how to]({{site.baseurl}}/assets/images/image19.png) -->
 
-After that, your replit folder structure should look like the following:
+<!-- Next, upload the entire “data” folder to Replit, as shown below. -->
 
-![replit how to]({{site.baseurl}}/assets/images/image17.png)
+<!-- ![replit how to]({{site.baseurl}}/assets/images/image12.png) -->
+
+<!-- After that, your replit folder structure should look like the following: -->
+
+<!-- ![replit how to]({{site.baseurl}}/assets/images/image17.png) -->
 
 Then, go to the following page to copy your Hugging Face API token. You should already have an API token ready, as indicated in the Preparation section.
 
