@@ -40,6 +40,7 @@ Next, create a new project on Replit and name it “image-processing”, as show
 Then, copy the code from the following script on the GitHub repository.
 
  - [https://github.com/yenchiah/image-processing-tutorial/blob/main/main.py](https://github.com/yenchiah/image-processing-tutorial/blob/main/main.py)
+ - or fork this [repl](https://replit.com/@ML4Design/image-processing-tutorial). 
 
 ![replit how to]({{site.baseurl}}/assets/images/image13.png)
 
