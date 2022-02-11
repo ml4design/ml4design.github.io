@@ -42,5 +42,8 @@ The course is organized into an introductory week and 4 modules, consisting of w
 
 - **Module 4: Designing iPSSs that include Machine Learning technology**. In this final module, you will learn how to design (using human-centered approaches) intelligent products, services, and systems. You will understand which issues could impact the experience of people when interacting with iPSSs and learn to assess how ML technology can and should be integrated into iPSSs (Lecture 9, Lecture 10, Tutorial 4).  
 
-Aspects related to ethics, bias, transparency, and fairness in machine learning will be pervasively addressed throughout the course
+Aspects related to ethics, bias, transparency, and fairness in machine learning will be pervasively addressed throughout the course.  
+
+All these resources are open-source. We encourage contribution (e.g. improvements, new tutorials) via the [GitHub repository](https://github.com/ml4design/ml4design.github.io).
+
 
