@@ -104,7 +104,7 @@ Here is the image that we just used as the input of the machine learning model:
 Now, to explain the output, it is an array of five dictionaries that represent the top 5 predictions from the model. Arrays and dictionaries are both data structures.
 
 - An array looks like [0, 1, 2, 3], which represents a list of elements (such as numbers).
-- A dictionary looks like {"key1": "value1", "key2", "value2"}, which represents pairs of keys and values.
+- A dictionary looks like {"key1": "value1", "key2": "value2"}, which represents pairs of keys and values.
 
 In this case, the first element in the array {'score': 0.9374412894248962, 'label': 'Egyptian cat'} is the first prediction. It means that the model thinks there are Egyptian cats in the image, with 0.9374412894248962 probability (which is very high).
 
