@@ -97,7 +97,7 @@ There are more buttons and functionalities on _Replit_. But this is all we need 
 
 # Embed your code in Discourse
 
-Note: To include your Replit directly into your post on Discourse, just paste the link of your Replit project and it will be automatically embedded in you post.
+Note: To include your Replit directly into your post on Discourse, just paste the link of your Replit project and it will be automatically embedded in your post.
 {: .fs-5 .ls-10 .code-example .bg-yellow-000}
 
 ![embed code in discourse]({{site.baseurl}}/assets/images/embed_example.gif)
