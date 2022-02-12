@@ -1,3 +1,7 @@
+---
+nav_exclude: true
+---
+
 # HOWTO
 Here is a short HOWTO guide on serving this github page locally.  
 Github pages uses these [dependencies and version](https://pages.github.com/versions/).
