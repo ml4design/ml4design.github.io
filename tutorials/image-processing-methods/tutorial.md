@@ -65,7 +65,7 @@ Then, go to the following page to copy your Hugging Face API token. You should a
 
 ![replit how to]({{site.baseurl}}/assets/images/image18.png)
 
-Next, find the following line in the Python script (you just copied this to Replit) and replace the “[PLACE_HOLDER]” part with the copied API token.
+Next, find the following line in the Python script. Replace the [PLACE_HOLDER] part with the copied API token. You need to also replace everything inside the quotation marks.
 
 <!-- |API_TOKEN = "[PLACE_HOLDER]"|  -->
 
