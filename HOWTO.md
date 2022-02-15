@@ -50,18 +50,19 @@ Make sure to download and install the `Ruby+Devkit 2.7.5-1` that is suitable for
 
 ## Serving the page locally
 
-Go to project folder and install the gems for this theme in your local profile
-```bash
-gem install --user-install bundler jekyll
-bundle install --path vendor/bundle
-```
-
 Make these local changes that you shouldn't commit or push.
 First uncomment the first line of `_config.yml` and comment the second line so that it looks like this:
 ```yml
 theme: just-the-docs
 # remote_theme: pmarsceill/just-the-docs
 ```
+
+Go to project folder and install the gems for this theme in your local profile
+```bash
+gem install --user-install bundler jekyll
+bundle install --path vendor/bundle
+```
+
 Then use this command to serve the page:  
 ```bash
 bundle exec jekyll serve
