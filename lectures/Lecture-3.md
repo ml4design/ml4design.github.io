@@ -18,9 +18,11 @@ nav_order: 3
 - [Microsofor Computer Vision Demos](https://aidemos.microsoft.com/computer-vision)
 - [Microsoft Video Analyser Demo](https://aidemos.microsoft.com/video-indexer/18ac02a461/faces)
 
+- [MorphCast JS SDK Demo](https://demo.morphcast.com/sdk-features/index.html?video=https%3A%2F%2Fdemo.morphcast.com%2Fsdk-features%2FBreeze_Woodson.mp4) 
+
 ## Lecture Slides
 
-__Work in Progress__
+- [Lecture 3 Slides]({{site.baseurl}}/assets/slides/ML4D-L3.pdf) (PDF - 47 Mb)
 
 ## Lecture Notes
 
