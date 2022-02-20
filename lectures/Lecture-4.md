@@ -15,8 +15,10 @@ nav_order: 3
 
 ## Experience
 
+- [A curated list of GAN applications](https://github.com/nashory/gans-awesome-applications)
 - [IBM-MIT Create Images with AI](https://gan-paint-demo.mybluemix.net)
 - [Linear Classification Loss Visualization](http://vision.stanford.edu/teaching/cs231n-demos/linear-classify/)
+- [GAN Lab](https://poloclub.github.io/ganlab/) - a demonstrator of how GANs work
 
 ## Lecture Slides
 
