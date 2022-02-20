@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Lecture 3: Image Processing Methods"
+title: "Lecture 4: Image Processing Methods"
 has_children: false
 parent: "Lectures"
 nav_order: 3
@@ -10,19 +10,17 @@ nav_order: 3
 
 ## Preparatory Reading Material
 
-- A good list of [videos showing application examples](https://chooch.ai/computer-vision/computer-vision-demo-videos/) of Computer Vision technology. 
-
+- [Hubel and Wiesel Cat Experiment](https://www.youtube.com/watch?v=IOHayh06LJ4)
+- [Generative Visual Manipulation on the Natural Image Manifold](https://www.youtube.com/watch?v=9c4z6YsBGQ0)
 
 ## Experience
 
-- [Microsofor Computer Vision Demos](https://aidemos.microsoft.com/computer-vision)
-- [Microsoft Video Analyser Demo](https://aidemos.microsoft.com/video-indexer/18ac02a461/faces)
-
-- [MorphCast JS SDK Demo](https://demo.morphcast.com/sdk-features/index.html?video=https%3A%2F%2Fdemo.morphcast.com%2Fsdk-features%2FBreeze_Woodson.mp4) 
+- [IBM-MIT Create Images with AI](https://gan-paint-demo.mybluemix.net)
+- [Linear Classification Loss Visualization](http://vision.stanford.edu/teaching/cs231n-demos/linear-classify/)
 
 ## Lecture Slides
 
-- [Lecture 3 Slides]({{site.baseurl}}/assets/slides/ML4D-L3.pdf) (PDF - 47 Mb)
+__Work in Progress__
 
 ## Lecture Notes
 
@@ -30,5 +28,5 @@ __Work in Progress__
 
 ## Additional Reading Material
 
-- [Supervised Learning](http://www.trustworthymachinelearning.com/trustworthymachinelearning-07.htm)
-- 
+- [A beginner's guide to understanding Convolutional Neural Networks](https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/)
+- [Three Ways Computer Vision Is Transforming Marketing](https://www.forbes.com/sites/forbestechcouncil/2020/04/03/three-ways-computer-vision-is-transforming-marketing/?sh=71b3adef214b)
