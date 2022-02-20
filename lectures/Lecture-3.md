@@ -12,7 +12,6 @@ nav_order: 3
 
 - A good list of [videos showing application examples](https://chooch.ai/computer-vision/computer-vision-demo-videos/) of Computer Vision technology. 
 
-
 ## Experience
 
 - [Microsofor Computer Vision Demos](https://aidemos.microsoft.com/computer-vision)
@@ -31,4 +30,3 @@ __Work in Progress__
 ## Additional Reading Material
 
 - [Supervised Learning](http://www.trustworthymachinelearning.com/trustworthymachinelearning-07.htm)
-- 
