@@ -10,6 +10,7 @@ nav_order: 3
 
 ## Preparatory Reading Material
 
+- [The Truth About Cats and Dogs](https://www.robots.ox.ac.uk/~vgg/publications/2011/Parkhi11/parkhi11.pdf)
 - [Hubel and Wiesel Cat Experiment](https://www.youtube.com/watch?v=IOHayh06LJ4)
 - [Generative Visual Manipulation on the Natural Image Manifold](https://www.youtube.com/watch?v=9c4z6YsBGQ0)
 
@@ -22,7 +23,7 @@ nav_order: 3
 
 ## Lecture Slides
 
-__Work in Progress__
+- [Lecture 4 Slides]({{site.baseurl}}/assets/slides/ML4D-L4.pdf) (PDF - 64 Mb)
 
 ## Lecture Notes
 
@@ -32,3 +33,4 @@ __Work in Progress__
 
 - [A beginner's guide to understanding Convolutional Neural Networks](https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/)
 - [Three Ways Computer Vision Is Transforming Marketing](https://www.forbes.com/sites/forbestechcouncil/2020/04/03/three-ways-computer-vision-is-transforming-marketing/?sh=71b3adef214b)
+- Interested in how human vision works? Two resources: [Visual Processing: Eye and Retina](https://nba.uth.tmc.edu/neuroscience/m/s2/chapter14.html),[Visual Processing: Cortical Pathways](https://nba.uth.tmc.edu/neuroscience/m/s2/chapter15.html)

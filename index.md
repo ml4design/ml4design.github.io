@@ -34,7 +34,7 @@ The course is organized into an introductory week and 4 modules, consisting of w
 
 - **Introduction: AI and ML in intelligent products, services, and systems (design)**. In this module, students are introduced to the role that Artificial Intelligence and, more specifically, Machine Learning technology play in iPSSs, in their design process, and in their lifecycle ([Lecture 1]({{site.baseurl}}/lectures/Lecture-1/)). The most important ML concepts, terminology, paradigms, and methods will also be described and exemplified ([Lecture 2]({{site.baseurl}}/lectures/Lecture-2/)).
 
-- **Module 1 : Image Processing methods for iPSSs**. In this module, you will be introduced to existing ML techniques for image processing (acquisition, analysis, generation), and will practice their use in realistic design contexts (Lecture 3, Lecture 4, Tutorial 1).
+- **Module 1 : Image Processing methods for iPSSs**. In this module, you will be introduced to existing ML techniques for image processing (acquisition, analysis, generation), and will practice their use in realistic design contexts ([Lecture 3]({{site.baseurl}}/lectures/Lecture-3/), [Lecture 4]({{site.baseurl}}/lectures/Lecture-4/), [Tutorial 1]({{site.baseurl}}/tutorials/image-processing-methods/)).
 
 - **Module 2: Text Processing methods for iPSSs**. In this module, you will be introduced to existing ML techniques for text processing (parsing, analysis, generation), and will practice their use in realistic design contexts (Lecture 5, Lecture 6, Tutorial 2). 
 
