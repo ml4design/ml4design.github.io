@@ -30,3 +30,5 @@ __Work in Progress__
 ## Additional Reading Material
 
 - [Natural Language Processing - Chapter 1](https://github.com/jacobeisenstein/gt-nlp-class/tree/master/notes) - Jacob Eisenstein, 2013.
+- [Bo: An intelligent network agent to promote physical activity in children with Congenital Heart Defects](http://resolver.tudelft.nl/uuid:fd895415-c353-41d5-8430-f0a67fd40ad4) - Hosana Morales Ornelas, Chapter 2
+- [OpenAI GPT-3 - Good At Almost Everything!](https://www.youtube.com/watch?v=_x9AwxfjxvE) - A video explaining some interesting use of GPT3

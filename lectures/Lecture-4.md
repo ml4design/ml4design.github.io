@@ -34,3 +34,4 @@ __Work in Progress__
 - [A beginner's guide to understanding Convolutional Neural Networks](https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/)
 - [Three Ways Computer Vision Is Transforming Marketing](https://www.forbes.com/sites/forbestechcouncil/2020/04/03/three-ways-computer-vision-is-transforming-marketing/?sh=71b3adef214b)
 - Interested in how human vision works? Two resources: [Visual Processing: Eye and Retina](https://nba.uth.tmc.edu/neuroscience/m/s2/chapter14.html),[Visual Processing: Cortical Pathways](https://nba.uth.tmc.edu/neuroscience/m/s2/chapter15.html)
+- [Making AI Art Absolute Beginner's Tutorial](https://www.youtube.com/watch?v=hlWJHTlk1ME&ab_channel=Neuraldivergent%3AAIGeneratedArt) - Credits to Fabian Hoogendijk for suggesting the link
