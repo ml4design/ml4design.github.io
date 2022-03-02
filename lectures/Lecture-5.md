@@ -21,7 +21,7 @@ nav_order: 3
 
 ## Lecture Slides
 
-- __Work in Progress__
+- [Lecture 5 Slides]({{site.baseurl}}/assets/slides/ML4D-L5.pdf) (PDF - 30 Mb)
 
 ## Lecture Notes
 
