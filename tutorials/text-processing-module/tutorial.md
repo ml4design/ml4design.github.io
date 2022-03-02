@@ -28,7 +28,7 @@ This section explains the tasks you will perform during the tutorial session wit
 To begin with, [check the code on Replit](https://replit.com/@machine-learning-for-design/ML-Tutorial#main.py). This repl contains the code and text data that we are going to use in this task. Press the fork button and it will copy the code and data to your own Replit project. The “main.py” file contains the main body of code. This is the only file that you will need to edit during the tutorial, individual assignment, and group assignment. Together we will also explore the other files (e.g. “preprocessing.py” and “topic_modelling.py”) and discuss them. In the following sections of this document, we provide a summary of the tutorial along with some questions that aim to help you understand the usefulness and importance of each task.
 Press the fork button and it will copy the code and images to your own Replit project.  
 
-![replit how to]({{site.baseurl}}/assets/images/fork_button.png)
+![replit how to]({{site.baseurl}}/assets/images/text-processing/fork_button.png)
 
 ## Task 5: Reading data
 
