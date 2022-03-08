@@ -14,8 +14,6 @@ nav_order: 3
 
 ## Experience
 
-- [Google N-Gram Viewer](https://books.google.com/ngrams)
-- [WebVectors - Online Word Embeddings Demo](http://vectors.nlpl.eu/explore/embeddings/en/)
 - [Google NLP API Demo](https://cloud.google.com/natural-language#section-2)
 - [IBM Watson NLP Demo](https://www.ibm.com/demos/live/natural-language-understanding/self-service/home)
 
