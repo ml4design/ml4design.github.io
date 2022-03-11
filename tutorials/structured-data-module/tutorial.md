@@ -181,12 +181,12 @@ Typically, there is a tradeoff between precision and recall, and one may need to
 The f1-score metric is a combination of recall and precision, as indicated below:
 
 ```
-f1-score = 2*(precision*recall) / (precision+recall)
+f1-score = 2 * (precision * recall) / (precision + recall)
 ```
 
 In the console after you run the python script on the Replit tool, there is a message printed by the script, as shown in the following:
 
-```shell
+```sh
 Use model DummyClassifier(constant=0, strategy='constant')
 Perform cross-validation, please wait...
 
@@ -234,7 +234,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 Then, run the code again, and the console should print the following message:
 
-```shell
+```sh
 Use model DecisionTreeClassifier()
 Perform cross-validation, please wait...
 
@@ -282,7 +282,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 Now, run the code again. The cross-validation part may be slow since training the Random Forest model can take a long time. After that, you should see the following message about evaluation metrics in the console:
 
-```shell
+```sh
 Use model RandomForestClassifier()
 Perform cross-validation, please wait...
 
@@ -317,7 +317,7 @@ The intuition for having a committee (instead of only a single tree) is that we 
 
 Also, notice that there is a message printed in the console similar to the following:
 
-```shell
+```sh
 Computer feature importance using RandomForestClassifier(random_state=0)
 
 ================================================
