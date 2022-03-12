@@ -7,7 +7,7 @@ parent: "Tutorial 1: Image Processing Methods for IPPSs"
 grand_parent: "Tutorials"
 ---
 
-# Tutorial (Friday 13:45-15:30)
+# Tutorial
 {: .no_toc }
 
 ## Table of contents
