@@ -71,7 +71,7 @@ Your deliverable is the technical report that will be sent to the Pittsburgh loc
   - Explain your findings from the experiment. Keep in mind that the local community will read your findings, and they have limited knowledge of machine learning and data science. You need to explain the findings in a way that local citizens and policy-makers can understand.
   - For example, from the experiment results, which pollutants are important to predict the presence of poor odor? How do the pollutants travel to the Pittsburgh region? For example, under what conditions of wind directions or speed will the pollutants with bad smell travel to the city region? Remember that you need to use the experiment result to support your argument, for example, the feature importance.
   - Also, keep in mind that you need to provide convincing evidence to argue that your machine learning model fits the data reasonably well, for example, using the evaluation metrics mentioned in the tutorial. None of the findings make sense if your model fits the data poorly, like the dummy classifier (always predicts “no” smell events) that we used in the tutorial.
-**Distribution of Group Collaboration**
+- **Distribution of Group Collaboration**
   - Describe the distributions of effort in the groups. Make sure that you keep track of this information. It is not acceptable to simply say “all members work together” or “all members contributed equally”. If there are any problems with collaboration, please inform the course coordinator as soon as possible.
 
 In addition, if you read articles (e.g., online blogs, academic papers) and take their ideas, make sure that you cite and attribute the works in your technical report. It is essential to keep this integrity in scientific research.
