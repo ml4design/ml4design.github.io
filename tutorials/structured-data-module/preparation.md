@@ -21,7 +21,7 @@ This section will prepare you with the background of the Smell Pittsburgh that w
 
 First, read the following paper to get an idea about the motivation, background, and design of the Smell Pittsburgh application.
 
-- Yen-Chia Hsu, Jennifer Cross, Paul Dille, Michael Tasota, Beatrice Dias, Randy Sargent, Ting-Hao (Kenneth) Huang, and Illah Nourbakhsh. 2020. Smell Pittsburgh: Engaging Community Citizen Science for Air Quality. ACM Transactions on Interactive Intelligent Systems. 10, 4, Article 32. DOI:https://doi.org/10.1145/3369397. Preprint:https://arxiv.org/pdf/1912.11936.pdf.
+- Yen-Chia Hsu, Jennifer Cross, Paul Dille, Michael Tasota, Beatrice Dias, Randy Sargent, Ting-Hao (Kenneth) Huang, and Illah Nourbakhsh. 2020. Smell Pittsburgh: Engaging Community Citizen Science for Air Quality. ACM Transactions on Interactive Intelligent Systems. 10, 4, Article 32. DOI:[https://doi.org/10.1145/3369397](https://doi.org/10.1145/3369397). Preprint:[https://arxiv.org/pdf/1912.11936.pdf](https://arxiv.org/pdf/1912.11936.pdf).
 
 <p style="color:red">At least you must read sections 1 (introduction), 2 (related work), 3 (design principles and challenges), and 4 (system) in the paper. Please note that If you come to the tutorial session without reading the paper, you will probably not be able to understand the entire machine learning pipeline well.</p>
 

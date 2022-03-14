@@ -186,7 +186,7 @@ f1-score = 2 * (precision * recall) / (precision + recall)
 
 In the console after you run the python script on the Replit tool, there is a message printed by the script, as shown in the following:
 
-```sh
+```
 Use model DummyClassifier(constant=0, strategy='constant')
 Perform cross-validation, please wait...
 
@@ -210,31 +210,31 @@ By the definition of accuracy, the dummy classifier (which always says “no”)
 
 In this task, we are going to use a different model. Now, let us change the model to Decision Tree and compare its performance with the dummy classifier. We will explain what a Decision Tree is later in this tutorial. First, please find the following line in the code:
 
-```python
+```
 model = DummyClassifier(strategy="constant", constant=0)
 ```
 
 Replace the line above with the following code:
 
-```python
+```
 model = DecisionTreeClassifier()
 ```
 
 Next, please find the line that imports the package in the step of training the model:
 
-```python
+```
 from sklearn.dummy import DummyClassifier
 ```
 
 Replace the line above with the following code:
 
-```python
+```
 from sklearn.tree import DecisionTreeClassifier
 ```
 
 Then, run the code again, and the console should print the following message:
 
-```sh
+```
 Use model DecisionTreeClassifier()
 Perform cross-validation, please wait...
 
@@ -269,20 +269,20 @@ You can find the visualization of a decision tree (trained using the real data) 
 
 Now that you have tried the Decision Tree model, in this task, we will use a more advanced model for smell event prediction. The mode that we will use is Random Forest. First, similar to the first few steps in the previous task, add a line to define the Random Forest model. You can add the line right after the line where you create the Decision Tree model in the previous task. You can comment out the line that creates the Decision Tree model.
 
-```python
+```
 #model = DecisionTreeClassifier()
 model = RandomForestClassifier()
 ```
 
 Also, add the following line to import the package. You can add the line right after the line where you import the Decision Tree model in the previous task.
 
-```python
+```
 from sklearn.ensemble import RandomForestClassifier
 ```
 
 Now, run the code again. The cross-validation part may be slow since training the Random Forest model can take a long time. After that, you should see the following message about evaluation metrics in the console:
 
-```sh
+```
 Use model RandomForestClassifier()
 Perform cross-validation, please wait...
 
@@ -317,7 +317,7 @@ The intuition for having a committee (instead of only a single tree) is that we 
 
 Also, notice that there is a message printed in the console similar to the following:
 
-```sh
+```
 Computer feature importance using RandomForestClassifier(random_state=0)
 
 ================================================
