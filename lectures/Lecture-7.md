@@ -6,7 +6,7 @@ parent: "Lectures"
 nav_order: 3
 ---
 
-# Natural Language Methods
+# Design and Develop Machine Learning Models
 
 ## Preparatory Reading Material
 
@@ -14,7 +14,7 @@ nav_order: 3
 
 ## Lecture Slides
 
-__Work in Progress__
+- [Lecture 7 Slides]({{site.baseurl}}/assets/slides/ML4D-L7.pdf) (PDF - 22 Mb)
 
 ## Lecture Notes
 
