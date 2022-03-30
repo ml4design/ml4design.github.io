@@ -8,8 +8,6 @@ nav_order: 3
 
 # Design and Develop Machine Learning Models /2
 
-## Preparatory Reading Material
-
 ## Experience
 
 - [Random Forest Demonstrator](https://cs.stanford.edu/~karpathy/svmjs/demo/demoforest.html)
@@ -20,9 +18,8 @@ nav_order: 3
 ## Lecture Slides
 
 - [Lecture 8 Slides]({{site.baseurl}}/assets/slides/ML4D-L8.pdf) (PDF - 4Mb)
+- [Lecture 8bis Slides]({{site.baseurl}}/assets/slides/ML4D-L8-Bis.pdf) (PDF - 2Mb)
 
 ## Lecture Notes
 
 __Work in Progress__
-
-## Additional Reading Material
