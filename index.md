@@ -40,7 +40,7 @@ The course is organized into an introductory week and 4 modules, consisting of w
 
 - **Module 3: Design and Develop Machine Learning Models**. In this module you will deepen your knowledge in how machine learning models could be trained, and on how their performance could be evaluated. Specific attention will be devoted to the task of training data design, generation, and usage in realistic adoption scenarios ([Lecture 7]({{site.baseurl}}/lectures/Lecture-7/), [Lecture 8]({{site.baseurl}}/lectures/Lecture-8/), [Tutorial 3]({{site.baseurl}}/tutorials/structured-data-module/)). 
 
-- **Module 4: Designing iPSSs that include Machine Learning technology**. In this final module, you will learn how to design (using human-centered approaches) intelligent products, services, and systems. You will understand which issues could impact the experience of people when interacting with iPSSs and learn to assess how ML technology can and should be integrated into iPSSs ([Lecture 9]({{site.baseurl}}/lectures/Lecture-9/), Lecture 10).  
+- **Module 4: Designing iPSSs that include Machine Learning technology**. In this final module, you will learn how to design (using human-centered approaches) intelligent products, services, and systems. You will understand which issues could impact the experience of people when interacting with iPSSs and learn to assess how ML technology can and should be integrated into iPSSs ([Lecture 9]({{site.baseurl}}/lectures/Lecture-9/)).  
 
 Aspects related to ethics, bias, transparency, and fairness in machine learning will be pervasively addressed throughout the course.  
 

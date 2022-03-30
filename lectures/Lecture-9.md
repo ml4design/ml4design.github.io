@@ -24,6 +24,7 @@ __Work in Progress__
 
 ## Additional Material
 
+- [The Machine Learning Canvas]({{site.baseurl}}/assets/material/MachineLearningCanvas.pdf)
 - [Tutorial: 21 fairness definitions and their politics](https://www.youtube.com/embed/jIXIuYdnyyk)
 - [A Crash Course in Fair NLP for Practitioners](https://www.arthur.ai/blog/crash-course-in-fair-nlp-for-practitioners). Several links to relevant NLP papers
 - [Aequitas](http://www.datasciencepublicpolicy.org/our-work/tools-guides/aequitas/). An open source bias audit toolkit for machine learning developers, analysts, and  policymakers to audit machine learning models for discrimination and bias, and make informed and equitable decisions around developing and deploying predictive risk-assessment tools.
