@@ -34,7 +34,7 @@ To answer this question, you need to not only select proper variables but also f
 - What are the models that you want to use?
   - Hint: use the knowledge that you learned in this module to choose a set of models that you want to investigate. Notice that this is a classification task, and a list of available models can be found at the link below:
   - Link to models: [https://scikit-learn.org/stable/supervised_learning.html](https://scikit-learn.org/stable/supervised_learning.html)
-- What are the variables that you are interested in exploring?
+- What are the variables that you are inteeested in exploring?
   - Hint: use the knowledge that you learned in this module to select different sets of variables and check how these sets affect model performance. A list of available variables is mentioned in the tutorial.
   - Hint: change the “add_inter” parameter in the code to add interaction terms, such as H2S multiplied by wind direction.
   - Hint: use the knowledge that you learned in this module to compute feature importance and inspect which are the important features.
@@ -60,10 +60,10 @@ Your deliverable is the technical report that will be sent to the Pittsburgh loc
 - **Experiment Design and Implementation**
   - Describe the machine learning models that you choose and explain why you choose them. The reasons may come from the knowledge that you learned in the lectures or the tutorial.
   - Describe the set of features (or multiple sets if you have multiple groups of features) that you choose and why you choose them. The reasons may come from the insights that you learned when you explored the data during the preparation phase of this module.
-  - Describe how you define the smell events and what motivates you to define the events in this way. You can also have multiple definitions of smell events and conduct experiments using different definitions.
-  - Describe the number of hours that you want the model to look back. You can have multiple settings with different numbers of hours and conduct experiments on all the settings.
-  - Describe the amount of data that you use to train your model. You can also have different settings with different numbers of samples and conduct experiments on all the settings.
-  - Describe how often you think the model needs to be restrained using updated data. You can have multiple settings with different numbers of the testing set size and conduct experiments on all the settings.
+  - Describe how you define the smell events and what motivates you to define the events in this way. You can also have multiple definitions of smell events and conduct experiments using different definitions (i.e., change the “smell_thr” and “smell_predict_hrs” parameters).
+  - Describe the number of hours that you want the model to look back. You can have multiple settings with different numbers of hours and conduct experiments on all the settings (i.e., change the “look_back_hrs” parameter).
+  - Describe the amount of data that you use to train your model. You can also have different settings with different numbers of samples and conduct experiments on all the settings (i.e., change the “train_size” parameter).
+  - Describe how often you think the model needs to be re-trained using updated data. You can have multiple settings with different numbers of the testing set size and conduct experiments on all the settings (i.e., change the “test_size” parameter).
   - Explain how you implement the experiment with one or multiple settings using Python code.
 - **Experiment Results**
   - Produce one or multiple tables similar to the one provided in the individual assignment to show the results of your experiment. Make sure that you clearly describe what each column in the table means.
