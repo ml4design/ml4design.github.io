@@ -3,7 +3,7 @@ layout: default
 title: "Lecture 8: Design and Develop Machine Learning Models /2"
 has_children: false
 parent: "Lectures"
-nav_order: 3
+nav_order: 8
 ---
 
 # Design and Develop Machine Learning Models /2

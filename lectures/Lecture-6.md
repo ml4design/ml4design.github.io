@@ -3,7 +3,7 @@ layout: default
 title: "Lecture 6: Natural Language Processing"
 has_children: false
 parent: "Lectures"
-nav_order: 3
+nav_order: 6
 ---
 
 # Natural Language Methods
