@@ -4,10 +4,10 @@ title: Home
 nav_order: 0
 ---
 
-# Welcome to the 2021/2022 Edition of the Machine Learning for Design Course
+# Welcome to the 2022/2023 Edition of the Machine Learning for Design Course
 
 <p align="center">
-  <img src="/assets/images/ml4d_home.png" />
+  <img src="/assets/images/ml4d_banner.png" />
 </p>
 
 ## The Course
@@ -34,11 +34,11 @@ The course is organized into an introductory week and 4 modules, consisting of w
 
 - **Introduction: AI and ML in intelligent products, services, and systems (design)**. In this module, students are introduced to the role that Artificial Intelligence and, more specifically, Machine Learning technology play in iPSSs, in their design process, and in their lifecycle ([Lecture 1]({{site.baseurl}}/lectures/Lecture-1/)). The most important ML concepts, terminology, paradigms, and methods will also be described and exemplified ([Lecture 2]({{site.baseurl}}/lectures/Lecture-2/)).
 
-- **Module 1 : Image Processing methods for iPSSs**. In this module, you will be introduced to existing ML techniques for image processing (acquisition, analysis, generation), and will practice their use in realistic design contexts ([Lecture 3]({{site.baseurl}}/lectures/Lecture-3/), [Lecture 4]({{site.baseurl}}/lectures/Lecture-4/), [Tutorial 1]({{site.baseurl}}/tutorials/image-processing-methods/)).
+- **Module 1 : Computer Vision methods for iPSSs**. In this module, you will be introduced to existing ML techniques for image processing (acquisition, analysis, generation), and will practice their use in realistic design contexts ([Lecture 3]({{site.baseurl}}/lectures/Lecture-3/), [Lecture 4]({{site.baseurl}}/lectures/Lecture-4/), [Tutorial 1]({{site.baseurl}}/tutorials/image-processing-methods/)).
 
 - **Module 2: Natural Language Processing methods for iPSSs**. In this module, you will be introduced to existing ML techniques for text processing (parsing, analysis, generation), and will practice their use in realistic design contexts ([Lecture 5]({{site.baseurl}}/lectures/Lecture-5/), [Lecture 6]({{site.baseurl}}/lectures/Lecture-6/), [Tutorial 2]({{site.baseurl}}/tutorials/text-processing-module/)). 
 
-- **Module 3: Design and Develop Machine Learning Models**. In this module you will deepen your knowledge in how machine learning models could be trained, and on how their performance could be evaluated. Specific attention will be devoted to the task of training data design, generation, and usage in realistic adoption scenarios ([Lecture 7]({{site.baseurl}}/lectures/Lecture-7/), [Lecture 8]({{site.baseurl}}/lectures/Lecture-8/), [Tutorial 3]({{site.baseurl}}/tutorials/structured-data-module/)). 
+- **Module 3: Design and Development of Machine Learning Models**. In this module you will deepen your knowledge in how machine learning models could be trained, and on how their performance could be evaluated. Specific attention will be devoted to the task of training data design, generation, and usage in realistic adoption scenarios ([Lecture 7]({{site.baseurl}}/lectures/Lecture-7/), [Lecture 8]({{site.baseurl}}/lectures/Lecture-8/), [Tutorial 3]({{site.baseurl}}/tutorials/structured-data-module/)). 
 
 - **Module 4: Designing iPSSs that include Machine Learning technology**. In this final module, you will learn how to design (using human-centered approaches) intelligent products, services, and systems. You will understand which issues could impact the experience of people when interacting with iPSSs and learn to assess how ML technology can and should be integrated into iPSSs ([Lecture 9]({{site.baseurl}}/lectures/Lecture-9/)).  
 
