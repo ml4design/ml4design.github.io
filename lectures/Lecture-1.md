@@ -10,6 +10,8 @@ nav_order: 1
 
 ## Preparatory Reading Material
 
+- [Design for AI Symposium 2022](Design for AI Symposium)
+  - Inspirational videos from the 2022 Design for AI symposium. What can Design do for AI? 
 - [What is the role of an AI Designer?](https://amandalinden.medium.com/what-is-the-role-of-an-a-i-designer-6943711046ec)
 - [AI Myths](https://www.aimyths.org)
 
