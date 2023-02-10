@@ -12,10 +12,7 @@ nav_order: 1
 
 - Watch the following video
  
-<iframe width="560" height="315"
-src="https://www.youtube.com/watch?v=l3BBir7Dljc" 
-frameborder="0" 
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=l3BBir7Dljc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
 - [Design for AI Symposium 2022](https://www.tudelft.nl/en/ide/news/conferences-and-symposia/design4ai-symposium)
