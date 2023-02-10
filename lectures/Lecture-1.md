@@ -17,6 +17,8 @@ nav_order: 1
 
 ## Warming Up
 
+{% include youtube.html id="l3BBir7Dljc" %} 
+
 - Use your TU Delft credentials to log-in and access [this Miro board](https://miro.com/app/board/uXjVOPzwy3E=/). The board is password protected. You can find the password on Brightspace. 
 - Think about one or more Product, Service, or System that, in your opinion, is powered by Artificial Intelligence technology.
 - Feel free to take inspirations from the world around you. Take pictures from your neighborhood, your home, the faculty...
