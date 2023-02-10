@@ -8,7 +8,15 @@ nav_order: 1
 
 # Artificial Intelligence and Machine Learning in Intelligent Products, Services, and Systems (design)
 
-## Preparatory Reading Material
+## Preparatory Reading and Video Material
+
+- Watch the following video
+ 
+<iframe width="560" height="315"
+src="https://www.youtube.com/watch?v=l3BBir7Dljc" 
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
 - [Design for AI Symposium 2022](https://www.tudelft.nl/en/ide/news/conferences-and-symposia/design4ai-symposium)
   - Inspirational videos from the 2022 Design for AI symposium. What can Design do for AI? 
@@ -16,12 +24,6 @@ nav_order: 1
 - [AI Myths](https://www.aimyths.org)
 
 ## Warming Up
-
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/MUQfKFzIOeU" 
-frameborder="0" 
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen></iframe>
 
 - Use your TU Delft credentials to log-in and access [this Miro board](https://miro.com/app/board/uXjVOPzwy3E=/). The board is password protected. You can find the password on Brightspace. 
 - Think about one or more Product, Service, or System that, in your opinion, is powered by Artificial Intelligence technology.
