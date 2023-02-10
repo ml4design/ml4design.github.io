@@ -18,7 +18,7 @@ compress_html:
   ignore:
     envs: all
 
-includes_dir: ["_cards", "_includes"]
+includes_dir: _cards
 
 collections:
   - cards
