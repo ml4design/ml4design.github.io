@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="katex/katex.min.css" />
+    <style>
+        @font-face {
+            font-family: 'Mono';
+            src: url("iAWriterMono.ttf") format('truetype');
+        }
+        @font-face {
+            font-family: 'Mono';
+            src: url("iAWriterMono-Italic.ttf") format('truetype');
+            font-style: italic;
+        }
+        
+        @font-face {
+            font-family: 'Duo';
+            src: url("iAWriterDuo.ttf") format('truetype');
+        }
+        @font-face {
+            font-family: 'Duo';
+            src: url("iAWriterDuo-Italic.ttf") format('truetype');
+            font-style: italic;
+        }
+        
+        @font-face {
+            font-family: 'Quattro';
+            src: url("iAWriterQuattro.ttf") format('truetype');
+        }
+        @font-face {
+            font-family: 'Quattro';
+            src: url("iAWriterQuattro-Italic.ttf") format('truetype');
+            font-style: italic;
+        }
+
+        body {
+          box-sizing: content-box; /* So measure calculations don’t need to include gutters */
+          text-rendering: optimizeLegibility; /* NOTE May cause performance issues */
+          /* font-kerning is enabled by default in OS X Safari 7+ */
+          -webkit-font-kerning: normal;
+          font-kerning: normal;
+        }
+
+        body {
+            --padding-right: 10%;
+            --padding-left: 10%;
+            padding-left: var(--padding-left);
+            padding-right: var(--padding-right);
+        }
+
+        /*  Typography  */
+
+        html {
+            --font-size: 18px;
+            line-height:1.45;
+            transition-property: font-size;
+            transition-duration: 0.4s;
+          }
+          
+          @media screen {
+            html.content-size-4xs {
+              --font-size: 11px;
+            }
+            html.content-size-3xs {
+              --font-size: 12px;
+            }
+            html.content-size-2xs {
+              --font-size: 13px;
+            }
+            html.content-size-xs {
+              --font-size: 14px;
+            }
+            html.content-size-s {
+              --font-size: 15px;
+            }
+            html.content-size-m {
+              --font-size: 16px;
+            }
+            html.content-size-l {
+              --font-size: 18px;
+            }
+            html.content-size-xl {
+              --font-size: 20px;
+            }
+            html.content-size-2xl {
+              --font-size: 24px;
+            }
+            html.content-size-3xl {
+              --font-size: 28px;
+            }
+            html.content-size-4xl {
+              --font-size: 32px;
+            }
+            html.content-size-5xl {
+              --font-size: 36px;
+            }
+            html.content-size-6xl {
+              --font-size: 42px;
+            }
+            html.content-size-7xl {
+              --font-size: 48px;
+            }
+            html.content-size-8xl {
+              --font-size: 54px;
+            }
+            html.content-size-9xl {
+              --font-size: 60px;
+            }
+            html.content-size-10xl {
+              --font-size: 72px;
+            }
+          }
+        
+        :root {
+            --SCROLL-THUMB-COLOR: gray;
+            --HTML-TOP-MARGIN: 55px;
+        }
+
+        html {
+            margin-top: var(--HTML-TOP-MARGIN);
+            font-size: var(--font-size);
+        }
+
+        /*.mono{
+            font-family: Mono;
+        }
+        
+        .duo{
+            font-family: Duo;
+        }
+        
+        .quattro{
+            font-family: Quattro;
+        }*/
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        .part {
+            border-left: 4px solid rgba(0, 0, 0, 0.0);
+            font-weight: 500;
+            overflow-wrap: break-word;
+        }
+
+        strong{
+            font-weight: 800;
+        }
+        
+        .dark{
+            background:#000;
+            color:#fff;
+        }
+        
+        .main {
+            height: 100vh;
+        }
+        hr{
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+        }
+        .part {
+            transition-property: opacity;
+            transition-duration: 0.4s;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .slide-parts{
+            max-width: 38em;
+            flex-grow :1;
+        }
+        
+        .note{
+            hanging-punctuation: first last;
+        }
+        
+        .part.current{
+            border-left: 4px solid var(--SCROLL-THUMB-COLOR);
+        }
+        
+        .slide-content{
+            border-left: 4px solid rgba(0, 0, 0, 0.0);
+            border-top: 4px solid rgba(0, 0, 0, 0.0);
+            border-right: 4px solid rgba(0, 0, 0, 0.0);
+            border-bottom: 4px solid rgba(0, 0, 0, 0.0);
+        }
+        .slide-content.current{
+            border-left: 4px solid var(--SCROLL-THUMB-COLOR);
+            border-top: 4px solid var(--SCROLL-THUMB-COLOR);
+            border-right: 4px solid var(--SCROLL-THUMB-COLOR);
+            border-bottom: 4px solid var(--SCROLL-THUMB-COLOR);
+        }
+       
+        .tp-slide{
+            margin-top:10px;
+            margin-bottom:50px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .non-current-slide{
+            -webkit-filter: grayscale(1);
+        }
+        
+        .slide-content {
+            border-radius: 10px;
+
+        }
+        
+        /*.is-empty{
+            border: 0px solid rgba(0, 0, 0, 0.0);
+        }*/
+
+        .is-empty-placeholder{
+            text-align:center;
+        }
+        .slide-number{
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: gray;
+            height: 24px;
+            border-radius:12px;
+            width:24px;
+            text-align:center;
+            min-width:24px;
+        }
+        
+        .slide-thumbnail{
+            align-self: flex-start;
+            border-radius: 6px;
+            transition-property: max-width;
+            transition-duration: 0.4s;
+        }
+        
+        .notes-mode .slide-thumbnail{
+            max-width: 100px;
+
+        }
+        
+        .thumbnails-mode .slide-thumbnail{
+            max-width: 60%;
+        }
+        
+        .slide-number span {
+          display: inline-block;
+          vertical-align: middle;
+          line-height: normal;
+        }
+        
+        
+        .slide-content h1,
+        .slide-content h2,
+        .slide-content h3,
+        .slide-content h4,
+        .slide-content h5,
+        .slide-content h6{
+            margin: 0;
+            font-size: 1em;
+        }
+        
+        .slide-content p {
+            margin: 0;
+        }
+        
+        ul, ol,p{
+            margin:0;
+        }
+
+        .focus .current {
+            opacity: 1;
+        }
+
+        .focus .future {
+            opacity: 0.2;
+        }
+
+        .focus .next {
+            opacity: 0.4;
+        }
+
+        .focus .past {
+            opacity: 0.2;
+        }
+
+        .focus .previous {
+            opacity: 0.4;
+        }
+
+        .overscroll{
+            height: 100vh;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 14px;
+        }
+
+        ::-webkit-scrollbar-track {
+            margin-top: 40px;
+            box-shadow: inset 0 0 14px 14px transparent;
+            border: solid 3px transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            
+            box-shadow: inset 0 0 14px 14px var(--SCROLL-THUMB-COLOR);
+            border: solid 3px transparent;
+            border-radius: 14px;
+        }
+        
+        a{
+          color: currentColor;
+        }
+
+        a:visited{
+          color:currentColor;
+        }
+
+        a:hover{
+          color:currentColor;
+        }
+        
+        .task-list-item {
+          --checkbox-size: 1em;
+        }
+
+        /* Hide default bullets for unordered task lists. */
+        ul .task-list-item {
+          list-style-type: none;
+        }
+
+        /* Hide gen-content bullets for unordered task lists. */
+        ul .task-list-item:before {
+          display: none;
+        }
+
+        .task-list-item-checkbox {
+          float: left;
+          /* Removes from flow in case of paragraph list items */
+          width: 1em;
+          /* line-height */
+          height: 1em;
+          /* line-height */
+          margin: 0 0 0 -1em;
+          /* 0s to overwrite user agent styles */
+          border: none;
+          /* Otherwise iPhone draws a border */
+          font-size: 1em;
+          -webkit-appearance: none;
+          /* Disables system checkbox image */
+          opacity: 1;
+          /* Otherwise they are 0.4 on iPhone, where it applies disabled effect even with above */
+        }
+
+        input[type="checkbox"].task-list-item-checkbox {
+          position: relative;
+          margin-top: 0.1em;
+          width: 1.2em;
+          height: 1.2em;
+          color: black;
+          border: 3px solid rgb(128,128,128);
+          border-radius: 6px;
+          appearance: none;
+          outline: 0;
+          cursor: pointer;
+          margin-right:0.3em;
+          transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+        }
+
+        input[type="checkbox"].task-list-item-checkbox::before {
+            position: absolute;
+            content: "";
+            display: block;
+            top: 0.05em;
+            left: 0.27em;
+            width: 0.4em;
+            height: 0.6em;
+            border-style: solid;
+            border-color: rgb(128,128,128);
+            border-width: 0 0.13em 0.1em 0;
+            transform: rotate(45deg);
+            opacity: 0;
+        }
+
+        input[type="checkbox"].task-list-item-checkbox:checked::before {
+            opacity: 1;
+        }
+
+        .dark input[type="checkbox"].task-list-item-checkbox::before {
+            border-color: rgb(128,128,128);
+        }
+        
+        pre code{
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body class="mac ">
+    <div class="main" >
+
+
+
+    </div>
+    <script src="katex/katex.min.js"></script>
+    <script lang="javascript">
+        !function () { "use strict"; function o() { var o = window, t = document; if (!("scrollBehavior" in t.documentElement.style && !0 !== o.__forceSmoothScrollPolyfill__)) { var l, e = o.HTMLElement || o.Element, r = 468, i = { scroll: o.scroll || o.scrollTo, scrollBy: o.scrollBy, elementScroll: e.prototype.scroll || n, scrollIntoView: e.prototype.scrollIntoView }, s = o.performance && o.performance.now ? o.performance.now.bind(o.performance) : Date.now, c = (l = o.navigator.userAgent, new RegExp(["MSIE ", "Trident/", "Edge/"].join("|")).test(l) ? 1 : 0); o.scroll = o.scrollTo = function () { void 0 !== arguments[0] && (!0 !== f(arguments[0]) ? h.call(o, t.body, void 0 !== arguments[0].left ? ~~arguments[0].left : o.scrollX || o.pageXOffset, void 0 !== arguments[0].top ? ~~arguments[0].top : o.scrollY || o.pageYOffset) : i.scroll.call(o, void 0 !== arguments[0].left ? arguments[0].left : "object" != typeof arguments[0] ? arguments[0] : o.scrollX || o.pageXOffset, void 0 !== arguments[0].top ? arguments[0].top : void 0 !== arguments[1] ? arguments[1] : o.scrollY || o.pageYOffset)) }, o.scrollBy = function () { void 0 !== arguments[0] && (f(arguments[0]) ? i.scrollBy.call(o, void 0 !== arguments[0].left ? arguments[0].left : "object" != typeof arguments[0] ? arguments[0] : 0, void 0 !== arguments[0].top ? arguments[0].top : void 0 !== arguments[1] ? arguments[1] : 0) : h.call(o, t.body, ~~arguments[0].left + (o.scrollX || o.pageXOffset), ~~arguments[0].top + (o.scrollY || o.pageYOffset))) }, e.prototype.scroll = e.prototype.scrollTo = function () { if (void 0 !== arguments[0]) if (!0 !== f(arguments[0])) { var o = arguments[0].left, t = arguments[0].top; h.call(this, this, void 0 === o ? this.scrollLeft : ~~o, void 0 === t ? this.scrollTop : ~~t) } else { if ("number" == typeof arguments[0] && void 0 === arguments[1]) throw new SyntaxError("Value could not be converted"); i.elementScroll.call(this, void 0 !== arguments[0].left ? ~~arguments[0].left : "object" != typeof arguments[0] ? ~~arguments[0] : this.scrollLeft, void 0 !== arguments[0].top ? ~~arguments[0].top : void 0 !== arguments[1] ? ~~arguments[1] : this.scrollTop) } }, e.prototype.scrollBy = function () { void 0 !== arguments[0] && (!0 !== f(arguments[0]) ? this.scroll({ left: ~~arguments[0].left + this.scrollLeft, top: ~~arguments[0].top + this.scrollTop, behavior: arguments[0].behavior }) : i.elementScroll.call(this, void 0 !== arguments[0].left ? ~~arguments[0].left + this.scrollLeft : ~~arguments[0] + this.scrollLeft, void 0 !== arguments[0].top ? ~~arguments[0].top + this.scrollTop : ~~arguments[1] + this.scrollTop)) }, e.prototype.scrollIntoView = function () { if (!0 !== f(arguments[0])) { var l = function (o) { for (; o !== t.body && !1 === (e = p(l = o, "Y") && a(l, "Y"), r = p(l, "X") && a(l, "X"), e || r);)o = o.parentNode || o.host; var l, e, r; return o }(this), e = l.getBoundingClientRect(), r = this.getBoundingClientRect(); l !== t.body ? (h.call(this, l, l.scrollLeft + r.left - e.left, l.scrollTop + r.top - e.top), "fixed" !== o.getComputedStyle(l).position && o.scrollBy({ left: e.left, top: e.top, behavior: "smooth" })) : o.scrollBy({ left: r.left, top: r.top, behavior: "smooth" }) } else i.scrollIntoView.call(this, void 0 === arguments[0] || arguments[0]) } } function n(o, t) { this.scrollLeft = o, this.scrollTop = t } function f(o) { if (null === o || "object" != typeof o || void 0 === o.behavior || "auto" === o.behavior || "instant" === o.behavior) return !0; if ("object" == typeof o && "smooth" === o.behavior) return !1; throw new TypeError("behavior member of ScrollOptions " + o.behavior + " is not a valid value for enumeration ScrollBehavior.") } function p(o, t) { return "Y" === t ? o.clientHeight + c < o.scrollHeight : "X" === t ? o.clientWidth + c < o.scrollWidth : void 0 } function a(t, l) { var e = o.getComputedStyle(t, null)["overflow" + l]; return "auto" === e || "scroll" === e } function d(t) { var l, e, i, c, n = (s() - t.startTime) / r; c = n = n > 1 ? 1 : n, l = .5 * (1 - Math.cos(Math.PI * c)), e = t.startX + (t.x - t.startX) * l, i = t.startY + (t.y - t.startY) * l, t.method.call(t.scrollable, e, i), e === t.x && i === t.y || o.requestAnimationFrame(d.bind(o, t)) } function h(l, e, r) { var c, f, p, a, h = s(); l === t.body ? (c = o, f = o.scrollX || o.pageXOffset, p = o.scrollY || o.pageYOffset, a = i.scroll) : (c = l, f = l.scrollLeft, p = l.scrollTop, a = n), d({ scrollable: c, method: a, startTime: h, startX: f, startY: p, x: e, y: r }) } } "object" == typeof exports && "undefined" != typeof module ? module.exports = { polyfill: o } : o() }();
+    </script>
+    <script lang="javascript">
+        var notesCount = 0;
+        var slidesCount = 0;
+        var currentNoteIndex = 0;
+        var isUserScroll = false;
+
+        function setup() {
+            processMath();
+            notesCount = document.querySelectorAll('.part').length;
+            slidesCount = document.querySelectorAll('.tp-slide').length;
+            window.addEventListener('resize', onResize);
+            window.addEventListener("scroll", onScroll);
+            window.addEventListener('wheel', onMouseWheel);
+            onResize();
+
+            var parts = document.querySelectorAll('.part'), i;
+            for (i = 0; i < parts.length; ++i) {
+                parts[i].dataset.index = i;
+                parts[i].addEventListener("click", function () {
+                    setNoteIndex(parseInt(this.dataset.index, 0), true,true);
+                });
+            }
+
+            var slides = document.querySelectorAll('.tp-slide');
+            for (i = 0; i < slides.length; ++i) {
+                var slideParts = slides[i].querySelectorAll('.part'), j;
+                for (j = 0; j < slideParts.length; ++j) {
+                    slideParts[j].dataset.slideIndex = i;
+                    if (slideParts[j].classList.contains("slide-content")) {
+                        if (slideParts[j].classList.contains("is-empty") == false) {
+                            slideParts[j].style.backgroundColor = interpolateColor(slidesCount, i, 0.3);
+                        }
+                    }
+                }
+                var slideNumber = slides[i].querySelectorAll('.slide-number'), k;
+                for (k = 0; k < slideNumber.length; ++k) {
+                    slideNumber[k].style.backgroundColor = interpolateColor(slidesCount, i, 0.3);
+                }
+            }
+            
+        }
+
+        function reloadThumbnail(imageElement, imageSrc){
+            setTimeout(function () {
+              imageElement.src = imageSrc + '?' + (new Date()).getTime()
+            }, 200)
+            delayedSyncScroll();
+        }
+
+        function delayedSyncScroll(){
+            var current = document.querySelector(".current");
+            setTimeout(() => { scrollElement(current); }, 500);
+        }
+        
+        
+        function setPartClass(element, className) {
+            element.classList.remove("current");
+            element.classList.remove("previous");
+            element.classList.remove("next");
+            element.classList.remove("past");
+            element.classList.remove("future");
+            element.classList.add(className);
+        }
+
+        function scrollElement(element) {
+            if (element != null){
+                var elementRect = element.getBoundingClientRect();
+                var top = elementRect.top + window.pageYOffset - 60;
+                window.scroll({ top: top, behavior: 'smooth' });
+            }
+        }
+
+        function setInitialNoteIndex(newIndex){
+            setNoteIndex(newIndex,false, false);
+            var current = document.querySelector(".current");
+            setTimeout(() => { scrollElement(current); }, 500);
+        }
+        
+        function setNoteIndex(newIndex, scroll, notify) {
+            //console.log("setting note index:" + newIndex)
+            currentNoteIndex = newIndex;
+            var parts = document.querySelectorAll('.part'), i;
+            
+            for (i = 0; i < parts.length; ++i) {
+                if (i == currentNoteIndex) {
+                    setPartClass(parts[i], "current");
+                    //console.log("slidecount",slidesCount, "slideindex", parts[i].dataset.slideIndex);
+                    document.documentElement.style.setProperty('--SCROLL-THUMB-COLOR', interpolateColor(slidesCount, parts[i].dataset.slideIndex, 0.8));
+                    if (scroll == true) {
+                        scrollElement(parts[i]);
+                    }
+                } else {
+                    if (i < currentNoteIndex) {
+                        if (i == currentNoteIndex - 1) {
+                            setPartClass(parts[i], "previous");
+                        } else {
+                            setPartClass(parts[i], "past");
+                        }
+                    } else {
+                        if (i == currentNoteIndex + 1) {
+                            setPartClass(parts[i], "next");
+                        } else {
+                            setPartClass(parts[i], "future");
+                        }
+                    }
+                }
+            }
+            
+            var slides = document.querySelectorAll('.tp-slide');
+            var noteIndex = 0;
+            
+            for (i = 0; i < slides.length; ++i) {
+                var slideParts = slides[i].querySelectorAll('.part'), j;
+                var currentPassed = false;
+                for (j = 0; j < slideParts.length; ++j) {
+                    if (noteIndex == newIndex){
+                        slides[i].classList.remove("non-current-slide");
+                        slides[i].classList.add("current-slide");
+                        currentPassed = true;
+                    }else{
+                        if (currentPassed == false){
+                            slides[i].classList.remove("current-slide");
+                            slides[i].classList.add("non-current-slide");
+                        }
+                    }
+                    noteIndex += 1;
+                }
+            }
+            if (notify == true){
+                window.webkit.messageHandlers.noteIndexChanged.postMessage(newIndex);
+            }
+            
+        }
+
+        function focusFirstVisibleNote() {
+            var parts = document.querySelectorAll('.part'), i;
+            for (i = 0; i < parts.length; ++i) {
+                var elementRect = parts[i].getBoundingClientRect();
+                if (elementRect.top > 50) {
+                    if (currentNoteIndex != i) {
+                        setNoteIndex(i, false,true);
+                    }
+                    return;
+                }
+            }
+        }
+
+        function onMouseWheel(e) {
+            isUserScroll = true;
+        }
+
+        function onScroll(e) {
+            if (isUserScroll == true) {
+                isUserScroll = false;
+                focusFirstVisibleNote();
+            }
+        }
+
+
+        function onResize() {
+            return;
+            let contentWidth = window.innerWidth * 0.8 - 40;
+            let fontSize = contentWidth / 80 * 2.7;
+            document.body.style.fontSize = fontSize + "px";
+            //setNoteIndex(currentNoteIndex,true);
+        }
+
+        function interpolateColor(preTotal, index, alpha) {
+            let total = Math.max(10, preTotal);
+            let reds = [71.0, 207, 255.0, 255.0];
+            let greens = [177.0, 72.0, 134.0, 191];
+            let blues = [255.0, 255.0, 134.0, 0.0];
+            let lowerBound = Math.floor(index / total * 3.0);
+            let percent = (index / total * 3.0) % 1;
+            if (lowerBound >= (reds.length - 1)) {
+                return `rgba(${reds[3]}, ${greens[3]}, ${blues[3]}, ${alpha})`;
+            }
+            let red = reds[lowerBound] + percent * (reds[lowerBound + 1] - reds[lowerBound])
+            let green = greens[lowerBound] + percent * (greens[lowerBound + 1] - greens[lowerBound])
+            let blue = blues[lowerBound] + percent * (blues[lowerBound + 1] - blues[lowerBound])
+            return `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+        }
+
+        window.onload = function () {
+            setup();
+        }
+
+        function processMath(){
+            document.querySelectorAll("span.math, span.inlinemath").forEach((span) => {
+              if (!span.classList.contains("katex-rendered")) {
+                var macros = {};
+                var delimiters = [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\(", right: "\\)", display: false},
+                  {left: "$", right: "$", display: false},
+                  {left: "\\[", right: "\\]", display: true}
+                ];
+                var mathExpression = span.innerText;
+                var math = "";
+                var display = false;
+                for (var delimiter of delimiters) {
+                  if (mathExpression.startsWith(delimiter.left) && mathExpression.endsWith(delimiter.right)) {
+                    math = mathExpression.substr(delimiter.left.length, mathExpression.length - delimiter.left.length - delimiter.right.length)
+                    display = delimiter.display;
+                    break;
+                  }
+                }
+                if (math.length == 0){
+                    math = mathExpression;
+                    display = false;
+                }
+                if (math.length > 0) {
+                  katex.render(math, span, {
+                    displayMode: display,
+                    throwOnError: false,
+                    trust: true,
+                    macros: macros
+                  })
+                  if (display == true){
+                    if (span !== null && span.parentNode !== null){
+                        span.parentNode.style["width"] = "100%";
+                    }
+                }
+                }
+                span.classList.add("katex-rendered");
+              }
+            });
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

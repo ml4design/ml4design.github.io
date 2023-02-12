@@ -10,11 +10,8 @@ nav_order: 1
 
 ## Preparatory Reading and Video Material
 
-- Watch the following video
+- Watch the video [IDE Design and AI](https://www.youtube.com/watch?v=l3BBir7Dljc)
  
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=l3BBir7Dljc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen></iframe>
-
 - [Design for AI Symposium 2022](https://www.tudelft.nl/en/ide/news/conferences-and-symposia/design4ai-symposium)
   - Inspirational videos from the 2022 Design for AI symposium. What can Design do for AI? 
 - [What is the role of an AI Designer?](https://amandalinden.medium.com/what-is-the-role-of-an-a-i-designer-6943711046ec)
@@ -29,6 +26,7 @@ allowfullscreen></iframe>
 
 ## Lecture Slides
 
+- [Lecture 1 Slides - **Work in Progress**]({{site.baseurl}}/assets/presentations/Lecture-1/Lecture1.htm) (Web)
 - [Lecture 1 Slides (OLD, 2021/2022)]({{site.baseurl}}/assets/slides/ML4D-L1.pdf) (PDF - 52Mb)
 
 ## Lecture Notes
