@@ -10,7 +10,7 @@ grand_parent: "Tutorials"
 - [Tutorial](#tutorial)
   - [Recap](#recap)
   - [Task 3: Imperfect Dataset](#task-3-imperfect-dataset)
-  - [Task 4 \& 5 - Preparation](#task-4--5---preparation)
+  - [Task 4 & 5 - Preparation](#task-4--5---preparation)
   - [Task 4: Noisy Image](#task-4-noisy-image)
   - [Task 5: Evaluation](#task-5-evaluation)
     - [Why evaluation is important?](#why-evaluation-is-important)
@@ -26,10 +26,10 @@ In the preparation, we emphasized the crucial significance of the background noi
 We have also raised a query regarding the requirement of background classes in image classification tasks. The answer to this question is clear - it is essential to include the background class for image classification. Without it, the background scene may be mistakenly identified as one of the classes defined, such as scissors or pens.
 
 Let's conduct an experiment using Teachable Machine. Our aim is to differentiate between a marker and a pen. As evidenced in the accompanying image, the machine performs exceptionally well even when the pen is not present in the original dataset.
-![Test Result](./images/1-recap-performance.png)
+![Test Result]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/1-recap-performance.png)
 
 But, let's consider the scenario where there is no pen or marker available. We can observe that the background has been forecasted as a marker with 80% confidence, but is that accurate?
-![Test Result without the background class](./images/1-recap-without_background.png)
+![Test Result without the background class]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/1-recap-without_background.png)
 
 This raises an issue for us, regarding how the model will perform if the dataset we supply is inadequate or flawed. How can we address misclassifications resulting from these imperfections?
 
@@ -39,26 +39,26 @@ Here, we primarily focus on four issues that result in imperfect datasets: missi
 1. **Missing labels**: If some examples in the dataset do not have corresponding labels, the model may not be able to learn the correct relationships between the data and the labels, leading to reduced performance.
 
     As outlined in the recap, the model we trained predicted the background scene as a marker if the background class was not defined. However, resolving this issue can be straightforward, by simply adding the missing classes to the original dataset.
-     ![Test Result with the background class](./images/2-task_3-missing_label.png)
+     ![Test Result with the background class]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/2-task_3-missing_label.png)
     
 2. **Inconsistent labels**: If the labels in the dataset are inconsistent or incorrect, the model may learn incorrect relationships between the data and the labels, leading to inaccurate predictions.
 
     Let's examine the outcome if we include marker images within the pen class. The model will no longer be able to accurately predict whether the input image represents a pen or a marker.
-    ![Inconsistent labels](./images/2-task_3-inconsistent_label.png)
+    ![Inconsistent labels]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/2-task_3-inconsistent_label.png)
 
     How can we resolve the inaccuracies in predictions caused by inconsistent labels? A straightforward approach is data cleaning, where we remove or fix the inconsistent labels in the dataset to enhance the quality of the data.
 
 3. **Incomplete dataset**: If the dataset does not contain enough examples or data points, the model may not be able to learn the patterns in the data, leading to underfitting or overfitting.
    
     In this scenario, we have constructed a dataset consisting of only two images, one representing a marker and the other representing a pen. It becomes evident that the model struggles to predict the class to which the image belongs, owing to the limited training data. The lack of sufficient examples results in a model that lacks the ability to effectively learn the patterns and relationships between the data and the labels.
-    ![Incomplete dataset](./images/2-task_3-incomplete_dataset.png)
+    ![Incomplete dataset]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/2-task_3-incomplete_dataset.png)
 
     The solution to the problem of limited training data is quite straightforward. By including additional images in the dataset, the model will have a larger sample set from which to learn, allowing it to better comprehend the patterns and correlations between the data and the labels.
 
 4. **Imbalanced dataset**: If the dataset is imbalanced, with more examples of one class than others, the model may learn to prioritize that class, leading to biased predictions.
 
     We have constructed a database consisting of 34 images of markers and only 1 image of a pen. The result is clear, the model has a tendency to always predict that the input image is a marker. This is due to the fact that the model is heavily biased towards the marker class, as it has been exposed to 34 examples of markers compared to just 1 example of a pen. 
-    ![Incomplete dataset](./images/2-task_3-imbalanced_dataset.png)
+    ![Incomplete dataset]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/2-task_3-imbalanced_dataset.png)
     
     This highlights the issue of imbalanced datasets and the need for a balanced distribution of classes in order to train a fair and accurate model. To resolve this issue, the solution is straightforward: simply add additional data to the classes that have insufficient samples. This will ensure that the model has a more diverse and representative training set, leading to better performance and more accurate predictions.
 
@@ -67,7 +67,7 @@ Here, we primarily focus on four issues that result in imperfect datasets: missi
 > - **Non-representative data**: If the dataset is not representative of the target population, the model may not be able to generalize to new data, leading to reduced performance.
 
 ## Task 4 & 5 - Preparation
-The aim of the following tasks is to distinguish between emergency vehicles and normal vehicles, utilizing a subset of [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m). Please fork the code on Replit at https://replit.com/@chaofanas/teachable-machine.
+The aim of the following tasks is to distinguish between emergency vehicles and normal vehicles, utilizing a subset of [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m). Please fork the code on Replit at [https://replit.com/@machine-learning-for-design/teachable-machine](https://replit.com/@machine-learning-for-design/teachable-machine).
 
 > Hint: You will need to install several packages, including opencv-python, keras, tensorflow, and scikit-learn. If Replit does not install the packages automatically, please copy the following code into the replit console.
 
@@ -80,9 +80,9 @@ The replit repository includes three folders, including:
 - dataset: The folder contains data from the [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m) and has two subdirectories, one for the training data (train) and the other for the testing data (test).
 - library: The folder includes a file named "teachable_machine.py" which provides functions that can be utilized in the main script "main.py."
 - model: The folder holds the obtained Teachable Machine model (keras_model.h5), the corresponding class labels (labels.txt), and model project file (project.tm).
-  - The trained model could be accessed at https://teachablemachine.withgoogle.com/models/fVdKoKYt6/;
-  - Also, if you desire to re-create the model on the Teachable Machine website, you can upload the model project file (project.tm) to https://teachablemachine.withgoogle.com/train/.
-  - For information on how to export or download the Teachable Machine Model, please refer to the tutorial available at https://www.youtube.com/watch?v=n-zeeRLBgd0&ab_channel=ExperimentswithGoogle.
+  - The trained model could be accessed at [https://teachablemachine.withgoogle.com/models/fVdKoKYt6/](https://teachablemachine.withgoogle.com/models/fVdKoKYt6/);
+  - Also, if you desire to re-create the model on the Teachable Machine website, you can upload the model project file (project.tm) to [https://teachablemachine.withgoogle.com/train/](https://teachablemachine.withgoogle.com/train/).
+  - For information on how to export or download the Teachable Machine Model, please refer to the tutorial available at [https://www.youtube.com/watch?v=n-zeeRLBgd0&ab_channel=ExperimentswithGoogle](https://www.youtube.com/watch?v=n-zeeRLBgd0&ab_channel=ExperimentswithGoogle).
   
 The "main.py" script is the core of Tasks 5 and 6, encompassing the introduction of noise to images and metrics to assess the performance of the Teachable Machine model.
 
@@ -91,7 +91,7 @@ We have discovered the consequences of constructing a dataset in an incorrect ma
 
 1. **Noise**: Here, we simplify the image noise into a salt-and-pepper noise. Salt-and-pepper noise, also known as impulse noise, is a form of noise sometimes seen in digital images. This noise can be caused by sharp and sudden disturbances in the image signal. It presents itself as sparsely occurring white and black pixels, shown in the following image.
 
-    ![noise](./images/3-task_4-noise.png)
+    ![noise]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/3-task_4-noise.png)
 
     Please first remove the comment symbols from the following lines of code, and then adjust the value of "amount" to observe how the image will change:
 
@@ -106,7 +106,7 @@ We have discovered the consequences of constructing a dataset in an incorrect ma
 
 2. **Brightness**: Brightness can also significantly impact the accuracy of image classification. If the images are too bright or too dark, it can lead to over-exposure or under-exposure, causing loss of important details in the image. This can result in the model being unable to accurately identify the features in the image, leading to misclassifications.
 
-    ![noise](./images/3-task_4-brightness.png)
+    ![noise]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/3-task_4-brightness.png)
 
     Please first remove the comment symbols from the following lines of code, and then adjust the value of "beta" to observe how the image will change:
 
@@ -121,7 +121,7 @@ We have discovered the consequences of constructing a dataset in an incorrect ma
 
 3. **Partial Image**: Partial images can significantly impact the accuracy of image classification. A partial image may contain only a portion of the object of interest and can be misleading to the classifier. The classifier may not have enough information to make an accurate prediction, resulting in a false positive or false negative.
 
-    ![noise](./images/3-task_4-partial.png)
+    ![noise]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/3-task_4-partial.png)
 
     Please first remove the comment symbols from the following lines of code, and then adjust the value of "percentage" to observe how the image will change:
 
@@ -152,7 +152,7 @@ Evaluation is the process of measuring the performance of a machine learning mod
 ### What metrics we could use to evaluate model performance?
 > Question: Throughout Tasks 1 to 4, we manually uploaded images to assess the model's accuracy. However, are there any metrics that can help us to evaluate the performance of a model in a systematic manner? 
 
-There are various evaluation metrics used in machine learning, that help to provide a comprehensive view of the model's performance. If you would like to find more information about evaluation metrics: https://en.wikipedia.org/wiki/Confusion_matrix
+There are various evaluation metrics used in machine learning, that help to provide a comprehensive view of the model's performance. If you would like to find more information about evaluation metrics: [https://en.wikipedia.org/wiki/Confusion_matrix](https://en.wikipedia.org/wiki/Confusion_matrix)
 
 The goal of this sub-task is to assess the performance of the Teachable Machine model that was trained in Task 4. To refresh our memory, the task scenario involves differentiating between emergency and normal vehicles.
 
@@ -208,4 +208,4 @@ To create a visualization of the confusion matrix based on the results, the skle
 
 The visualized confusion matrix is shown in the following image. 
 
-![confusion matrix](./images/4-task_5-confusion_matrix.png)
+![confusion matrix]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/4-task_5-confusion_matrix.png)

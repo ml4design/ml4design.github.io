@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Tutorial"
+title: "Preparation"
 has_children: false
 nav_order: 1
 parent: "Tutorial 1b: Teachable Machine"
@@ -26,13 +26,14 @@ Building your own model with Teachable Machine is an excellent way to learn abou
 
 ## Introduction of Teachable Machine
 An introduction video for Teachable Machine:
-[![Introduction](https://teachablemachine.withgoogle.com/assets/img/contentpage/home/poster.jpg)](https://www.youtube.com/embed/T2qQGqZxkD0)
+<!-- [![Introduction](https://teachablemachine.withgoogle.com/assets/img/contentpage/home/poster.jpg)](https://www.youtube.com/embed/T2qQGqZxkD0) -->
+<iframe width="500" height="281" src="https://www.youtube.com/embed/T2qQGqZxkD0" title="Teachable Machine 2.0: Making AI easier for everyone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 > Question: How does Teachable Machine work?
 
-> Hint: Teachable Machine uses transfer learning, which is a simplified version of deep learning. This allows users to train effective machine learning models with limited training data, making it possible for beginners to create models even if they don't have a lot of data to work with. More details could be found at https://codelabs.developers.google.com/tensorflowjs-transfer-learning-teachable-machine#0
+> Hint: Teachable Machine uses transfer learning, which is a simplified version of deep learning. This allows users to train effective machine learning models with limited training data, making it possible for beginners to create models even if they don't have a lot of data to work with. More details could be found at [https://codelabs.developers.google.com/tensorflowjs-transfer-learning-teachable-machine#0](https://codelabs.developers.google.com/tensorflowjs-transfer-learning-teachable-machine#0)
 
-In this preparation, we will assist you to become acquainted with Teachable Machine. Please open the following link (https://teachablemachine.withgoogle.com/). The link will direct you to the website shown in the following picture, and press the button "Get Started".
+In this preparation, we will assist you to become acquainted with Teachable Machine. Please open the following link ([https://teachablemachine.withgoogle.com/](https://teachablemachine.withgoogle.com/)). The link will direct you to the website shown in the following picture, and press the button "Get Started".
 ![Start Page]({{site.baseurl}}/assets/images/teachable-machine/images-Preparation/1-front_page.png)
 
 Before attending the tutorial, complete the tasks listed in the following subsections. We will discuss the results at the beginning of the tutorial session. In the upcoming tasks, we will tackle two different types of classification - image classification and audio classification. The image classification task will be represented by a red frame, while the audio classification task will be represented by a green frame. 
@@ -80,6 +81,6 @@ This following tutorial is originated from [Snap, Clap, Whistle](https://medium.
 In this preparation, we have gained an understanding of how to use Teachable Machine for both image and audio classification. We have learned how to build and train models that are capable of recognizing patterns and objects within these two data formats. By following this preparation, we now have the skills and knowledge to create custom machine learning models that are tailored to specific use cases.
 
 ## Extra Resources
-- Frequently asked questions: https://teachablemachine.withgoogle.com/faq
-- Teachable Machine Tutorials: https://www.youtube.com/playlist?list=PLJfHZtseuscuTQfodmFnbZ3rBgCWsRT9t
-- Predict poses with Teachable Machine: https://medium.com/@warronbebster/teachable-machine-tutorial-head-tilt-f4f6116f491
+- Frequently asked questions: [https://teachablemachine.withgoogle.com/faq](https://teachablemachine.withgoogle.com/faq)
+- Teachable Machine Tutorials: [https://www.youtube.com/playlist?list=PLJfHZtseuscuTQfodmFnbZ3rBgCWsRT9t](https://www.youtube.com/playlist?list=PLJfHZtseuscuTQfodmFnbZ3rBgCWsRT9t)
+- Predict poses with Teachable Machine: [https://medium.com/@warronbebster/teachable-machine-tutorial-head-tilt-f4f6116f491](https://medium.com/@warronbebster/teachable-machine-tutorial-head-tilt-f4f6116f491)

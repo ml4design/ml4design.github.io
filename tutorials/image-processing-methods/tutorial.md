@@ -3,7 +3,7 @@ layout: default
 title: "Tutorial"
 has_children: false
 nav_order: 2
-parent: "Tutorial 1: Image Processing Methods for IPPSs"
+parent: "Tutorial 1a: Image Processing Methods for IPPSs"
 grand_parent: "Tutorials"
 ---
 
