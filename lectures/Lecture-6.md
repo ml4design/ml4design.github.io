@@ -19,7 +19,7 @@ nav_order: 6
 
 ## Lecture Slides
 
-- [Lecture 6 Slides]({{site.baseurl}}/assets/slides/ML4D-L6.pdf) (PDF - 6 Mb)
+- [Lecture 6 Slides (OLD, 2021/2022)]({{site.baseurl}}/assets/slides/ML4D-L6.pdf) (PDF - 6 Mb)
 
 ## Lecture Notes
 
