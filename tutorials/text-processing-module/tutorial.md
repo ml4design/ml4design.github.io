@@ -2,7 +2,7 @@
 layout: default
 title: "Tutorial"
 has_children: false
-nav_order: 2
+nav_order: 3
 parent: "Tutorial 2: Text Processing"
 grand_parent: "Tutorials"
 ---

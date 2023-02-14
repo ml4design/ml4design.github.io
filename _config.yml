@@ -1,4 +1,5 @@
 # theme: just-the-docs
+#theme: "just-the-docs" # quotation marks are required for windows platform
 remote_theme: pmarsceill/just-the-docs
 
 title: ML4Design

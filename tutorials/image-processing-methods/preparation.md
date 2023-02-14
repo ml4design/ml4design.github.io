@@ -3,7 +3,7 @@ layout: default
 title: "Preparation"
 has_children: false
 nav_order: 1
-parent: "Tutorial 1: Image Processing Methods for IPPSs"
+parent: "Tutorial 1a: Image Processing Methods for IPPSs"
 grand_parent: "Tutorials"
 ---
 # Preparation
