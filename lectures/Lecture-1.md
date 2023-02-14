@@ -26,8 +26,7 @@ nav_order: 1
 
 ## Lecture Slides
 
-- [Lecture 1 Slides - **Work in Progress**]({{site.baseurl}}/assets/presentations/Lecture-1/Lecture1.htm) (Web)
-- [Lecture 1 Slides (OLD, 2021/2022)]({{site.baseurl}}/assets/slides/ML4D-L1.pdf) (PDF - 52Mb)
+- [Lecture 1 Slides]({{site.baseurl}}/assets/presentations/Lecture-1/Lecture1.htm) (Web)
 
 ## Lecture Notes
 
