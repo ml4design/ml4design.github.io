@@ -30,7 +30,7 @@ nav_order: 1
 
 ## Lecture Notes
 
-__Work in Progress__
+- [Lecture 1 Notes (Work-in-progress)]({{site.baseurl}}/assets/notes/Lecture-1/Lecture-1) (Web)
 
 ## Additional Reading Material
 
