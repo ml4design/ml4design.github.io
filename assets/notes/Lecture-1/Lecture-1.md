@@ -5,6 +5,7 @@
 Version 1.1
 Date: 14/02/202
 Author: Alessandro Bozzon
+
 ---
 
 ## Why should you care about Machine Learning?
