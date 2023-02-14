@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="@@base@@" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="engine/main.css" />
+    <link rel="stylesheet" href="theme/newyork.css" />
+    <link rel="stylesheet" href="engine/katex/katex.min.css" />
+    <!--<link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />-->
+    <style>
+    :root{
+--logo: ;
+--darkaccent1color: #FFC400;
+--lightaccent1color: #FFC400;
+--accent2: #43aa8b;
+--accent3: #f9c74f;
+--accent4: #90be6d;
+--accent5: #f8961e;
+--accent6: #577590;
+--lighttitletextcolor: #FFC400;
+--darktitletextcolor: #000;
+--lightbodytextcolor: #FFF;
+--darkbodytextcolor: #000;
+--lightbackgroundcolor: #ffffff;
+--darkbackgroundcolor: #000000;
+--bodyfont: inter;
+--titlefont: inter;
+} 
+
+    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="engine/print.css"
+      media="print"
+    />
+  </head>
+
+  <body class="responsive">
+    <div class="reveal">
+      <div class="slides"><section class="variable-size-headings has-header dark cover-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">1</div></div>
+      <div class="layout-cover" style="width: 100%; font-size: 0.953rem;">
+        <div style=""><h1 id="machinelearningfordesign">Machine Learning for Design</h1>
+
+<p>Lecture 1</p>
+
+<p>Introduction to Machine Learning. <em>Part 1</em></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">2</div></div>
+      <div class="layout-title" style="width: 100%; font-size: 0.953rem;">
+        <div style=""><h2 id="whyshouldyoucareaboutmachinelearning">Why should you care about Machine Learning?</h2>
+
+<h3 id="part1">Part 1</h3></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">3</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="aiisthenewelectricity">AI is the new electricity</h3>
+
+<div class="single-image-wrapper"><img src="images/NG-AI-New-Electricity.png" class=" size-contain image-filter-grayscale position-center-top"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">4</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="whereisartificialintelligence">Where is artificial Intelligence?</h3>
+
+<div class="single-image-wrapper"><img src="images/MIRO-2122.png" class=" image-filter-grayscale position-center-top"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark grid-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">5</div></div>
+      <div class="layout-grid grid-items-3 media-grid" style="width: 100%; font-size: 0.719rem;">
+        <div style=""><ul>
+<li>Autonomous vehicles
+
+<ul>
+<li>from Roomba to Self-driving cars</li>
+<li>In stores, warehouses, production lines, streets, living rooms</li>
+</ul></li>
+<li>More and more consumer products and appliances
+
+<ul>
+<li>Thermostats, Security Cameras, Fridges</li>
+</ul></li>
+</ul></div><div style=""><ul>
+<li>Content production and consumption applications
+
+<ul>
+<li>Social media, Amazon, Netflix etc.</li>
+</ul></li>
+<li>Chatbots</li>
+<li>In-store automation and smarter shopping</li>
+<li>Optimised supply chains</li>
+<li>Energy grid optimisation</li>
+<li>...</li>
+</ul></div><div style=""><h3 id="whereisartificialintelligence">Where is artificial Intelligence?</h3>
+
+<p><img src="images/smartbrush.png" class=" position-center-center"></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">6</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <img src="images/stats1.png" class=" size-contain position-center-center" style="">
+        <div style=""><div class="single-image-wrapper"><img src="images/stats2.png" class=" size-contain position-center-center"></div><p></p>
+
+<p>2021 enterprise trends in machine learning (Algorithmia, 2021)</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image title-container present has-dark-background fitted" data-background-image="images/definitions.png" data-state="background-opacity-forty background-filter-grayscale" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">7</div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="somedefinitions">Some Definitions</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-footnotes has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">8</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.766rem;">
+        <div style=""><h3 id="intelligence">Intelligence</h3></div>
+        <div style=""><blockquote class="is-single-quote"><div class="line"></div>
+<p>Mental quality that consists of the abilities to learn from experience, adapt to new situations, understand and handle abstract concepts, and use knowledge to manipulate one’s environment.<sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup> </p>
+<div class="line"></div></blockquote></div>
+      </div>
+      <div class="footnotes">
+<ol>
+
+<li id="fn1">
+<p>Encyclopaedia Britannica <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p>
+</li>
+
+</ol>
+</div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">9</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="ourdefinitionofintelligence">Our definition of <em>Intelligence</em></h3></div>
+        <div style=""><blockquote class="is-single-quote"><div class="line"></div>
+<p>Intelligence measures an agent’s ability to achieve goals in a wide range of environments.</p>
+<div class="line"></div></blockquote></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">10</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="artificialintelligence">Artificial Intelligence</h3></div>
+        <div style=""><p>Intelligence demonstrated by machines</p>
+
+<p>Computer programs that can emulate <em>physical</em> and/or <em>cognitive</em> human capabilities</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">11</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="strongvs.weakai">Strong vs. Weak AI</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">12</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.813rem;">
+        <div style=""><h4 id="strongartificialintelligence"><mark>Strong</mark> Artificial Intelligence</h4></div>
+        <div style=""><p>AI that can do everything we humans can do, and possibly much more</p>
+
+<p>Also called <em>Artificial General Intelligence</em> (AGI) or <em>human-level</em> intelligence</p>
+
+<pre><code class="hljs asciidoc"><span class="hljs-bullet">- </span>The AI we see in movies
+</code></pre>
+
+<p><strong>No AI program has been created yet that could be considered an AGI</strong> </p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">13</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="weakintelligence"><mark>Weak</mark> Intelligence</h4></div>
+        <div style=""><p>Narrow AI</p>
+
+<p>AI specialised in well-defined tasks.</p>
+
+<p>For example, <em>speech recognition</em>, <em>chess-playing</em>, <em>autonomous driving</em></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-footnotes has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">14</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><h3 id="learning">Learning</h3></div>
+        <div style=""><p>Any process by which a system improves performance from experience <sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></p>
+
+<p>The ability to perform a task in a situation that has never been encountered before</p>
+
+<p><mark>Learning = generalisation</mark></p></div>
+      </div>
+      <div class="footnotes">
+<ol>
+
+<li id="fn1">
+<p>Herbert Alexander Simon <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p>
+</li>
+
+</ol>
+</div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">15</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="cantintelligencebeprogrammed">Can't intelligence be programmed?</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-footnotes has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">16</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.906rem;">
+        <div style=""><h3 id="polanysparadox">Polany's Paradox</h3></div>
+        <div style=""><blockquote class="is-single-quote"><div class="line"></div>
+<p>“We can know more than we can tell... </p>
+
+<p>The skill of a driver cannot be replaced by a thorough schooling in the theory of the motorcar” <sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></p>
+<div class="line"></div></blockquote></div>
+      </div>
+      <div class="footnotes">
+<ol>
+
+<li id="fn1">
+<p>1 Michael Polanyi (1966) <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p>
+</li>
+
+</ol>
+</div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-footnotes has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">17</div></div>
+      <div class="layout-grid grid-items-3 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="whatisacat1">What is a cat?<sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></h4></div><img src="images/Cat1.png" class=" position-center-center" style=""><img src="images/Cat2.png" class=" position-center-top" style="">
+      </div>
+      <div class="footnotes">
+<ol>
+
+<li id="fn1">
+<p>Credits: Jonah Burlingame <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p>
+</li>
+
+</ol>
+</div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-footnotes has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">18</div></div>
+      <div class="layout-grid grid-items-3 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="whatisacat1">What is a cat?<sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></h4>
+
+<p>A cat has whiskers</p>
+
+<p>A cat is furry</p></div><img src="images/Cat1.png" class=" position-center-center" style=""><img src="images/Cat2.png" class=" position-center-top" style="">
+      </div>
+      <div class="footnotes">
+<ol>
+
+<li id="fn1">
+<p>Credits: Jonah Burlingame <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p>
+</li>
+
+</ol>
+</div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-footnotes has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">19</div></div>
+      <div class="layout-grid grid-items-3 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="whatisacat1">What is a cat?<sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></h4>
+
+<p>A cat has whiskers</p>
+
+<p>A cat is furry</p>
+
+<p><mark>But so are lions!</mark></p></div><img src="images/Cat1.png" class=" position-center-center" style=""><img src="images/Cat3.png" class=" position-center-center" style="">
+      </div>
+      <div class="footnotes">
+<ol>
+
+<li id="fn1">
+<p>Credits: Jonah Burlingame <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p>
+</li>
+
+</ol>
+</div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-footnotes has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">20</div></div>
+      <div class="layout-grid grid-items-3 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="whatisacat1">What is a cat?<sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></h4>
+
+<p>A cat has whiskers</p>
+
+<p>A cat is furry</p>
+
+<p>A cat is small</p></div><img src="images/Cat1.png" class=" position-center-center" style=""><img src="images/Cat2.png" class=" position-center-top" style="">
+      </div>
+      <div class="footnotes">
+<ol>
+
+<li id="fn1">
+<p>Credits: Jonah Burlingame <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p>
+</li>
+
+</ol>
+</div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-footnotes has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">21</div></div>
+      <div class="layout-grid grid-items-3 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="whatisacat1">What is a cat?<sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></h4>
+
+<p>A cat has whiskers</p>
+
+<p>A cat is furry</p>
+
+<p>A cat is small</p>
+
+<p><mark>But so are koalas</mark></p></div><img src="images/Cat1.png" class=" position-center-center" style=""><img src="images/Cat4.png" class=" position-center-center" style="">
+      </div>
+      <div class="footnotes">
+<ol>
+
+<li id="fn1">
+<p>Credits: Jonah Burlingame <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p>
+</li>
+
+</ol>
+</div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-footnotes has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">22</div></div>
+      <div class="layout-grid grid-items-3 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="whatisacat1">What is a cat?<sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></h4>
+
+<p>A cat has whiskers</p>
+
+<p>A cat is furry</p>
+
+<p>A cat is small</p>
+
+<p>A cat does not climb trees</p></div><img src="images/Cat1.png" class=" position-center-center" style=""><img src="images/Cat2.png" class=" position-center-top" style="">
+      </div>
+      <div class="footnotes">
+<ol>
+
+<li id="fn1">
+<p>Credits: Jonah Burlingame <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p>
+</li>
+
+</ol>
+</div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-footnotes has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">23</div></div>
+      <div class="layout-grid grid-items-3 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="whatisacat1">What is a cat?<sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></h4>
+
+<p>A cat has whiskers</p>
+
+<p>A cat is furry</p>
+
+<p>A cat is small</p>
+
+<p>A cat does not climb trees</p>
+
+<p><mark>well...</mark></p></div><img src="images/Cat1.png" class=" position-center-center" style=""><img src="images/Cat5.png" class=" position-right-center" style="">
+      </div>
+      <div class="footnotes">
+<ol>
+
+<li id="fn1">
+<p>Credits: Jonah Burlingame <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p>
+</li>
+
+</ol>
+</div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-footnotes has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">24</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><h3 id="machinelearning">Machine Learning</h3></div>
+        <div style=""><p>The field of study that gives computers the ability to learn without being explicitly programmed<sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></p>
+
+<p>Machine learning is the science (and art) of programming computers <strong>so they can learn from data</strong></p></div>
+      </div>
+      <div class="footnotes">
+<ol>
+
+<li id="fn1">
+<p>Arthur Samuel <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p>
+</li>
+
+</ol>
+</div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">25</div></div>
+      <div class="layout-grid grid-items-3 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="programming">Programming</h4>
+
+<p><img src="images/program.png" class=" size-contain position-center-center"></p>
+
+<p>Rules to detect a cat:</p>
+
+<pre><code class="hljs markdown"><span class="hljs-bullet">1.</span> Whiskers
+<span class="hljs-bullet">2.</span> Furry
+<span class="hljs-bullet">3.</span> Small
+</code></pre></div><img src="images/Cat1.png" class=" position-center-center" style=""><div style=""><h4 id="ml">ML</h4>
+
+<p><img src="images/ml.png" class=" size-contain position-center-center"></p>
+
+<p>Let me learn how a cat looks like from examples</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">26</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="functionsofamachinelearningsystem">Functions of a Machine Learning System</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">27</div></div>
+      <div class="layout-grid grid-items-4" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="descriptive">Descriptive</h4>
+
+<p>Explain what happened</p></div><div style=""><h4 id="predictive">Predictive</h4>
+
+<p>Predict what will happen</p></div><div style=""><h4 id="prescriptive">Prescriptive</h4>
+
+<p>Suggest/recommend actions to take</p></div><div style=""><h4 id="generative">Generative</h4>
+
+<p>(Semi) autonomously create new data</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">28</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.813rem;">
+        <div style=""><h3 id="deeplearning">Deep Learning</h3>
+
+<p>Deep Learning is a Machine Learning approach based on <em>neural networks</em> (NN)</p>
+
+<p>NN are machine learning algorithms in which processing nodes (neurons) are organized into layers</p>
+
+<p>Depth = number of layers</p></div>
+        <img src="images/deep-nn.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">29</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><h3 id="computervision">Computer Vision</h3>
+
+<p>High-level understanding of digital images or videos</p>
+
+<p>Also generation (e.g Stable Diffusion)</p>
+
+<p>An enabler for technology such as smart doorbells, self-driving cars, etc.</p></div>
+        <img src="images/yolo1-13492.gif" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">30</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 0.906rem;">
+        <div style="">
+          <h3 id="naturallanguageprocessing">Natural Language Processing</h3>
+
+<p>High-level understanding of language spoken and written by humans</p>
+
+<p>Also generation (e.g. ChatGPT)</p>
+
+<p>An enabler for technology like Siri or Alexa</p>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">31</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="thehardproblemsareeasyandtheeasyproblemsarehard">The hard problems are easy, and the easy problems are hard</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">32</div></div>
+      <div class="layout-title" style="width: 100%; font-size: 0.953rem;">
+        <div style=""><h2 id="whyshouldyoucareaboutmachinelearning">Why should you care about Machine Learning?</h2>
+
+<h3 id="part2">Part 2</h3></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-footnotes has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">33</div></div>
+      <div class="layout-default" style="width: 100%; font-size: 1rem;">
+        <div style=""><blockquote class="is-single-quote"><div class="line"></div>
+<p>The most profound technologies are those that disappear. They weave themselves into the fabric of everyday life until they are indistinguishable from it <sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup>.</p>
+<div class="line"></div></blockquote></div>
+      </div>
+      <div class="footnotes">
+<ol>
+
+<li id="fn1">
+<p>Mark Weiser, The Computer for the Twenty-First Century (Scientific American, 1991, pp. 66–75) <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p>
+</li>
+
+</ol>
+</div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">34</div></div>
+      <div class="layout-grid grid-items-4 media-grid" style="width: 100%; font-size: 1rem;">
+        <img src="images/zuck.gif" class=" size-contain position-center-center" style=""><img src="images/socialdilemma.png" class=" size-contain position-center-bottom" style=""><img src="images/Toeslag.png" class=" size-contain position-center-center" style=""><img src="images/Amazon.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">35</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.766rem;">
+        <div style=""><h3 id="whydoweneeddesignerstounderstandml">Why do we need Designers to understand ML?</h3>
+
+<p>Focus on purpose, not on outcomes.</p>
+
+<p>Asking "Why" questions</p>
+
+<p>Understanding and acknowledging diversity of stakeholders and values</p>
+
+<p>...</p></div>
+        <img src="images/hci.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">36</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h1 id="designforaivideoandpodcast">Design for AI video and Podcast</h1></div>
+        <div style=""><p><a href="https://www.youtube.com/watch?v=6EQF24MyCfY">Video</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=Qw8YAcsv250">Podcast</a></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">37</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="whatcandesignersdoformachinelearning">What can designers do <strong>for</strong> Machine Learning?</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark grid-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">38</div></div>
+      <div class="layout-grid grid-items-3 media-grid" style="width: 100%; font-size: 0.438rem;">
+        <div style=""><h4 id="humaneaitechnology">Humane AI+ technology</h4>
+
+<p><img src="images/ruinedbydesign.png" class=" position-center-center"></p></div><div style=""><h4 id="designtoolsforaistakeholders">Design tools for AI stakeholders</h4>
+
+<p><img src="images/designtools.png" class=" position-center-center"></p>
+
+<p>http://resolver.tudelft.nl/uuid:dabbfb49-4fbf-4ead-ab3d-e535572de4e7</p></div><div style=""><h4 id="designmldata">Design ML data</h4>
+
+<p><img src="images/excavating.png" class=" position-center-center"></p>
+
+<p><img src="images/imagenet.png" class=" position-center-center"></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">39</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="whatcandesignersdowithmachinelearning">What can designers do <strong>with</strong> Machine Learning?</h3></div>
+        <img src="images/MIRO-2122.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">40</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="memoryaugmentation">Memory Augmentation</h4>
+
+<p><a href="https://kind.io.tudelft.nl">Dr. Evangelos Niforatos</a></p>
+
+<div class="single-image-wrapper"><img src="images/glasses.pdf" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark title-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+        <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">41</div></div>
+        <div class="layout-title-image media-grid" style="width: 100%; font-size: 1rem;">
+          <div style=""><h4 id="sightaugmentation">Sight Augmentation</h4>
+
+<p><a href="https://www.letsenvision.com/">Envision Glasses</a></p></div>
+          <img src="images/envision.tiff" class=" size-contain position-center-center" style="">
+        </div>
+        <div class="footnotes"></div>
+        <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">42</div></div>
+      <div class="layout-grid grid-items-3 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="mlforfascinationandengagement">ML for Fascination and Engagement</h4>
+
+<p><a href="https://www.tudelft.nl/en/stories/articles/landshapes-made-to-feel-real">Frederik Ueberschär</a></p></div><img src="images/frederik1.gif" class=" size-contain position-center-center" style=""><img src="images/Frederik2.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">43</div></div>
+      <div class="layout-grid grid-items-3 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="interaction">Interaction</h4>
+
+<p><a href="https://experiments.withgoogle.com/experiments">Experiments with Google</a></p>
+
+<p>1612 and counting...</p></div><img src="images/interaction1.png" class=" size-contain position-center-center" style=""><img src="images/interaction2.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">44</div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="whatcanmachinelearningdofordesigners">What can Machine Learning do <strong>for</strong> designers?</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">45</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="co-create">Co-create</h4>
+
+<p><img src="images/AI-as-a-tool.tiff" class=" size-contain position-center-center"></p></div>
+        <video controls="" class=" size-contain position-center-center" style="" data-paused-by-reveal=""><source src="images/pizza-11738.mov"></video>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">46</div></div>
+      <div class="layout-grid grid-items-3 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="inspire">Inspire</h4>
+
+<p><a href="https://openai.com/blog/dall-e/">Dall-e</a></p></div><img src="images/dalle1.png" class=" size-contain position-center-center" style=""><img src="images/dalle2.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">47</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><h4 id="scaleup">Scale up!</h4>
+
+<p>Analysis of how parents perceive their baby, their behaviours towards their child, and thus understand how overprotection develops throughout childhood</p>
+
+<p>more than 300 stories, manually and NLP analysis</p></div>
+        <div style=""><p><a href="http://resolver.tudelft.nl/uuid:fd895415-c353-41d5-8430-f0a67fd40ad4">Thesis Document</a></p>
+
+<div class="single-image-wrapper"><img src="images/hosana.png" class=" size-contain position-center-center"></div><p></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">48</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><h4 id="scaleup">Scale up!</h4>
+
+<p>How to help designers, experts, and societal stakeholders work together with AI, to prepare, realise and evaluate design interventions?</p>
+
+<p>Goal: reduce design complexity for large-scale social interventions</p></div>
+        <div style=""><p><a href="https://www.tudelft.nl/ai/design-at-scale-lab">D@S Lab</a></p>
+
+<div class="single-image-wrapper"><img src="images/designscale.tiff" class=" size-contain position-center-center"></div><p></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">49</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><h4 id="understanddesign">Understand design</h4>
+
+<p>Using big data ... we experiment with artificial agency during complex system design processes</p>
+
+<p>We are exploring the form and use of novel design methods to address systemic design problems to create an AI Toolkit</p></div>
+        <div style=""><p><a href="https://www.di-lab.space">Design Intelligence lab</a></p>
+
+<div class="single-image-wrapper"><img src="images/dilab.png" class=" size-contain position-center-center"></div><p></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-footnotes has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">50</div></div>
+      <div class="layout-default" style="width: 100%; font-size: 0.906rem;">
+        <div style=""><h2 id="whyprogramming">Why Programming?</h2>
+
+<blockquote>
+<p>All design needs a medium. A designer in the age of computable technology also contends with programming, which the designer wields as a tool and canvas.<sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></p>
+</blockquote></div>
+      </div>
+      <div class="footnotes">
+<ol>
+
+<li id="fn1">
+<p>Ge Wang - Stanford <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p>
+</li>
+
+</ol>
+</div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">51</div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="debunkingsomemyths">Debunking some myths</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark caption-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">52</div></div>
+      <div class="layout-caption media-grid" style="width: 100%; font-size: 0.906rem;">
+        <img src="images/hinton.png" class=" size-contain position-center-center" style="">
+        <div style=""><p><strong>POLL</strong>: which one would you like to be your surgeon? </p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">53</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="expectations">Expectations</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">54</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <img src="images/gpt3-guardian.png" class=" size-contain position-center-center" style="">
+        <img src="images/pingpong.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">55</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><video controls="" class=" size-contain position-center-center" data-paused-by-reveal=""><source src="images/Geoff Hinton_ On Radiology.mp4"></video></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">56</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="reality">Reality</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">57</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><video controls="" class=" size-contain position-center-center" data-paused-by-reveal=""><source src="images/headball.mov"></video></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">58</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/zillow.png" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">59</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/bing1.jpeg" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">60</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/bing2.jpeg" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">61</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/bing3.jpeg" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">62</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/bing4.jpeg" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-footnotes has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">63</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><p>“48% of US consumers intend to buy at least one smart home device in 2018”<sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup> </p></div>
+        <div style=""><p>“23% of connected security system owners said they <strong>deactivate their system completely</strong> when they have guests over” </p></div>
+      </div>
+      <div class="footnotes">
+<ol>
+
+<li id="fn1">
+<p><a href="https://www.ooma.com/blog/survey-consumers-want-smart-home-security-that-doesnt-invade-privacy">Survey of 2000 US Consumers. Ooma</a> <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p>
+</li>
+
+</ol>
+</div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">64</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="aimlcanpredictthefuture">AI/ML can predict the future</h3></div>
+        <div style=""><p>AI/ML are “statistical parrots” 🦜 </p>
+
+<p>They are (very good) pattern recognition machine</p>
+
+<p>Garbage in - Garbage Out</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">65</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="aimlhasagency">AI/ML has agency</h3></div>
+        <div style=""><p>AI/ML are tools. </p>
+
+<p>People design and use them.</p>
+
+<p>And they change us!</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">66</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="aimlcanmagicallytransformapssovernight">AI/ML can magically transform a PSS overnight</h3></div>
+        <div style=""><p>Magically: maybe</p>
+
+<p>Overnight: No</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">67</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="mlengineeringdesignandengineeringiscomplex">ML Engineering Design and Engineering is Complex</h4>
+
+<p>2021 enterprise trends in machine learning (Algorithmia, 2021)</p></div>
+        <div style=""><div class="single-image-wrapper"><img src="images/stats3.png" class=" size-contain position-center-center"></div><p></p>
+
+<div class="single-image-wrapper"><img src="images/stats4.png" class=" size-contain position-center-center"></div><p></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">68</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="aimlcansolveanyproblem">AI/ML can solve any problem</h3></div>
+        <div style=""><p>AI/ML technologies are very flexible and powerful</p>
+
+<p>But they have very strict requirements </p>
+
+<p>And potentially harmful limitations</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">69</div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="courseorganisation">Course Organisation</h2>
+
+<h3 id="ml4design.com"><a href="https://ml4design.com">ml4design.com</a></h3></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">70</div></div>
+      <div class="layout-grid grid-items-6 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/alessandro.tiff" class=" size-contain position-center-center"></div><p></p>
+
+<p>Alessandro</p></div><div style=""><div class="single-image-wrapper"><img src="images/carlo.tiff" class=" size-contain position-center-center"></div><p></p>
+
+<p>Carlo</p></div><div style=""><div class="single-image-wrapper"><img src="images/vasileios.tiff" class=" size-contain position-center-center"></div><p></p>
+
+<p>Vasileios</p></div><div style=""><div class="single-image-wrapper"><img src="images/evangelos.tiff" class=" size-contain position-center-center"></div><p></p>
+
+<p>Evangelos</p></div><div style=""><div class="single-image-wrapper"><img src="images/denis.tiff" class=" size-contain position-center-center"></div><p></p>
+
+<p>Denis</p></div><div style=""><div class="single-image-wrapper"><img src="images/chaofan.png" class=" size-contain position-center-center"></div><p></p>
+
+<p>Chaofan</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">71</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/Calendar.png" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">72</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.766rem;">
+        <div style=""><ul>
+<li>Individual Exam (W3.10) - <strong>50%</strong> of your grade
+
+<ul>
+<li>Multiple choice + Open answers</li>
+<li>Exams from 21/22 available</li>
+<li>Example questions available every week</li>
+</ul></li>
+</ul></div>
+        <div style=""><ul>
+<li>Group Assignment - <strong>50%</strong> of your grade
+
+<ul>
+<li>Group portfolio - 80%
+
+<ul>
+<li>3 group assignments (one for each module)</li>
+<li>First 2 already available on the Wesite</li>
+</ul></li>
+<li>Individual Group Assessment - 20%
+
+<ul>
+<li>We will use Buddy Check</li>
+</ul></li>
+</ul></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">73</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="changesfrom20212022">Changes from 2021/2022</h3></div>
+        <div style=""><p>Redistribution of content</p>
+
+<p>More "design examples"</p>
+
+<p>Assignment 1 is a bit more complex</p>
+
+<p>Assignment 3 is a lot less complex</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">74</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.766rem;">
+        <div style=""><h3 id="workinprogress">Work in Progress!</h3>
+
+<ul>
+<li>Last year it went very well, but we are still experimenting
+
+<ul>
+<li>I am preparing lecture notes!</li>
+</ul></li>
+<li>Several topics are currently objects of research!
+
+<ul>
+<li>We don’t have all the answers all the time :)</li>
+</ul></li>
+</ul></div>
+        <div style=""><ul>
+<li>We appreciate your:
+
+<ul>
+<li><strong>Enthusiasm</strong> for adventuring into this new field</li>
+<li><strong>patience</strong>, if the course’s logistics is not perfect (yet)</li>
+<li><strong>feedback</strong>, to help us further improve the course</li>
+</ul></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">75</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="tools">Tools</h3>
+
+<ul>
+<li>Use <em>Discussion Lists</em> on Brightspace
+
+<ul>
+<li>Questions of general interest</li>
+<li>Interesting Articles</li>
+<li>Feedback</li>
+</ul></li>
+</ul></div>
+        <div style=""><ul>
+<li>Use MS Teams for
+
+<ul>
+<li>personal and urgent questions</li>
+<li>group communication</li>
+</ul></li>
+<li>Email for less urgent personal questions</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">76</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.672rem;">
+        <div style=""><h3 id="honourcode:permissivebutstrict">Honour Code: permissive but strict</h3>
+
+<p><strong>OK</strong> to discuss assignments with classmates</p>
+
+<p><strong>OK</strong> to use existing solutions as part of your projects/assignments. Clarify your contributions.</p>
+
+<p><strong>OK</strong> to publish your assignments portfolio after the course is over (we encourage that!)</p></div>
+        <div style=""><p><strong>NOT OK</strong> to ask someone to do assignments/projects for you</p>
+
+<p><strong>NOT OK</strong> to use ChatGPT (or similar) without clear attribution</p>
+
+<p><strong>NOT OK</strong> to copy solutions from classmates</p>
+
+<p><strong>NOT OK</strong> to pretend that someone’s solution is yours</p>
+
+<p><strong>NOT OK</strong> to post your assignment solutions online</p>
+
+<p><mark>ASK</mark> the teaching team if unsure</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">77</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.906rem;">
+        <div style=""><h2 id="todoweek1">To DO Week 1</h2>
+
+<p><mark>READ THE COURSE MANUAL</mark></p>
+
+<p>We will have another lecture on Friday 13.45</p>
+
+<p>Set-up tutorial on Friday 15.45</p></div>
+        <div style=""><p>Form Groups: Deadline Tuesday 21st EOB</p>
+
+<div class="single-image-wrapper"><img src="images/brightspace.png" class=" size-contain position-center-center"></div><p></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark cover-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">78</div></div>
+      <div class="layout-cover" style="width: 100%; font-size: 0.953rem;">
+        <div style=""><h1 id="machinelearningfordesign">Machine Learning for Design</h1>
+
+<p>Lecture 1</p>
+
+<p>Introduction to Machine Learning. <em>Part 1</em></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section></div>
+    </div>
+    <script src="engine/index.js"></script>
+    <!--<script src="engine/d3v4.min.js" charset="utf-8"></script>
+    <script src="engine/charts.min.js" charset="utf-8"></script>
+    <script src="engine/billboard.min.js"></script>-->
+    <script src="engine/pptxgen.min.js"></script>
+                                                   <script src="engine/pptx.js"></script>
+    <script>
+      Reveal.configure({
+        progress: true,
+        keyboard: true,
+        dependencies: [
+          {
+            src: "engine/highlight.js",
+            sync: true,
+            callback: function () {
+              hljs.initHighlightingOnLoad();
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>
