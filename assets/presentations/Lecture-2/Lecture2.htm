@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="@@base@@" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="engine/main.css" />
+    <link rel="stylesheet" href="theme/newyork.css" />
+    <link rel="stylesheet" href="engine/katex/katex.min.css" />
+    <!--<link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />-->
+    <style>
+    :root{
+--logo: ;
+--darkaccent1color: #FFC400;
+--lightaccent1color: #FFC400;
+--accent2: #43aa8b;
+--accent3: #f9c74f;
+--accent4: #90be6d;
+--accent5: #f8961e;
+--accent6: #577590;
+--lighttitletextcolor: #FFC400;
+--darktitletextcolor: #000;
+--lightbodytextcolor: #FFF;
+--darkbodytextcolor: #000;
+--lightbackgroundcolor: #ffffff;
+--darkbackgroundcolor: #000000;
+--bodyfont: inter;
+--titlefont: inter;
+} 
+
+    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="engine/print.css"
+      media="print"
+    />
+  </head>
+
+  <body class="responsive">
+    <div class="reveal">
+      <div class="slides"><section class="variable-size-headings has-header dark cover-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">1</div></div>
+      <div class="layout-cover" style="width: 100%; font-size: 0.953rem;">
+        <div style=""><h1 id="machinelearningfordesign">Machine Learning for Design</h1>
+
+<p>Lecture 2</p>
+
+<p>Introduction to Machine Learning. <em>Part 2</em></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">2</div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="themachinelearninglife-cycle">The Machine Learning Life-Cycle</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">3</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="cross-industrystandardprocessfordataminingcrisp-dmmethodology">Cross-Industry Standard Process for Data Mining (CRISP-DM) methodology</h3></div>
+        <img src="images/lifecycle.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">4</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="crisp-dminourcourse">CRISP-DM In our course</h3>
+
+<p><img src="images/lifecycle-annotated-2.png" class=" size-contain position-center-center"></p></div>
+        <img src="images/lifecycle-annotated-1.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">5</div></div>
+      <div class="layout-grid grid-items-3" style="width: 100%; font-size: 0.813rem;">
+        <div style=""><h3 id="problemspecification">Problem Specification</h3></div><div style=""><p>What is the problem owner hoping to accomplish and why? </p>
+
+<p>Why am I (being asked to) solve it?</p>
+
+<p>Am I the right person to solve this problem?</p></div><div style=""><p>What are the (psychological, societal, and environmental) repercussions of building this technology?</p>
+
+<p>Should this thing be built at all?</p>
+
+<p>What are the metrics of success?</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark grid-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">6</div></div>
+      <div class="layout-grid grid-items-3" style="width: 100%; font-size: 0.719rem;">
+        <div style=""><h3 id="dataunderstanding">Data Understanding</h3>
+
+<p><mark>Know your data!</mark></p></div><div style=""><p>Data need to be collected —&gt; Datasets</p>
+
+<p>What data is available?</p>
+
+<p>What data should be available, but isn’t?</p></div><div style=""><p>What population / system / process is your data representing? </p>
+
+<p>And what properties of such population / system / process are included (or excluded)?</p>
+
+<p>What biases (social, population, temporal) are present in your datasets?</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark grid-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">7</div></div>
+      <div class="layout-grid grid-items-4" style="width: 100%; font-size: 0.672rem;">
+        <div style=""><h3 id="datapreparation">Data Preparation</h3></div><div style=""><ul>
+<li><strong>Data integration</strong>
+
+<ul>
+<li>Extracting, transforming, and loading (ETL) data from disparate relevant databases and other data sources</li>
+<li>This step is most challenging when dealing with big data sources</li>
+</ul></li>
+</ul></div><div style=""><ul>
+<li><strong>Data cleaning</strong>
+
+<ul>
+<li>Filling missing values</li>
+<li>Transforming value types (e.g. binning)</li>
+<li>Dropping features that should not be considered</li>
+</ul></li>
+</ul></div><div style=""><ul>
+<li><strong>Feature engineering</strong>
+
+<ul>
+<li>Transform the data to derive new features</li>
+</ul></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">8</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.766rem;">
+        <div style=""><h3 id="modeling">Modeling</h3>
+
+<ul>
+<li><strong>Select</strong> a training algorithm</li>
+<li>Use it to <strong>find patterns</strong> in the training dataset</li>
+<li><strong>Generalize</strong> them to fit a statistical model</li>
+</ul></div>
+        <div style=""><ul>
+<li><strong>Enhance</strong> the model to satisfy additional objectives and constraints captured in the problem specification
+
+<ul>
+<li>e.g., increase reliability, mitigate biases, generate explanations</li>
+</ul></li>
+<li><strong>No free-lunch theorem</strong>
+
+<ul>
+<li>There is no one best machine learning algorithm for all problems and datasets</li>
+</ul></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">9</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/model-development-process.png" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">10</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="evaluation">Evaluation</h3>
+
+<ul>
+<li>Testing and validation of the model
+
+<ul>
+<li>Also against the problem specification requirements</li>
+</ul></li>
+</ul></div>
+        <div style=""><ul>
+<li>Performed on data not used for training
+
+<ul>
+<li><p>Hold out dataset </p>
+<img src="images/training-data-split.png" class=" size-contain position-center-center"></li>
+</ul></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">11</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="modelauditingriskmanagement">Model auditing/risk management</h4>
+
+<p><img src="images/eu-act.png" class=" size-contain position-center-center"></p></div>
+        <img src="images/pyramid-of-risks.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark grid-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">12</div></div>
+      <div class="layout-grid grid-items-3" style="width: 100%; font-size: 0.766rem;">
+        <div style=""><h3 id="deploymentandmonitoring">Deployment and monitoring</h3></div><div style=""><ul>
+<li>What data infrastructure will bring new data to the model?</li>
+<li>Will predictions be made in batch or one-by-one?</li>
+<li>How much latency is allowed?</li>
+<li>How will the user interact with the system?
+
+<ul>
+<li>Is there a problem here?</li>
+</ul></li>
+</ul></div><div style=""><ul>
+<li>Tools to monitor the model’s performance
+
+<ul>
+<li>And ensure it is operating as expected</li>
+</ul></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">13</div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="data">Data</h2>
+
+<h3 id="therawmaterial">The raw material</h3></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">14</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="data">Data</h3>
+
+<div class="single-image-wrapper"><img src="images/data-example.png" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">15</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.813rem;">
+        <div style=""><h3 id="typesoffeatureslabelvalues">Types of Features / Label Values</h3></div>
+        <div style=""><ul>
+<li><strong>Categorical</strong>
+
+<ul>
+<li>Named Data</li>
+<li>Can take numerical values, but no mathematical meaning</li>
+</ul></li>
+<li><strong>Numerical</strong>
+
+<ul>
+<li>-Measurements</li>
+<li>Take numerical values (discrete or continuous)</li>
+</ul></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">16</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="categoricalnominal">Categorical <strong>Nominal</strong></h4>
+
+<ul>
+<li>No order</li>
+<li>No direction</li>
+<li>e.g. marital status, gender, ethnicity</li>
+</ul></div>
+        <div style=""><h4 id="categoricalordinal">Categorical <strong>Ordinal</strong></h4>
+
+<ul>
+<li>Order</li>
+<li>Direction</li>
+<li>e.g., letter grades (<em>A</em>,<em>B</em>,<em>C</em>,<em>D</em>), ratings (<em>dislike</em>, <em>neutral</em>, <em>like</em>)</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">17</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="numericalinterval">Numerical <strong>Interval</strong></h4>
+
+<ul>
+<li>Difference between measurements</li>
+<li>No true zero or fixed beginning</li>
+<li>e.g., temperature (C or F), IQ, time, dates</li>
+</ul></div>
+        <div style=""><h4 id="numericalratio">Numerical <strong>Ratio</strong></h4>
+
+<ul>
+<li>Difference between measurements</li>
+<li>True zero exists</li>
+<li>e.g., temperature (K), age, height</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">18</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="datamodalities">Data Modalities</h3>
+
+<div class="single-image-wrapper"><img src="images/datamodalities.png" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark section-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">19</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 0.672rem;">
+        <div style="">
+          <h3 id="keydimensions">Key Dimensions</h3>
+
+<table>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+
+<thead>
+<tr>
+	<th><mark>Modality</mark></th>
+	<th><mark>Quantity</mark></th>
+	<th><mark>Quality</mark></th>
+	<th><mark>Freshness</mark></th>
+	<th><mark>Cost</mark></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>Structured</td>
+	<td>Number of records</td>
+	<td>Errors</td>
+	<td>Rate of collection</td>
+	<td>Acquisition</td>
+</tr>
+<tr>
+	<td>Semi-structured</td>
+	<td>Number of features</td>
+	<td>Missing data</td>
+	<td></td>
+	<td>Licensing</td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td>Bias</td>
+	<td></td>
+	<td>Cleaning and integrations</td>
+</tr>
+</tbody>
+</table>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">20</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="statictabulardata">Static Tabular Data</h3>
+
+<div class="single-image-wrapper"><img src="images/statictabulardata.png" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">21</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.766rem;">
+        <div style=""><h3 id="timeseries">Time Series</h3>
+
+<ul>
+<li>tabular data with <strong>time</strong> feature</li>
+<li>For instance
+
+<ul>
+<li>Sensor data, Stock market data</li>
+</ul></li>
+<li>Label is usually associated with a set of records
+
+<ul>
+<li>e.g. a continuous movement of the phone indicating an action</li>
+</ul></li>
+</ul></div>
+        <img src="images/timeseries.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">22</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/timefeature.png" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">23</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.672rem;">
+        <div style=""><h3 id="images">Images</h3>
+
+<ul>
+<li>Visual content acquired through cameras, scanners, etc.</li>
+<li>Each pixel in an image is a feature
+
+<ul>
+<li>But spatially and geometrically organised</li>
+<li>e.g., edges, corners</li>
+</ul></li>
+<li>Feature values are numerical values across channels
+
+<ul>
+<li>e.g., <em>R,G,B</em></li>
+</ul></li>
+<li>Dimensionality --&gt; <em>n x m</em></li>
+</ul></div>
+        <img src="images/images-are-numbers.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark caption-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">24</div></div>
+      <div class="layout-caption media-grid" style="width: 100%; font-size: 1rem;">
+        <img src="images/images-table.png" class=" size-contain position-center-center" style="">
+        <div style=""><p>More in <mark>Module 1</mark></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">25</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.625rem;">
+        <div style=""><h3 id="textualdocuments">Textual documents</h3>
+
+<ul>
+<li>Sequence of alphanumerical characters
+
+<ul>
+<li>Short: e.g. tweets</li>
+<li>Long: e.g Web documents, interview transcripts</li>
+</ul></li>
+<li>Features are (set of) words
+
+<ul>
+<li>Words are also syntactically and semantically organised</li>
+</ul></li>
+<li>Feature values are (set of) words occurences</li>
+<li>Dimensionality --&gt; at least dictionary size</li>
+</ul></div>
+        <img src="images/amazonreview.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark caption-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">26</div></div>
+      <div class="layout-caption media-grid" style="width: 100%; font-size: 1rem;">
+        <img src="images/text-table.png" class=" size-contain position-center-center" style="">
+        <div style=""><p>More in <mark>Module 2</mark></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">27</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 0.578rem;">
+        <div style="">
+          <h3 id="datasources">Data Sources</h3>
+
+<table>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+
+<thead>
+<tr>
+	<th><mark>Purposefully Collected Data</mark></th>
+	<th><mark>Administrative Data</mark></th>
+	<th><mark>Social Data</mark></th>
+	<th><mark>Crowdsourcing</mark></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>Survey</td>
+	<td>Call records</td>
+	<td>Web pages</td>
+	<td>Distributed sensing</td>
+</tr>
+<tr>
+	<td>Census</td>
+	<td>Financial transactions</td>
+	<td>Social Media</td>
+	<td>Implicit crowd work (e.g. captcha)</td>
+</tr>
+<tr>
+	<td>Economic Indicators</td>
+	<td>Travel Data</td>
+	<td>Apps</td>
+	<td>Micro-work platforms (e.g Amazon Mechanical Turk)</td>
+</tr>
+<tr>
+	<td>Ad-hoc sensing</td>
+	<td>GPS Data</td>
+	<td>Search Engines</td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">28</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 0.578rem;">
+        <div style="">
+          <h3 id="datasources">Data Sources</h3>
+
+<table>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+
+<thead>
+<tr>
+	<th><mark>Purposefully Collected Data</mark></th>
+	<th><mark>Administrative Data</mark></th>
+	<th><mark>Social Data</mark></th>
+	<th><mark>Crowdsourcing</mark></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td><em>Modality</em>: mostly structured</td>
+	<td><em>Modality</em>: mostly structured</td>
+	<td><em>Modality</em>: mostly semi-structured</td>
+	<td><em>Modality</em>: all</td>
+</tr>
+<tr>
+	<td><em>Quantity</em>: low</td>
+	<td><em>Quantity</em>: high</td>
+	<td><em>Quantity</em>: low</td>
+	<td><em>Quantity</em>: mid-low</td>
+</tr>
+<tr>
+	<td><em>Quality</em>: high</td>
+	<td><em>Quality</em>: high</td>
+	<td><em>Quality</em>: low</td>
+	<td><em>Quality</em>: mid</td>
+</tr>
+<tr>
+	<td><em>Freshness</em>: low</td>
+	<td><em>Freshness</em>: high</td>
+	<td><em>Freshness</em>: high</td>
+	<td><em>Freshness</em>: mid</td>
+</tr>
+<tr>
+	<td><em>Cost</em>: high</td>
+	<td><em>Cost</em>: high</td>
+	<td><em>Cost</em>: low</td>
+	<td><em>Cost</em>: mid-low</td>
+</tr>
+</tbody>
+</table>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">29</div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="categoriesofmachinelearning">Categories of Machine Learning</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">30</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="howdomachineslearn">How do machines learn?</h3>
+
+<div class="single-image-wrapper"><img src="images/model-development-process.png" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">31</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.766rem;">
+        <div style=""><h3 id="onmodels">On Models</h3>
+
+<blockquote>
+<p>A physical, mathematical, logical, or conceptual representation of a system, entity, phenomenon, or process</p>
+</blockquote></div>
+        <div style=""><ul>
+<li>A <strong>simple(r)</strong> representation of reality helping us understand how something works or will work.
+
+<ul>
+<li><strong>Not</strong> <strong>truthful</strong>, just a <strong>useful</strong> one</li>
+</ul></li>
+<li>The goal of models is to make a particular part or feature of the world more accessible to understand, define, quantify, visualise, or simulate</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">32</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><h3 id="examplesofmodels">Examples of models</h3>
+
+<p>Architecture plans</p>
+
+<p>Maps</p>
+
+<p>Music Sheet</p>
+
+<p>Mathematical laws of physics!</p>
+
+<p><mark>Machine Learning</mark> (statistical) Models </p></div>
+        <div style=""><div class="single-image-wrapper"><img src="images/music-sheet.png" class=" size-contain position-center-center"></div><p></p>
+
+<div class="single-image-wrapper"><img src="images/gravity.png" class=" size-contain position-center-center"></div><p></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">33</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.578rem;">
+        <div style=""><h4 id="scientificmodels">Scientific Models</h4>
+
+<ul>
+<li>GOAL: <mark>explain reality</mark></li>
+<li>Created to make predictions about the outcomes of future experiments
+
+<ul>
+<li>e.g., apples on the moon</li>
+</ul></li>
+<li>Tested against the <strong>outcome</strong></li>
+<li>If data from new experiments don’t agree, the model has to be modified/extended / refined
+
+<ul>
+<li>Falsifiability</li>
+</ul></li>
+<li>Scientific models should be <em>small</em> and <em>simple</em>.</li>
+<li>They should generalize phenomena observed in new ways.</li>
+</ul></div>
+        <img src="images/scientific-model.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">34</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.485rem;">
+        <div style=""><h4 id="mlmodels">ML Models</h4>
+
+<ul>
+<li>GOAL: <mark>describe the data</mark></li>
+<li>Designed to capture the <em>variability</em> in observational data by exploiting regularities/symmetries/redundancies</li>
+<li>A good ML model doesn't need to explain reality, it <strong>just describe data</strong></li>
+<li>They don’t need to be simple or transparent, or intelligible. Just <strong>accurate</strong>
+
+<ul>
+<li><em>Black box</em></li>
+</ul></li>
+<li>ML models may be large and complex.</li>
+<li>They should generalize to new data obtained in the same way as the training data
+
+<ul>
+<li>Same application context and data acquisition process</li>
+</ul></li>
+</ul></div>
+        <img src="images/ml-model.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">35</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/list-of-models.png" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">36</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.813rem;">
+        <div style=""><h3 id="supervisedlearning">Supervised Learning</h3>
+
+<ul>
+<li>Input: <strong>labeled</strong> data
+
+<ul>
+<li>Data + expected prediction</li>
+</ul></li>
+<li>During training, labels are used to associate patterns with outputs</li>
+<li>Learns how to make input-output <strong>predictions</strong></li>
+</ul></div>
+        <div style=""><ul>
+<li><em>Classification</em></li>
+<li><em>Regression</em></li>
+<li><em>Ranking</em></li>
+<li><em>Recommendation</em></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">37</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/supervised.png" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">38</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.953rem;">
+        <div style=""><h4 id="classification">Classification</h4>
+
+<ul>
+<li>Learn to output a <strong>category label</strong></li>
+<li>Binary
+
+<ul>
+<li>e.g. <em>Spam</em> / <em>not Spam</em>, <em>Cat</em> / <em>not cat</em></li>
+</ul></li>
+<li>Multi-class
+
+<ul>
+<li>e.g. <em>cat</em>, <em>dog</em>, <em>bird</em></li>
+</ul></li>
+</ul></div>
+        <img src="images/classification.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">39</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="regression">Regression</h4>
+
+<ul>
+<li>Learn to output one or more <strong>numbers</strong>
+
+<ul>
+<li>e.g., value of a share, number of stars in a review</li>
+</ul></li>
+</ul></div>
+        <img src="images/regression.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">40</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.953rem;">
+        <div style=""><h3 id="unsupervisedlearning">Unsupervised Learning</h3>
+
+<ul>
+<li>Input: <strong>unlabeled</strong> data</li>
+<li>The machine learns structures (patterns) from the data without human guidance</li>
+</ul></div>
+        <div style=""><ul>
+<li><em>Clustering</em></li>
+<li><em>Dimensionality Reduction</em> (e.g. Large Language Models)</li>
+<li><em>Anomaly detection&amp;</em></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">41</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/unsupervised.png" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">42</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="clustering">Clustering</h4>
+
+<div class="single-image-wrapper"><img src="images/clustering-example.png" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">43</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="dimensionalityreduction">Dimensionality Reduction</h4>
+
+<div class="single-image-wrapper"><img src="images/dimensionality-reduction.png" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">44</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 0.859rem;">
+        <div style="">
+          <h3 id="semi-supervisedlearning">Semi-Supervised Learning</h3>
+
+<p>Combination of <strong>supervised</strong> and <strong>unsupervised</strong> learning</p>
+
+<p>Few <strong>labeled</strong> data in the input are used to create <strong>noisy labeled data</strong></p>
+
+<p>With more labeled data, the machine learns how to make input-output <strong>predictions</strong></p>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">45</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/semi-supervised-example.png" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">46</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.906rem;">
+        <div style=""><h3 id="transferlearning">Transfer Learning</h3>
+
+<p>Often called <em>fine-tuning</em></p>
+
+<p>Reuse a model trained for one task is <strong>re-purposed</strong> (tuned) on a different but related task</p>
+
+<p>Useful in tasks lacking abundant data</p></div>
+        <img src="images/transfer-learning.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">47</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/transfer-learning-example.png" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">48</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 0.953rem;">
+        <div style="">
+          <h3 id="reinforcementlearning">Reinforcement Learning</h3>
+
+<p>Data about the <strong>environment</strong> and <strong>reward function</strong> as input</p>
+
+<p>The machine can perform <strong>actions</strong> influencing the environment</p>
+
+<p>The machine learns behaviours that result in <strong>greater reward</strong></p>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">49</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/reinforcement-example.png" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">50</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.766rem;">
+        <div style=""><h3 id="don’tforgetdomainexpertise">Don’t forget domain expertise</h3>
+
+<ul>
+<li>ML makes some tasks automatic, but we still need our brains</li>
+<li>More in <mark>Module 3</mark> and <mark>Module 4</mark></li>
+</ul></div>
+        <div style=""><ul>
+<li>Defining the prediction task</li>
+<li>Define the evaluation metrics</li>
+<li>Designing features</li>
+<li>Designing inclusions and exclusion criteria for the data</li>
+<li>Annotating (hand-labeling) training (and testing) data</li>
+<li>Select right model</li>
+<li>Error analysis</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark cover-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">51</div></div>
+      <div class="layout-cover" style="width: 100%; font-size: 0.953rem;">
+        <div style=""><h1 id="machinelearningfordesign">Machine Learning for Design</h1>
+
+<p>Lecture 2</p>
+
+<p>Introduction to Machine Learning. <em>Part 2</em></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section></div>
+    </div>
+    <script src="engine/index.js"></script>
+    <!--<script src="engine/d3v4.min.js" charset="utf-8"></script>
+    <script src="engine/charts.min.js" charset="utf-8"></script>
+    <script src="engine/billboard.min.js"></script>-->
+    <script src="engine/pptxgen.min.js"></script>
+                                                   <script src="engine/pptx.js"></script>
+    <script>
+      Reveal.configure({
+        progress: true,
+        keyboard: true,
+        dependencies: [
+          {
+            src: "engine/highlight.js",
+            sync: true,
+            callback: function () {
+              hljs.initHighlightingOnLoad();
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>

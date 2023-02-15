@@ -22,7 +22,8 @@ nav_order: 2
 
 ## Lecture Slides
 
-- [Lecture 2 Slides (OLD, 2021/2022)]({{site.baseurl}}/assets/slides/ML4D-L2.pdf) (PDF - 30 Mb)
+- [Lecture 2 Slides]({{site.baseurl}}/assets/presentations/Lecture-2/Lecture2.htm) (Web)
+- [Lecture 2 PDF]({{site.baseurl}}/assets/slides/ML4D-L2-2223.pdf) (PDF - 45Mb)
 
 ## Lecture Notes
 
