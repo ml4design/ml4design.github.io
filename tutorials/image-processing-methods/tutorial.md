@@ -69,7 +69,7 @@ Next, find the following line in the Python script. Replace the [PLACE_HOLDER] p
 
 <!-- |API_TOKEN = "[PLACE_HOLDER]"|  -->
 
-```plain
+```python
 API_TOKEN = "[PLACE_HOLDER]"
 ```
 More information about how to use the API can be found in the following page:
@@ -91,13 +91,13 @@ The tool should begin to install required packages automatically and then give y
 
 Seeing the above result means that the code is running correctly. The result is the output from a deployed machine learning model that is specified in the following line in the code:
 
-```plain
+```python
 API_URL = "https://api-inference.huggingface.co/models/google/vit-base-patch16-224"
 ```
 
 And the input image is specified in the following line in the code. It is a path that points to an image file, where you uploaded in the “data” folder on Replit.
 
-```plain
+```python
 my_image = "data/000000039769.jpeg"
 ```
 
@@ -188,4 +188,4 @@ Run the code again by clicking on the “Run” button at the top of the Replit 
 
 The model output is similar to the one that we got before, except that now we get an extra “box” field in the returned data, which means the location of an object in the image. For example, the first item in the array shows that the model predicts a bicycle at the location {'xmin': 333, 'ymin': 216, 'xmax': 522, 'ymax': 531} with probability 0.9970716238021851. The numbers in the “box” field mean pixel coordinates, with the top-left point of the image being the origin. So, “xmin” and “ymin” represent the top-left corner of the bounding box, and “xmax” and “ymax” represent the bottom-right corner of the bounding box.
 
-[Next: Assignments]({{site.baseurl}}/assignments/image-processing-methods/){: .btn .btn-purple }
+[Next: Tutorial 1b]({{site.baseurl}}/tutorials/teachable-machine-module/){: .btn .btn-purple }
