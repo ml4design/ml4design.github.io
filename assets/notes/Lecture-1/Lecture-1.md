@@ -1,6 +1,10 @@
-# Machine Learning for Design
-	Lecture 1
-	Introduction to Machine Learning. *Part 1*
+---
+layout: default
+title: Lecture 1 Notes
+nav_exclude: true
+---
+
+# Lecture 1: Lecture Notes
 
 Version 1.1
 Date: 14/02/202
