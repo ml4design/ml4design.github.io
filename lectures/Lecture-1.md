@@ -27,6 +27,7 @@ nav_order: 1
 ## Lecture Slides
 
 - [Lecture 1 Slides]({{site.baseurl}}/assets/presentations/Lecture-1/Lecture1.htm) (Web)
+- [Lecture 1 PDF]({{site.baseurl}}/assets/slides/ML4D-L1-2223.pdf) (PDF - 45Mb)
 
 ## Lecture Notes
 
