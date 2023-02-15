@@ -95,11 +95,11 @@ While writing code, you often need to organise pieces of code in separated files
 
 There are more buttons and functionalities on _Replit_. But this is all we need to know to get started. So let's jump in the first Python programming assignment!
 
-# Embed your code in Discourse
+<!-- # Embed your code in Discourse
 
 Note: To include your Replit directly into your post on Discourse, just paste the link of your Replit project and it will be automatically embedded in your post.
 {: .fs-5 .ls-10 .code-example .bg-yellow-000}
 
-![embed code in discourse]({{site.baseurl}}/assets/images/embed_example.gif)
+![embed code in discourse]({{site.baseurl}}/assets/images/embed_example.gif) -->
 
 <!-- [Next Step: Assignment 1 - Calculator]({{site.baseurl}}/computational-thinking/01-calculator){: .btn .btn-purple } -->

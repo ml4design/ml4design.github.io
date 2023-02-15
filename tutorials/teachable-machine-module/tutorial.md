@@ -70,12 +70,12 @@ Here, we primarily focus on four issues that result in imperfect datasets: missi
 The aim of the following tasks is to distinguish between emergency vehicles and normal vehicles, utilizing a subset of [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m). Please fork the code on Replit at [https://replit.com/@machine-learning-for-design/teachable-machine](https://replit.com/@machine-learning-for-design/teachable-machine).
 
 > Hint: You will need to install several packages, including opencv-python, keras, tensorflow, and scikit-learn. If Replit does not install the packages automatically, please copy the following code into the replit console.
-
+```shell
     pip install opencv-python
     pip install keras
     pip install tensorflow
     pip install scikit-learn
-
+```
 The replit repository includes three folders, including:
 - dataset: The folder contains data from the [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m) and has two subdirectories, one for the training data (train) and the other for the testing data (test).
 - library: The folder includes a file named "teachable_machine.py" which provides functions that can be utilized in the main script "main.py."
@@ -209,3 +209,5 @@ To create a visualization of the confusion matrix based on the results, the skle
 The visualized confusion matrix is shown in the following image. 
 
 ![confusion matrix]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/4-task_5-confusion_matrix.png)
+
+[Next: Assignments]({{site.baseurl}}/assignments/image-processing-methods/){: .btn .btn-purple }

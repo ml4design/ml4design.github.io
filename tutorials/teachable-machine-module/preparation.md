@@ -84,3 +84,6 @@ In this preparation, we have gained an understanding of how to use Teachable Mac
 - Frequently asked questions: [https://teachablemachine.withgoogle.com/faq](https://teachablemachine.withgoogle.com/faq)
 - Teachable Machine Tutorials: [https://www.youtube.com/playlist?list=PLJfHZtseuscuTQfodmFnbZ3rBgCWsRT9t](https://www.youtube.com/playlist?list=PLJfHZtseuscuTQfodmFnbZ3rBgCWsRT9t)
 - Predict poses with Teachable Machine: [https://medium.com/@warronbebster/teachable-machine-tutorial-head-tilt-f4f6116f491](https://medium.com/@warronbebster/teachable-machine-tutorial-head-tilt-f4f6116f491)
+
+
+[Next: Tutorial]({{site.baseurl}}/tutorials/teachable-machine-module/tutorial/){: .btn .btn-purple }
