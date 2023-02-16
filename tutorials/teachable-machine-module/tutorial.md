@@ -69,13 +69,8 @@ Here, we primarily focus on four issues that result in imperfect datasets: missi
 ## Task 4 & 5 - Preparation
 The aim of the following tasks is to distinguish between emergency vehicles and normal vehicles, utilizing a subset of [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m){:target="_blank"}. Please fork the code on Replit at [https://replit.com/@machine-learning-for-design/teachable-machine](https://replit.com/@machine-learning-for-design/teachable-machine){:target="_blank"}.
 
-> Hint: You will need to install several packages, including opencv-python, keras, tensorflow, and scikit-learn. If Replit does not install the packages automatically, please copy the following code into the replit console.
-```shell
-    pip install opencv-python
-    pip install keras
-    pip install tensorflow
-    pip install scikit-learn
-```
+> Hint: Replit is expected to install several packages automatically, which include opencv-python, keras, tensorflow, and scikit-learn. In case these packages are not installed automatically, click on the Run button. Our program will take care of installing any missed packages, and you need to wait until the installation process is finished before proceeding to the next step.
+
 The replit repository includes three folders, including:
 - dataset: The folder contains data from the [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m){:target="_blank"} and has two subdirectories, one for the training data (train) and the other for the testing data (test).
 - library: The folder includes a file named "teachable_machine.py" which provides functions that can be utilized in the main script "main.py."

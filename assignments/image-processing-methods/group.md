@@ -42,41 +42,44 @@ In the group assignment, you need to do the following tasks:
     > For example, you could use Teachable Machine to develop a computer vision model that can automatically detect if a car is parked correctly inside a parking slot. The model will be trained using images of cars parked in different slots under various lighting and weather conditions, and it should be able to accurately detect and analyze the images.
     > ![improper parking]({{site.baseurl}}/assets/images/teachable-machine/assignment/parking_slot.png)
 
-4. Design an application based on model observations
+4. Design an application based on the model observations
+    
+    Provide detailed application design, including its functionalities and user interface, in the context of public parking spaces.
     - **Hugging Face** model
-        > For exmaple, visualizing the distribution of bikes on a map may inform the municipality about where to put bike racks. 
+        > For example, visualize the distribution of bikes on a map may inform the municipality about where to put bike racks. 
     - Self-defined **Teachable Machine** model
-        > For example, visualizing the distribution of improper parking on a map may inform the municipality about where to arrange more parking slots or assign parking authorities.
+        > For example, visualize the distribution of improper parking on a map may inform the municipality about where to arrange more parking slots or assign parking authorities.
 
-    Quantifying the number of bike or cars in a region may help the municipality decide how large the parking space should be to accommodate the needs.
+    Quantifying the number of bikes or cars in a region may help the municipality decide how large the parking space should be to accommodate the needs.
 
 ## Deliverable
 
 Your final deliverable is the technical report that will be sent to the municipality to help them improve the design of the new scan car system. Always keep the design brief mentioned above in mind when writing the report. In the report, you need to explain how you completed the above-listed tasks and what the results are. <span style="color:red">**Specifically and importantly, your report MUST have the following sections, where we will assess your learning outcome based on the grading rubric at the end of this handout. Failing to have these sections will significantly and negatively impact your score.**</span>
 
-- **Summary**
+1. **Summary**
     - Provide a summary of what you did and your findings. Maximum 150 words.
 
-- **Data Collection and Processing**
+2. **Data Collection and Processing**
     - Explain how you collect the data. For example, where were the locations that you took the photos? When did you take the photos?
     Show what data you collect. For example, by including images in the report, providing a valid link (that is publicly accessible) to a repository such as GitHub or Google Drive.
     Show and explain how you process the data. For example, by including code in the report and explaining how the code works in a good detail.
 
-- **Model Capability Experiments and Reflections**
+3. **Model Capability Experiments and Reflections**
     - Describe the procedure of the experiments that you did to understand the capability of the model. For example, what are the images that you used in the experiment? What are the model outputs from these images? What are the aspects (e.g., lighting conditions, orientation and scale of the objects, etc.) that you considered during the experiment?
     - Describe your findings from the experiment and reflect on the model’s capability to process images with different conditions. For example, what happened to the images with many bikes crowded together? Is the model working when the photos are blurry?
 
-- **Problem Identification and Model Training Procedure**
+4. **Problem Identification and Model Training**
     - Describe the specific challenges and limitations of the problem which cannot be implemented in the provided Hugging Face model. For example, the Hugging Face model may not be sufficient to identify improper parking, making a Teachable Machine model necessary.
     - Describe the training procedure and the nature of the data utilized in the model, and assess how well the model performs. For example, determine the number of correct and incorrect identifications of improper parking in a set of parking images.
 
-- **Application Design**
-    - Describe how you design the application based on the observations of Hugging Face and Teachable Machine models. For example, 
-        - Develope a user interface where individuals can either take a picture or upload an image of public parking spots.
-        - Create a dataflow that transfers the collected images to the trained model in order to detect the number of cars, whether there is proper parking, and the presence of cars in the image.
-        - Decide how the application should react accordingly based on the identified observations. This may include generating a heat map displaying parking slot popularity or providing alerts for improper parking.
+5. **Application Design**
+    - Describe how you design the application based on the observations of Hugging Face and Teachable Machine models.
+        > The example structure could be as follows:
+        > - a user interface where individuals can either take a picture or upload an image of public parking spots.
+        > - a dataflow that transfers the collected images to the trained model in order to detect the number of cars, the presence of cars, and whether there is proper parking in the image.
+        > - a flowchart of how the application should react accordingly based on the identified observations. This may include generating a heat map displaying parking slot popularity or providing alerts for improper parking.
 
-- **Distribution of Group Collaboration**
+6. **Distribution of Group Collaboration**
     - Describe the distributions of effort in the groups. Make sure that you keep track of this information. It is not acceptable to simply say “all members work together” or “all members contributed equally”. If there are any problems with collaboration, please inform the course coordinator as soon as possible.
 
 
