@@ -31,16 +31,16 @@ An introduction video for Teachable Machine:
 
 > Question: How does Teachable Machine work?
 
-> Hint: Teachable Machine uses transfer learning, which is a simplified version of deep learning. This allows users to train effective machine learning models with limited training data, making it possible for beginners to create models even if they don't have a lot of data to work with. More details could be found at [https://codelabs.developers.google.com/tensorflowjs-transfer-learning-teachable-machine#0](https://codelabs.developers.google.com/tensorflowjs-transfer-learning-teachable-machine#0)
+> Hint: Teachable Machine uses transfer learning, which is a simplified version of deep learning. This allows users to train effective machine learning models with limited training data, making it possible for beginners to create models even if they don't have a lot of data to work with. More details could be found at [https://codelabs.developers.google.com/tensorflowjs-transfer-learning-teachable-machine#0](https://codelabs.developers.google.com/tensorflowjs-transfer-learning-teachable-machine#0){:target="_blank"}
 
-In this preparation, we will assist you to become acquainted with Teachable Machine. Please open the following link ([https://teachablemachine.withgoogle.com/](https://teachablemachine.withgoogle.com/)). The link will direct you to the website shown in the following picture, and press the button "Get Started".
+In this preparation, we will assist you to become acquainted with Teachable Machine. Please open the following link ([https://teachablemachine.withgoogle.com/](https://teachablemachine.withgoogle.com/){:target="_blank"}). The link will direct you to the website shown in the following picture, and press the button "Get Started".
 ![Start Page]({{site.baseurl}}/assets/images/teachable-machine/images-Preparation/1-front_page.png)
 
 Before attending the tutorial, complete the tasks listed in the following subsections. We will discuss the results at the beginning of the tutorial session. In the upcoming tasks, we will tackle two different types of classification - image classification and audio classification. The image classification task will be represented by a red frame, while the audio classification task will be represented by a green frame. 
 ![Task Selection]({{site.baseurl}}/assets/images/teachable-machine/images-Preparation/2-tasks.png)
 
 ## Task 1: How to use Teachable Machine - Image
-This following tutorial is originated from [Bananameter](https://medium.com/@warronbebster/teachable-machine-tutorial-bananameter-4bfffa765866).
+This following tutorial is originated from [Bananameter](https://medium.com/@warronbebster/teachable-machine-tutorial-bananameter-4bfffa765866){:target="_blank"}.
 
 ### How to Train it
 1. To train the machine, the first step involves defining the various categories or classes that it will learn to differentiate. In this instance, we will create two classes - one for pens and another for scissors. These classes form the basis for the machine's learning journey. By establishing these categories, we are giving the machine a clear direction on what it needs to identify and what features or patterns it should focus on.
@@ -56,7 +56,7 @@ This following tutorial is originated from [Bananameter](https://medium.com/@war
 ![Test Result]({{site.baseurl}}/assets/images/teachable-machine/images-Preparation/3-task_1-result.png)
 
 ## Task 2: How to use Teachable Machine - Audio
-This following tutorial is originated from [Snap, Clap, Whistle](https://medium.com/@warronbebster/teachable-machine-tutorial-snap-clap-whistle-4212fd7f3555).
+This following tutorial is originated from [Snap, Clap, Whistle](https://medium.com/@warronbebster/teachable-machine-tutorial-snap-clap-whistle-4212fd7f3555){:target="_blank"}.
 
 ### How to Train it
 1. This task at hand involves detecting snaps and claps from a mixture of background noises. This means that the machine will have to be trained to recognize certain patterns in audio inputs and distinguish between different sounds.
@@ -81,9 +81,9 @@ This following tutorial is originated from [Snap, Clap, Whistle](https://medium.
 In this preparation, we have gained an understanding of how to use Teachable Machine for both image and audio classification. We have learned how to build and train models that are capable of recognizing patterns and objects within these two data formats. By following this preparation, we now have the skills and knowledge to create custom machine learning models that are tailored to specific use cases.
 
 ## Extra Resources
-- Frequently asked questions: [https://teachablemachine.withgoogle.com/faq](https://teachablemachine.withgoogle.com/faq)
-- Teachable Machine Tutorials: [https://www.youtube.com/playlist?list=PLJfHZtseuscuTQfodmFnbZ3rBgCWsRT9t](https://www.youtube.com/playlist?list=PLJfHZtseuscuTQfodmFnbZ3rBgCWsRT9t)
-- Predict poses with Teachable Machine: [https://medium.com/@warronbebster/teachable-machine-tutorial-head-tilt-f4f6116f491](https://medium.com/@warronbebster/teachable-machine-tutorial-head-tilt-f4f6116f491)
+- Frequently asked questions: [https://teachablemachine.withgoogle.com/faq](https://teachablemachine.withgoogle.com/faq){:target="_blank"}
+- Teachable Machine Tutorials: [https://www.youtube.com/playlist?list=PLJfHZtseuscuTQfodmFnbZ3rBgCWsRT9t](https://www.youtube.com/playlist?list=PLJfHZtseuscuTQfodmFnbZ3rBgCWsRT9t){:target="_blank"}
+- Predict poses with Teachable Machine: [https://medium.com/@warronbebster/teachable-machine-tutorial-head-tilt-f4f6116f491](https://medium.com/@warronbebster/teachable-machine-tutorial-head-tilt-f4f6116f491){:target="_blank"}
 
 
 [Next: Tutorial]({{site.baseurl}}/tutorials/teachable-machine-module/tutorial/){: .btn .btn-purple }

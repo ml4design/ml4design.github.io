@@ -23,19 +23,19 @@ This section explains the tasks that we will give to you with the guidance of co
 
 ## Task 5
 
-In this task, we will teach you how to automate the image processing pipeline using Python and the Replit online tool [https://replit.com](https://replit.com). We will give you a script that can process an image using a deployed Hugging Face model. We will guide you through editing the script on Replit to make it work for the bike images that we will provide.
+In this task, we will teach you how to automate the image processing pipeline using Python and the Replit online tool [https://replit.com](https://replit.com){:target="_blank"}. We will give you a script that can process an image using a deployed Hugging Face model. We will guide you through editing the script on Replit to make it work for the bike images that we will provide.
 
 ![replit how to]({{site.baseurl}}/assets/images/coding-pipeline.png)
 
 The above figure shows the pipeline. The Python code and the bike image data sit on your coding environment, which is the Replit online tool in our case. Then, when running the code from Replit, the computer that hosts your code will request the Hugging Face API to send and process your data. Once the request is confirmed valid (for example, through the API token), the Hugging Face API will tell a deployed machine learning model to process your data. Finally, the Hugging Face API will collect the results returned by the model and return the results to your coding environment.
 
-First, [check the code on Replit](https://replit.com/@ML4Design/image-processing-tutorial). This repl contains the code and images that we want to use in this task. Press the fork button and it will copy the code and images to your own Replit project. 
+First, [check the code on Replit](https://replit.com/@ML4Design/image-processing-tutorial){:target="_blank"}. This repl contains the code and images that we want to use in this task. Press the fork button and it will copy the code and images to your own Replit project. 
 
 ![replit how to]({{site.baseurl}}/assets/images/fork_button.png)
 
 <!-- First, download the bike images from the link below. The bike images are in the “data/bike” folder. You should already have downloaded the data in the Preparation section. -->
 
- - The code and images can also be found here: [https://github.com/yenchiah/image-processing-tutorial](https://github.com/yenchiah/image-processing-tutorial)
+ - The code and images can also be found here: [https://github.com/yenchiah/image-processing-tutorial](https://github.com/yenchiah/image-processing-tutorial){:target="_blank"}
 
 <!-- Next, create a new project on Replit and name it “image-processing”, as shown in the following screenshot. Remember to use the “Python” template. -->
 
@@ -61,7 +61,7 @@ First, [check the code on Replit](https://replit.com/@ML4Design/image-processing
 
 Then, go to the following page to copy your Hugging Face API token. You should already have an API token ready, as indicated in the Preparation section.
 
- - Link to the API token: [https://huggingface.co/settings/token](https://huggingface.co/settings/token)
+ - Link to the API token: [https://huggingface.co/settings/token](https://huggingface.co/settings/token){:target="_blank"}
 
 ![replit how to]({{site.baseurl}}/assets/images/image18.png)
 
@@ -74,7 +74,7 @@ API_TOKEN = "[PLACE_HOLDER]"
 ```
 More information about how to use the API can be found in the following page:
 
- - [https://api-inference.huggingface.co/docs/python/html/quicktour.html](https://api-inference.huggingface.co/docs/python/html/quicktour.html)
+ - [https://api-inference.huggingface.co/docs/python/html/quicktour.html](https://api-inference.huggingface.co/docs/python/html/quicktour.html){:target="_blank"}
 
 After finishing the above steps, click the green “Run” button at the top of the Replit tool to run the script, as shown below:
 
@@ -148,7 +148,7 @@ In the Preparation section and also in the previous task, you have seen image cl
 
 First, go to the following page and use the same bike image that we showed in the previous task as the input of the model.
 
-- Link to the object detection model: [https://huggingface.co/facebook/detr-resnet-50](https://huggingface.co/facebook/detr-resnet-50)
+- Link to the object detection model: [https://huggingface.co/facebook/detr-resnet-50](https://huggingface.co/facebook/detr-resnet-50){:target="_blank"}
 
 The output should look similar to the screenshot below. Notice that, different from the task that you did before, this model gives bounding boxes with different colors. And each bounding box has a corresponding prediction, such as “bicycle” or “person”.
 

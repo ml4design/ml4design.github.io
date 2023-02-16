@@ -67,7 +67,7 @@ Here, we primarily focus on four issues that result in imperfect datasets: missi
 > - **Non-representative data**: If the dataset is not representative of the target population, the model may not be able to generalize to new data, leading to reduced performance.
 
 ## Task 4 & 5 - Preparation
-The aim of the following tasks is to distinguish between emergency vehicles and normal vehicles, utilizing a subset of [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m). Please fork the code on Replit at [https://replit.com/@machine-learning-for-design/teachable-machine](https://replit.com/@machine-learning-for-design/teachable-machine).
+The aim of the following tasks is to distinguish between emergency vehicles and normal vehicles, utilizing a subset of [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m){:target="_blank"}. Please fork the code on Replit at [https://replit.com/@machine-learning-for-design/teachable-machine](https://replit.com/@machine-learning-for-design/teachable-machine){:target="_blank"}.
 
 > Hint: You will need to install several packages, including opencv-python, keras, tensorflow, and scikit-learn. If Replit does not install the packages automatically, please copy the following code into the replit console.
 ```shell
@@ -77,12 +77,12 @@ The aim of the following tasks is to distinguish between emergency vehicles and 
     pip install scikit-learn
 ```
 The replit repository includes three folders, including:
-- dataset: The folder contains data from the [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m) and has two subdirectories, one for the training data (train) and the other for the testing data (test).
+- dataset: The folder contains data from the [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m){:target="_blank"} and has two subdirectories, one for the training data (train) and the other for the testing data (test).
 - library: The folder includes a file named "teachable_machine.py" which provides functions that can be utilized in the main script "main.py."
 - model: The folder holds the obtained Teachable Machine model (keras_model.h5), the corresponding class labels (labels.txt), and model project file (project.tm).
-  - The trained model could be accessed at [https://teachablemachine.withgoogle.com/models/fVdKoKYt6/](https://teachablemachine.withgoogle.com/models/fVdKoKYt6/);
-  - Also, if you desire to re-create the model on the Teachable Machine website, you can upload the model project file (project.tm) to [https://teachablemachine.withgoogle.com/train/](https://teachablemachine.withgoogle.com/train/).
-  - For information on how to export or download the Teachable Machine Model, please refer to the tutorial available at [https://www.youtube.com/watch?v=n-zeeRLBgd0&ab_channel=ExperimentswithGoogle](https://www.youtube.com/watch?v=n-zeeRLBgd0&ab_channel=ExperimentswithGoogle).
+  - The trained model could be accessed at [https://teachablemachine.withgoogle.com/models/fVdKoKYt6/](https://teachablemachine.withgoogle.com/models/fVdKoKYt6/){:target="_blank"};
+  - Also, if you desire to re-create the model on the Teachable Machine website, you can upload the model project file (project.tm) to [https://teachablemachine.withgoogle.com/train/](https://teachablemachine.withgoogle.com/train/){:target="_blank"}.
+  - For information on how to export or download the Teachable Machine Model, please refer to the tutorial available at [https://www.youtube.com/watch?v=n-zeeRLBgd0&ab_channel=ExperimentswithGoogle](https://www.youtube.com/watch?v=n-zeeRLBgd0&ab_channel=ExperimentswithGoogle){:target="_blank"}.
   
 The "main.py" script is the core of Tasks 5 and 6, encompassing the introduction of noise to images and metrics to assess the performance of the Teachable Machine model.
 
@@ -208,6 +208,6 @@ To create a visualization of the confusion matrix based on the results, the skle
 
 The visualized confusion matrix is shown in the following image. 
 
-![confusion matrix]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/4-task_5-confusion_matrix.png)
+![confusion matrix]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/4-task_5-confusion_matrix.png){:target="_blank"}
 
 [Next: Assignments]({{site.baseurl}}/assignments/image-processing-methods/){: .btn .btn-purple }
