@@ -27,7 +27,7 @@ There are many software development environments available. Each supports one or
 
 Thus, we will use [Replit](https://repl.it), a software development environment that you access directly from your favourite web browser. In the following video, we guide you through the functionalities of _Replit_ that you will use in this series of Python programming assignments. We also describe each functionality in the following sections.
 
-[TODO video hands-on guided tour]
+<!-- [TODO video hands-on guided tour] -->
 
 # Sign Up
 
