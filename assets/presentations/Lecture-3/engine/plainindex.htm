@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="@@base@@" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" media="all" href="normalize.css">
+    <link rel="stylesheet" media="all" href="core.css">
+    <link rel="stylesheet" media="all" href="style.css">
+    <link rel="stylesheet" href="katex/katex.min.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="content"></div>
+    <script src="katex/katex.min.js"></script>
+    <script>
+     function mediaLoaded(){
+         const documentIsReady = document.readyState === "complete";
+         const fontsAreLoaded = document.fonts.status === "loaded";
+         const imagesAreLoaded = Array.from(document.querySelectorAll("img")).every(
+           (img) => img.complete && img.naturalHeight
+         );
+
+         const videosAreLoaded = Array.from(document.querySelectorAll("video")).every(
+           (vid) => vid.readyState > 4
+         );
+         if (
+             documentIsReady &&
+             fontsAreLoaded &&
+             imagesAreLoaded &&
+             videosAreLoaded
+           ) {
+             return true;
+           }
+
+           return false;
+     }
+        
+     function processMath(){
+         document.querySelectorAll("span.math, span.inlinemath").forEach((span) => {
+           if (!span.classList.contains("katex-rendered")) {
+             var macros = {};
+             var delimiters = [
+               {left: "$$", right: "$$", display: true},
+               {left: "\\(", right: "\\)", display: false},
+               {left: "$", right: "$", display: false},
+               {left: "\\[", right: "\\]", display: true}
+             ];
+             var mathExpression = span.innerText;
+             var math = "";
+             var display = false;
+             for (var delimiter of delimiters) {
+               if (mathExpression.startsWith(delimiter.left) && mathExpression.endsWith(delimiter.right)) {
+                 math = mathExpression.substr(delimiter.left.length, mathExpression.length - delimiter.left.length - delimiter.right.length)
+                 display = delimiter.display;
+                 break;
+               }
+             }
+             if (math.length > 0) {
+               katex.render(math, span, {
+                 displayMode: display,
+                 throwOnError: false,
+                 trust: true,
+                 macros: macros
+               })
+               if (display == true){
+                 if (span !== null && span.parentNode !== null){
+                     span.parentNode.style["width"] = "100%";
+                 }
+             }
+             }
+             span.classList.add("katex-rendered");
+           }
+         });
+     }
+    </script>
+   </body>
+</html>
+
+

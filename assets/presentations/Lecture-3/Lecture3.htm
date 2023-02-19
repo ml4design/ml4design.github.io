@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="@@base@@" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="engine/main.css" />
+    <link rel="stylesheet" href="theme/newyork.css" />
+    <link rel="stylesheet" href="engine/katex/katex.min.css" />
+    <!--<link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />-->
+    <style>
+    :root{
+--logo: ;
+--darkaccent1color: #FFC400;
+--lightaccent1color: #FFC400;
+--accent2: #43aa8b;
+--accent3: #f9c74f;
+--accent4: #90be6d;
+--accent5: #f8961e;
+--accent6: #577590;
+--lighttitletextcolor: #FFC400;
+--darktitletextcolor: #000;
+--lightbodytextcolor: #FFF;
+--darkbodytextcolor: #000;
+--lightbackgroundcolor: #ffffff;
+--darkbackgroundcolor: #000000;
+--bodyfont: inter;
+--titlefont: inter;
+} 
+
+    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="engine/print.css"
+      media="print"
+    />
+  </head>
+
+  <body class="responsive">
+    <div class="reveal">
+      <div class="slides"><section class="variable-size-headings has-header dark cover-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">1</div></div>
+      <div class="layout-cover" style="width: 100%; font-size: 1rem;">
+        <div style=""><h1 id="machinelearningfordesign">Machine Learning for Design</h1>
+
+<p>Lecture 3</p>
+
+<p>Machine Learning for Images. <em>Part 1</em></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">2</div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="abitmoreonregressionandclassification">A bit more on regression and classification</h2>
+
+<h4 id="andyourveryfirstcontactwithdeepneuralnetworks">And your very first contact with (deep) neural networks</h4></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">3</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="linearregression">Linear Regression</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/LR1.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">4</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/LR2.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">5</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/LR3.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">6</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/LR4.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">7</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/LR5.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">8</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/LR6.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">9</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/LR7.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">10</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/LR8.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">11</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">12</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.813rem;">
+        <div style=""><h3 id="findingthebestparametervalues">Finding the best parameter values</h3>
+
+<ul>
+<li><mark>Training the model</mark></li>
+</ul></div>
+        <div style=""><ul>
+<li><strong>Gradient Descent</strong>: an algorithm to find the minimum point of a function</li>
+<li><strong>Hyperparameters</strong>: parameters of the Gradient Descent
+
+<ul>
+<li><em>Learning Rate</em>: speed of descent</li>
+<li><em>Epochs</em>: max number of steps</li>
+</ul></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">13</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <img src="images/training1.gif" class=" size-contain position-center-center" style="">
+        <img src="images/training2.gif" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/LR9.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">14</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">15</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="classification">Classification</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/Class1.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">16</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/Class2.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">17</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/Class3.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">18</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/Class4.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">19</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/Class5.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">20</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/Class6.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">21</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/Class7.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">22</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/Class8.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">23</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/Class9.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">24</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/Class10.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">25</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/Class11.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">26</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/Class12.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">27</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/Class13.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">28</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/DLNetwork.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">29</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/neurons.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">30</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/NN1.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">31</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/NN2.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">32</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/NN3.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">33</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/NN4.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">34</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/NN5.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">35</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/NN6.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">36</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/NN7.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">37</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/NN8.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">38</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">39</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.719rem;">
+        <div style=""><h3 id="fullyconnectedneuralnetwork">Fully connected Neural Network</h3>
+
+<p><img src="images/NNConnected.png" class=" size-contain position-center-center"></p></div>
+        <div style=""><ul>
+<li><strong>Hyperparameters</strong>
+
+<ul>
+<li>Learning rate</li>
+<li>Number of epochs</li>
+<li>Architecture
+
+<ul>
+<li>#layers, #nodes, activation functions</li>
+</ul></li>
+<li>Batch vs. mini-batch vs. stochastic gradient descent</li>
+<li>Regularization parameters:
+
+<ul>
+<li>Dropout probability p</li>
+</ul></li>
+</ul></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">40</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.578rem;">
+        <div style=""><h3 id="classifyingintomultipleclasses-softmaxfunction">Classifying into multiple classes - <em>Softmax</em> function</h3>
+
+<p><img src="images/softmax1.png" class=" size-contain position-center-center"></p></div>
+        <div style=""><div class="single-image-wrapper"><img src="images/softmax2.png" class=" size-contain position-center-center"></div><p></p>
+
+<ul>
+<li>Return a probability for each class
+
+<ul>
+<li>example C1= ADMITTED, C2 = NOT ADMITTED, C3 = NEW TEST</li>
+<li>p(C1) = 0.37, p(C2) = 0,21, p(C3) = 0,42</li>
+</ul></li>
+<li>We use the <em>Softmax</em> activation function for the output layer</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">41</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><p><a href="https://playground.tensorflow.org/">Tensorflow Playground</a></p>
+
+<div class="single-image-wrapper"><img src="images/tensor.png" class=" size-contain position-center-center"></div><p></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">42</div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="machinelearningandimages">Machine Learning and Images</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/Image1.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">43</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/Image2.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">44</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">45</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><h3 id="images">Images</h3>
+
+<p><img src="images/Image3.png" class=" size-contain position-center-center"></p></div>
+        <div style=""><ul>
+<li>Each pixel in an image is a <em>feature</em>
+
+<ul>
+<li>numerical
+
+<ul>
+<li>0 or 1 for <em>Black and White</em></li>
+<li>Between 0 and 255 for <em>greyscale</em></li>
+<li>16M values for <em>RGB</em></li>
+</ul></li>
+</ul></li>
+<li>Dimensionality -&gt; <em>n x m</em></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">46</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.813rem;">
+        <div style=""><h3 id="computervision">Computer Vision</h3>
+
+<p>Building algorithms that can “understand” the content of images and use it for other applications </p>
+
+<ul>
+<li>It is a “Strong AI” problem
+
+<ul>
+<li>signal-to-symbol conversion</li>
+<li>The <strong>semantic gap</strong></li>
+</ul></li>
+</ul></div>
+        <div style=""><p>A general-purpose vision system <strong>requires</strong></p>
+
+<ul>
+<li>Flexible, robust visual representation</li>
+<li>Updated and maintained</li>
+<li>Reasoning</li>
+<li>Interfacing with attention goals, and plans</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">47</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="whatspecifictaskscanwetrainacvsystemtoperform">What specific tasks can we train a CV system to perform?</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/Image4.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">48</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/Image5.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">49</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">50</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <img src="images/yolo1-13492.gif" class=" size-contain position-center-center" style="">
+        <img src="images/yolo2-22424.gif" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/image6.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">51</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/image7.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">52</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">53</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <img src="images/faceid1.png" class=" size-contain position-center-center" style="">
+        <img src="images/faceid2.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">54</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/image8.png" class=" position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">55</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <img src="images/googleobject.png" class=" size-contain position-center-center" style="">
+        <img src="images/delftdesignguide.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/image9.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">56</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">57</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <img src="images/Segmentation.png" class=" size-contain position-center-center" style="">
+        <img src="images/segmentation2.gif" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">58</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><p><a href="https://www.google.com/get/sunroof">Project Sunroof</a></p>
+
+<div class="single-image-wrapper"><img src="images/sunroof.png" class=" size-contain position-center-center"></div><p></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/image10.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">59</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">60</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <img src="images/scene1.png" class=" size-contain position-center-center" style="">
+        <img src="images/scene2.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/scene3.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">61</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/image11.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">62</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/image12.png" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">63</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/koala.gif" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">64</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">65</div></div>
+      <div class="layout-grid grid-items-4 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="stereolabszedcamera">Stereolabs ZED Camera</h4>
+
+<p><a href="https://www.stereolabs.com/docs/object-detection/">3D Object Detection</a></p>
+
+<p><a href="https://www.stereolabs.com/docs/body-tracking/">Body tracking</a></p>
+
+<p>Positional tracking</p></div><img src="images/camera.png" class=" size-contain position-center-center" style=""><img src="images/bodytracking.png" class=" size-contain position-center-center" style=""><img src="images/DismalImpartialKoodoo-mobile-22369.gif" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">66</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/image13.png" class=" position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/image14.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">67</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark cover-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">68</div></div>
+      <div class="layout-cover" style="width: 100%; font-size: 1rem;">
+        <div style=""><h1 id="machinelearningfordesign">Machine Learning for Design</h1>
+
+<p>Lecture 3</p>
+
+<p>Machine Learning for Images. <em>Part 1</em></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">69</div></div>
+      <div class="layout-default" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="credits">Credits</h4>
+
+<p><a href="http://16385.courses.cs.cmu.edu/spring2022/">CMU Computer Vision</a> course - Matthew O’Toole. </p>
+
+<p>Grokking Machine Learning. Luis G. Serrano. Manning, 2021</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section></div>
+    </div>
+    <script src="engine/index.js"></script>
+    <!--<script src="engine/d3v4.min.js" charset="utf-8"></script>
+    <script src="engine/charts.min.js" charset="utf-8"></script>
+    <script src="engine/billboard.min.js"></script>-->
+    <script src="engine/pptxgen.min.js"></script>
+                                                   <script src="engine/pptx.js"></script>
+    <script>
+      Reveal.configure({
+        progress: true,
+        keyboard: true,
+        dependencies: [
+          {
+            src: "engine/highlight.js",
+            sync: true,
+            callback: function () {
+              hljs.initHighlightingOnLoad();
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>

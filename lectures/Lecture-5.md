@@ -11,6 +11,10 @@ nav_order: 5
 ## Preparatory Reading Material
 
 - [The Social Impact of Natural Language Processing](https://aclanthology.org/P16-2096.pdf)
+- [The Tweet that Sank $100bn](https://blog.tobiasrevell.com/2023/02/15/box090-the-tweet-that-sank-100bn/)
+- [ReckonsGPT / Call My Bluffbot](https://petafloptimism.com/2023/02/19/reckonsgpt-call-my-bluffbot/)
+- [ChatGPT is everywhere. Here’s where it came from](https://www.technologyreview.com/2023/02/08/1068068/chatgpt-is-everywhere-heres-where-it-came-from/)
+- [ChatGPT is a blurry JPEG of the Web](https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web)
 
 ## Experience
 
