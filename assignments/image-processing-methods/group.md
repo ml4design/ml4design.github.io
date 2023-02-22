@@ -44,7 +44,7 @@ In the group assignment, you need to do the following tasks:
 
 4. Design an application based on the model observations
     
-    Provide detailed application design, including its functionalities and user interface, in the context of public parking spaces.
+    Provide detailed application design, including its functionalities and user interface, in the context of public parking spaces. (For example, provide visualized examples in Adobe XD or Figma).
     - **Hugging Face** model
         > For example, visualize the distribution of bikes on a map may inform the municipality about where to put bike racks. 
     - Self-defined **Teachable Machine** model
@@ -73,7 +73,7 @@ Your final deliverable is the technical report that will be sent to the municipa
     - Describe the training procedure and the nature of the data utilized in the model, and assess how well the model performs. For example, determine the number of correct and incorrect identifications of improper parking in a set of parking images.
 
 5. **Application Design**
-    - Describe how you design the application based on the observations of Hugging Face and Teachable Machine models.
+    - Describe how you design the application based on the observations of Hugging Face and Teachable Machine models. Provide visualized examples of how the application will look like.
         > The example structure could be as follows:
         > - a user interface where individuals can either take a picture or upload an image of public parking spots.
         > - a dataflow that transfers the collected images to the trained model in order to detect the number of cars, the presence of cars, and whether there is proper parking in the image.
