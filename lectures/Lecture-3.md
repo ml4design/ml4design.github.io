@@ -10,7 +10,7 @@ nav_order: 3
 
 ## Preparatory Reading Material
 
-- A good list of [videos showing application examples](https://chooch.ai/computer-vision/computer-vision-demo-videos/) of Computer Vision technology. 
+- A lomg list of Computer Vision [applications](https://viso.ai/applications/computer-vision-applications/). 
 
 ## Experience
 
