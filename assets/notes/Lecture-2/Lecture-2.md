@@ -6,8 +6,8 @@ nav_exclude: true
 
 # Lecture 2: Lecture Notes
 
-Version 1.0
-Date: 21/02/2023
+Version 1.1
+Date: 28/02/2023
 Author: Alessandro Bozzon
 
 ---
@@ -170,9 +170,28 @@ There are four classes: *Unacceptable*, *high*, *limited* and *minimal* risk. An
 
 To give some examples. The recommender system of Netflix will probably fall in the *minimal risk*  application. In the worst-case scenario, if the system does not work well, a user receives a recommendation for a movie they do not like: tough luck! 
 
-Risks are considered *Limited* when the malfunctioning of the system might have effects that have some consequence, but they are not too problematic. For instance, a system that is designed to classify whether content is inappropriate fails 5% of the time. There is some risk: people can be offended or traumatized. But as long as these mistakes can be corrected in the future, it is fine. *High risk* are those systems where peoples’ lives (or livelihood or well-being) are in danger. And here, the requirements are very strict. Think for instance, of decision support systems for deciding if someone should receive a mortgage; or applications in law enforcement or fraud prevention. 
+Risks are considered *Limited* when the malfunctioning of the system might have effects that have some consequence, but they are not too problematic. For instance, a system that is designed to classify whether content is inappropriate fails 5% of the time. There is some risk: people can be offended or traumatized. But as long as these mistakes can be corrected in the future, it is fine. AI chatbots, spam filters, and customer management sustems fall into this category. 
 
-*Unacceptable risks* happen in those situations where under no circumstances should it not be allowed for an A.I. system to operate. Some people believe, for instance, that we should not be allowed to design a system for military purposes. Of course, other people disagree. 
+ *High risk* are those systems that "either pose a health and safety risk or pose a risk to people’s fundamental rights". And here, the requirements are very strict. The legislation includes in this category: 
+
+- biometric identification and categorisation of natural persons
+- management and operation of critical infrastructure
+- education and vocational training
+- employment, worker management and access to self-employment (e.g. recruitment systems)
+- access to and enjoyment of essential public and private services and benefits
+- law enforcement
+- migration, asylum and border control management
+- administration of justice and democratic processes
+
+Note that the list of critical areas are still in discussion, and currently subject to variations. For instance, the Parliament is currently considering placing conversational and art-generating AI tools such as ChatGPT and DALL-E-2 in the high-risk category. 
+
+*Unacceptable risks* happen in those situations where under no circumstances should it not be allowed for an A.I. system to operate. These include:
+
+- "subliminal, manipulative, or exploitative techniques causing harm"
+- "Real-time, remote, biometric identification systems used in public spaces for law enforcement"
+- All forms of social scoring
+
+Some people believe, for instance, that we should not be allowed to design a system for military purposes. Of course, other people disagree. 
 
 ---
 
