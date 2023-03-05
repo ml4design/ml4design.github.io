@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="@@base@@" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1" />
+    <link rel="stylesheet" href="engine/main.css" />
+    <link rel="stylesheet" href="theme/newyork.css" />
+    <link rel="stylesheet" href="engine/katex/katex.min.css" />
+    <!--<link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />-->
+    <style>
+    :root{
+--logo: ;
+--darkaccent1color: #FFC400;
+--lightaccent1color: #FFC400;
+--accent2: #43aa8b;
+--accent3: #f9c74f;
+--accent4: #90be6d;
+--accent5: #f8961e;
+--accent6: #577590;
+--lighttitletextcolor: #FFC400;
+--darktitletextcolor: #000;
+--lightbodytextcolor: #FFF;
+--darkbodytextcolor: #000;
+--lightbackgroundcolor: #ffffff;
+--darkbackgroundcolor: #000000;
+--bodyfont: inter;
+--titlefont: inter;
+} 
+
+    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="engine/print.css"
+      media="print"
+    />
+  </head>
+
+  <body class="responsive">
+    <div class="reveal">
+      <div class="slides"><section class="variable-size-headings has-header dark cover-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">1</div></div>
+      <div class="layout-cover" style="width: 100%; font-size: 1rem;">
+        <div style=""><h1 id="machinelearningfordesign">Machine Learning for Design</h1>
+
+<p>Lecture 5 - Part <em>b</em></p>
+
+<p>Natural Language Processing</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">2</div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="previouslyonml4d">Previously on ML4D</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">3</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 0.906rem;">
+        <div style="">
+          <h3 id="naturallanguageprocessing">Natural Language Processing</h3>
+
+<p>High-level understanding of the language spoken and written by humans</p>
+
+<p>Also, generation (e.g., ChatGPT)</p>
+
+<p>An enabler for technology like Siri or Alexa</p>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">4</div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="whynaturallanguageprocessing">Why natural language processing?</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">5</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="forasocialmedia">Fora, social media</h3>
+
+<p><img src="images/fora.png" class=" size-contain position-center-center"></p></div>
+        <img src="images/social-media.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">6</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="productreview">Product review</h3></div>
+        <img src="images/product.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">7</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="books">Books</h3>
+
+<p>Digital, or digitised </p></div>
+        <img src="images/books.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">8</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="interviews">Interviews</h3></div>
+        <img src="images/interview.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">9</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.813rem;">
+        <div style=""><h3 id="bigtextualdatalanguageatscale">Big Textual Data = Language at scale</h3>
+
+<ul>
+<li>One of the largest reflections of the world, a man-made one</li>
+<li>Essential to better understand people, organisations, products, services, systems
+
+<ul>
+<li>and <em>their relationships</em>!</li>
+</ul></li>
+</ul></div>
+        <div style=""><ul>
+<li>Language is a proxy for human behaviour and a strong signal of individual characteristics
+
+<ul>
+<li>Language is always situated</li>
+<li>Language is also a political instrument</li>
+</ul></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">10</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.672rem;">
+        <div style=""><ul>
+<li>Answer questions using the Web</li>
+<li>Translate documents from one language to another</li>
+<li>Do library research; summarize</li>
+<li>Archive and allow access to cultural heritage</li>
+<li>Interact with intelligent devices</li>
+<li>Manage messages intelligently</li>
+<li>Help make informed decisions</li>
+<li>Follow directions given by any user</li>
+<li>Fix your spelling or grammar</li>
+</ul></div>
+        <div style=""><ul>
+<li>Grade exams</li>
+<li>Write poems or novels</li>
+<li>Listen and give advice</li>
+<li>Estimate public opinion</li>
+<li>Read everything and make predictions</li>
+<li>Interactively help people learn</li>
+<li>Help disabled people</li>
+<li>Help refugees/disaster victims</li>
+<li>Document or reinvigorate indigenous languages</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">11</div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="whatisnaturallanguageprocessing">What is Natural Language Processing?</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">12</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.766rem;">
+        <div style=""><ul>
+<li><p><mark>Computer using natural language as input and/or output</mark></p>
+<img src="images/nlu-nlg.png" class=" size-contain position-center-center"></li>
+</ul></div>
+        <div style=""><ul>
+<li><strong>N</strong>atural: human communication, unlike e.g., programming languages</li>
+<li><strong>L</strong>anguage: signs, meanings, and a code connecting signs with their meanings</li>
+<li><strong>P</strong>processing: computational methods to allow computers to `understand’, or to generate</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">13</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.906rem;">
+        <img src="images/beyond-keyword.png" class=" size-contain position-center-center" style="">
+        <div style=""><h3 id="beyondkeywordmatching">Beyond keyword matching</h3>
+
+<ul>
+<li>Identify the <strong>structure</strong> and <strong>meaning</strong> of <strong>words</strong>, <strong>sentences</strong>, <strong>texts</strong> and <strong>conversations</strong></li>
+<li>Deep understanding of broad language</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">14</div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="whyisnlphard">Why is NLP Hard?</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">15</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.953rem;">
+        <div style=""><p>Human languages are <strong>messy</strong>, <strong>ambiguous</strong>, and <strong>ever-changing</strong></p></div>
+        <div style=""><p>A string may have many possible interpretations at every level </p>
+
+<p>The correct resolution of the ambiguity will depend on the <em>intended meaning</em>, which is often inferable from the <em>context</em></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">16</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><p>There is tremendous <strong>diversity</strong> in human languages</p></div>
+        <div style=""><p>Languages express the same kind of meaning in different ways</p>
+
+<p>Some languages express some meanings more readily/often</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">17</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><p><strong>Knowledge Bottleneck</strong></p></div>
+        <div style=""><p>About language</p>
+
+<p>About the world: Common sense and Reasoning</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">18</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="ambiguityandexpressivity">Ambiguity and Expressivity</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">19</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.672rem;">
+        <div style=""><blockquote class="is-single-quote"><div class="line"></div>
+<p><strong>Christopher Robin</strong> is alive and well. <strong>He</strong> is the same person that you read about in the book, <strong>Winnie the Pooh</strong>. As a boy, <strong>Chris</strong> lived in a pretty home called <strong>Cotchford Farm</strong>. When <strong>Chris</strong> was three years old, <strong>his father</strong> wrote a poem about <strong>him</strong>. The poem was printed in a magazine for others to read. <strong>Mr. Robin</strong> then wrote a book </p>
+<div class="line"></div></blockquote></div>
+        <div style=""><p>Who wrote <strong>Winnie the Pooh</strong>?</p>
+
+<p>Where did <strong>Chris</strong> live?</p>
+
+<div class="single-image-wrapper"><img src="images/winnie.png" class=" size-contain position-center-center"></div><p></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark title-image-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+        <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">20</div></div>
+        <div class="layout-title-image media-grid" style="width: 100%; font-size: 0.719rem;">
+          <div style=""><h4 id="lexicalambiguitywordsenseambiguity">Lexical ambiguity (<strong>Word sense</strong> ambiguity)</h4>
+
+<p>The presence of two or more possible meanings within a single word</p></div>
+          <img src="images/penguins-word-ambiguity.jpg" class=" size-contain position-center-center" style="">
+        </div>
+        <div class="footnotes"></div>
+        <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark title-image-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+        <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">21</div></div>
+        <div class="layout-title-image media-grid" style="width: 100%; font-size: 0.719rem;">
+          <div style=""><h4 id="syntacticambiguitywordsenseambiguity">Syntactic ambiguity (<strong>Word sense</strong> ambiguity)</h4>
+
+<p>The presence of two or more possible meanings within a <em>single sentence</em> or <em>sequence of words</em></p></div>
+          <img src="images/isawherduck.png" class=" size-contain position-center-center" style="">
+        </div>
+        <div class="footnotes"></div>
+        <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">22</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="attachmentambiguity">Attachment ambiguity</h4></div>
+        <div style=""><blockquote class="is-single-quote"><div class="line"></div>
+<p>The policeman shot the thief with the gun</p>
+<div class="line"></div></blockquote></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">23</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="pronounreferenceambiguity">Pronoun Reference ambiguity</h4>
+
+<div class="single-image-wrapper"><img src="images/pronoun-reference-1.jpg" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">24</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.813rem;">
+        <div style=""><h4 id="semanticambiguity">Semantic Ambiguity</h4></div>
+        <div style=""><div class="single-image-wrapper"><img src="images/graucho.png" class=" size-contain position-center-center"></div><p></p>
+
+<blockquote>
+<p>Every fifteen minutes a woman in this country gives birth. Our job is to find this woman, and stop her! </p>
+
+<pre><code class="hljs armasm"><span class="hljs-symbol">Groucho</span> <span class="hljs-keyword">Marx</span>
+</code></pre>
+</blockquote></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">25</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="sparsity">Sparsity</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">26</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="zipslaw">Zip's Law</h4>
+
+<blockquote>
+<p>“... given some document collection, the frequency of any word is inversely proportional to its rank in the frequency table...”</p>
+</blockquote></div>
+        <img src="images/zip1.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">27</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/zip2.png" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">28</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="languageevolution">Language Evolution</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark default-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">29</div></div>
+      <div class="layout-default" style="width: 100%; font-size: 0.719rem;">
+        <div style=""><table>
+<colgroup>
+<col>
+<col>
+</colgroup>
+
+<tbody>
+<tr>
+	<td><strong>LOL</strong></td>
+	<td>Laugh out loud</td>
+</tr>
+<tr>
+	<td><strong>G2G</strong></td>
+	<td>Got to go</td>
+</tr>
+<tr>
+	<td><strong>BFN</strong></td>
+	<td>Bye for now</td>
+</tr>
+<tr>
+	<td><strong>B4N</strong></td>
+	<td>Bye for now</td>
+</tr>
+<tr>
+	<td><strong>Idk</strong></td>
+	<td>I don't know</td>
+</tr>
+<tr>
+	<td><strong>FWIW</strong></td>
+	<td>For what it's worth</td>
+</tr>
+<tr>
+	<td><strong>LUWAMH</strong></td>
+	<td>Love you with all my heart</td>
+</tr>
+</tbody>
+</table></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">30</div></div>
+      <div class="layout-grid grid-items-3 media-grid" style="width: 100%; font-size: 1rem;">
+        <img src="images/emojy1.png" class=" size-contain position-center-center" style=""><img src="images/emojy2.png" class=" size-contain position-center-center" style=""><img src="images/emojy3.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">31</div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="nlptasks">NLP Tasks</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">32</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h3 id="anexampleofnlpprocess">An example of NLP Process</h3>
+
+<div class="single-image-wrapper"><img src="images/nlp-process.png" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">33</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="morphology">Morphology</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">34</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.766rem;">
+        <div style=""><h4 id="tokenisation">Tokenisation</h4>
+
+<p><img src="images/%20tokenisation.png" class=" size-contain position-center-center"></p></div>
+        <div style=""><ul>
+<li>Separation of words (or of morphemes) in a sentence</li>
+<li>Issues
+
+<ul>
+<li>Separators: punctuations</li>
+<li>Exceptions: „m.p.h“, „Ph.D“</li>
+<li>Expansions: „we're“ = „we are“</li>
+<li>Multi-words expressions: “New York”, “doghouse”</li>
+</ul></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">35</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.906rem;">
+        <div style=""><h4 id="stop-wordremoval">Stop-word Removal</h4>
+
+<p><img src="images/zip2.png" class=" size-contain position-center-center"></p></div>
+        <div style=""><ul>
+<li>Removal of high-frequency words, which carry less information
+
+<ul>
+<li>E.g. determiners, prepositions</li>
+</ul></li>
+<li>English stop list is about 200-300 terms (e.g., <em>been</em>, <em>a</em>, <em>about</em>, <em>otherwise</em>, <em>the</em>, etc..)</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">36</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.719rem;">
+        <div style=""><h4 id="stemming">Stemming</h4>
+
+<p><img src="images/stemmers.png" class=" size-contain position-center-center"></p></div>
+        <div style=""><ul>
+<li>Heuristic process that chops off the ends of words in the hope of achieving the goal correctly most of the time</li>
+<li>Stemming collapses derivationally related words</li>
+<li>Two basic types:
+
+<ul>
+<li>Algorithmic: uses programs to determine related words</li>
+<li>Dictionary-based: uses lists of related words</li>
+</ul></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark default-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">37</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 0.672rem;">
+        <div style=""><h4 id="lemmatisation">Lemmatisation</h4>
+
+<p>It uses dictionaries and morphological analysis of words to return the base or dictionary form of a word </p>
+
+<p>Example: Lemmatization of <em>saw</em> —&gt; attempts to return <em>see</em> or <em>saw</em> depending on whether the use of the token is a <em>verb</em> or a <em>noun</em></p>
+
+<div class="single-image-wrapper"><img src="images/lemmatisation.png" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">38</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="syntax">Syntax</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark title-image-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+        <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">39</div></div>
+        <div class="layout-title-image media-grid" style="width: 100%; font-size: 0.719rem;">
+          <div style=""><h4 id="part-of-speechtagging">Part-of-speech Tagging</h4>
+
+<p>Tagging each word in a sentence with a corresponding <em>part-of-speech</em> (e.g. noun, verb, adverbs)</p></div>
+          <img src="images/%20POS.png" class=" size-contain position-center-center" style="">
+        </div>
+        <div class="footnotes"></div>
+        <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">40</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.766rem;">
+        <div style=""><h4 id="namedentityrecognition">Named Entity Recognition</h4>
+
+<ul>
+<li>Factual information and knowledge are usually expressed by <strong>named entities</strong>
+
+<ul>
+<li>Who, Whom, Where, When, Which, ...</li>
+</ul></li>
+</ul></div>
+        <div style=""><ul>
+<li><strong>Identify</strong> words that refer to proper names of interest in a particular application
+
+<ul>
+<li>E.g. people, companies, locations, dates, product names, prices, etc.</li>
+</ul></li>
+<li><strong>Classify</strong> them to the corresponding classes (e.g. person, location)</li>
+<li><strong>Assign</strong> a unique identifier from a database</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark full-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">41</div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/NER.png" class=" size-contain position-center-center"></div></div>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">42</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.719rem;">
+        <div style=""><h4 id="languageanalysis">Language Analysis</h4>
+
+<ul>
+<li>Idea: people's language can provide <em>insights into their psychological states</em> (e.g. emotions, thinking style)</li>
+<li>For instance
+
+<ul>
+<li>Frequency of words associated with positive or negative emotions</li>
+<li>Use of pronouns as a proxy for confidence and character traits</li>
+</ul></li>
+</ul></div>
+        <img src="images/secret-life-pronouns.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark default-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">43</div></div>
+      <div class="layout-default" style="width: 100%; font-size: 0.578rem;">
+        <div style=""><ul>
+<li><strong>Analytic Thinking</strong>: the degree to which people use words that suggest formal, logical, and hierarchical thinking patterns.
+
+<ul>
+<li>low Analytical Thinking —&gt; language that is more intuitive and personal</li>
+</ul></li>
+<li><strong>Clout</strong>: the relative social status, confidence, or leadership that people display through their writing or talking</li>
+<li><strong>Authenticity</strong>: the degree to which a person is self-monitoring
+
+<ul>
+<li>Low authenticity: prepared texts (i.e., speeches written ahead of time) and texts where a person is being socially cautious</li>
+</ul></li>
+<li><strong>Emotional tone</strong>: the higher the number, the more positive the tone. Numbers below 50 suggest a more negative emotional tone.</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark caption-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">44</div></div>
+      <div class="layout-caption media-grid" style="width: 100%; font-size: 0.906rem;">
+        <img src="images/liwc2022.png" class=" size-contain position-center-center" style="">
+        <div style=""><p><a href="https://www.liwc.app/static/documents/LIWC-22%20Manual%20-%20Development%20and%20Psychometrics.pdf">The Development and Psychometric Properties of LIWC-22</a></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">45</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <img src="images/liwc-2022-2.png" class=" size-contain position-center-center" style="">
+        <img src="images/liwc-2022-3.png" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">46</div></div>
+      <div class="layout-grid grid-items-1 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/ml4d1.png" class=" size-contain position-center-center"></div><p></p>
+
+<div class="single-image-wrapper"><img src="images/ml4d2.png" class=" size-contain position-center-center"></div><p></p>
+
+<div class="single-image-wrapper"><img src="images/ml4d3.png" class=" size-contain position-center-center"></div><p></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">47</div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.719rem;">
+        <div style=""><h4 id="sentimentanalysis">Sentiment Analysis</h4>
+
+<ul>
+<li><p>The detection of attitudes </p>
+ "<em>enduring, affectively colored beliefs, dispositions towards objects or persons</em>”</li>
+<li>Main elements
+
+<ul>
+<li>Holder (source)</li>
+<li>Target (aspect)</li>
+<li>Type of attitude</li>
+<li>Text containing the attitude</li>
+</ul></li>
+</ul></div>
+        <div style=""><ul>
+<li>Tasks
+
+<ul>
+<li><em>Classification</em>: Is the attitude of the text positive or negative?</li>
+<li><em>Regression</em>: Rank the attitude of the text from 1 to 5</li>
+<li><em>Advanced</em>: Detect the target, source, or complex attitude types</li>
+</ul></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">48</div></div>
+      <div class="layout-grid grid-items-1 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/sa-1.png" class=" size-contain position-center-center"></div><p></p>
+
+<div class="single-image-wrapper"><img src="images/sa-2.png" class=" size-contain position-center-center"></div><p></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">49</div></div>
+      <div class="layout-grid grid-items-1 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/ibm-ner.png" class=" size-contain position-center-center"></div><p></p>
+
+<div class="single-image-wrapper"><img src="images/ibm-ner-2.png" class=" size-contain position-center-center"></div><p></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">50</div></div>
+      <div class="layout-grid grid-items-1 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="emotionanalysis">Emotion Analysis</h4>
+
+<div class="single-image-wrapper"><img src="images/ibm-emotion-1.png" class=" size-contain position-center-center"></div>
+
+<p><img src="images/ibm-emotion-2.png" class=" size-contain position-center-center"></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">51</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="semantics">Semantics</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">52</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.719rem;">
+        <div style=""><h4 id="documentcategorisation">Document Categorisation</h4>
+
+<ul>
+<li>Assigning a label or category to an entire text or document</li>
+<li>Supervised learning</li>
+<li>For instance
+
+<ul>
+<li>Spam vs. Not spam</li>
+<li>Language identification</li>
+<li>Authors attribution</li>
+<li>Assigning a library subject category or topic label</li>
+</ul></li>
+</ul></div>
+        <div style=""><div class="single-image-wrapper"><img src="images/ML4D-Cat.png" class=" size-contain position-center-center"></div><p></p>
+
+<p>ML4D Course Description</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">53</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><h4 id="topicmodeling">Topic Modeling</h4>
+
+<ul>
+<li>A topic is the subject or theme of a discourse</li>
+<li>Topic modeling: group documents/text according to their (semantic) similarity</li>
+<li>An unsupervised machine learning approach</li>
+</ul></div>
+        <div style=""><div class="single-image-wrapper"><img src="images/Ml4D-Topic.png" class=" size-contain position-center-center"></div><p></p>
+
+<p>ML4D Course Description</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">54</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 0.953rem;">
+        <div style=""><h4 id="wordsensedisambiguation">Word Sense Disambiguation</h4>
+
+<ul>
+<li>Multiple words can be spelled the same way (homonymy)</li>
+<li>The same word can also have different, related senses (polysemy)</li>
+<li><p>Disambiguation depends on context!</p>
+<img src="images/WSD.png" class=" size-contain position-center-center"></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">55</div></div>
+      <div class="layout-grid grid-items-4 media-grid" style="width: 100%; font-size: 0.813rem;">
+        <div style=""><h4 id="automatedsummarisation">Automated Summarisation</h4></div><div style=""><ul>
+<li>Condensing a piece of text to a shorter version while preserving key informational elements and the meaning of content</li>
+<li>A challenging task!</li>
+</ul></div><div style=""><div class="single-image-wrapper"><img src="images/summarisation-1.png" class=" size-contain position-center-center"></div><p></p>
+
+<p>https://textsummarization.net/</p></div><div style=""><div class="single-image-wrapper"><img src="images/summarisation-2.png" class=" size-contain position-center-center"></div><p></p>
+
+<p>https://brevi.app/single-demo (not working!)</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark title-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+        <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">56</div></div>
+        <div class="layout-title-image media-grid" style="width: 100%; font-size: 1rem;">
+          <div style=""><h4 id="machinetranslationpopularlanguages">Machine Translation (popular languages)</h4></div>
+          <img src="images/translation-1.png" class=" size-contain position-center-center" style="">
+        </div>
+        <div class="footnotes"></div>
+        <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark title-image-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+        <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">57</div></div>
+        <div class="layout-title-image media-grid" style="width: 100%; font-size: 1rem;">
+          <div style=""><h4 id="machinetranslationlanguageswithfewerresources">Machine Translation (languages with fewer resources)</h4></div>
+          <img src="images/translation-2.png" class=" size-contain position-center-center" style="">
+        </div>
+        <div class="footnotes"></div>
+        <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">58</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="naturallanguageinstructionsdialogsystems">Natural Language Instructions / Dialog systems</h4>
+
+<p><img src="images/dialog-1.jpg" class=" size-contain position-center-center"></p></div>
+        <img src="images/dialog-2.jpg" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark grid-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">59</div></div>
+      <div class="layout-grid grid-items-3 media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="naturallanguagegeneration">Natural Language Generation</h4></div><img src="images/gpt-1.jpeg" class=" size-contain position-center-center" style=""><img src="images/gpt-2.jpeg" class=" size-contain position-center-center" style="">
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">60</div></div>
+      <div class="layout-title" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="stateoftheartinnlp">State of the Art in NLP</h2>
+
+<h3 id="asof2022">As of <mark>2022</mark></h3></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">61</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><div class="single-image-wrapper"><img src="images/Status-nlp-2022.png" class=" size-contain position-center-center"></div><p></p>
+
+<p>Credits: Nava Tintarev</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark cover-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">62</div></div>
+      <div class="layout-cover" style="width: 100%; font-size: 1rem;">
+        <div style=""><h1 id="machinelearningfordesign">Machine Learning for Design</h1>
+
+<p>Lecture 5 - Part <em>b</em></p>
+
+<p>Natural Language Processing</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark default-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">63</div></div>
+      <div class="layout-default" style="width: 100%; font-size: 0.485rem;">
+        <div style=""><h4 id="credits">Credits</h4>
+
+<p>CIS 419/519 Applied Machine Learning. Eric Eaton, Dinesh Jayaraman. https://www.seas.upenn.edu/~cis519/spring2020/</p>
+
+<p>EECS498: Conversational AI. Kevin Leach. https://dijkstra.eecs.umich.edu/eecs498/</p>
+
+<p>CS 4650/7650: Natural Language Processing. Diyi Yang. https://www.cc.gatech.edu/classes/AY2020/cs7650_spring/</p>
+
+<p>Natural Language Processing. Alan W Black and David Mortensen. http://demo.clab.cs.cmu.edu/NLP/</p>
+
+<p>IN4325 Information Retrieval. Jie Yang. </p>
+
+<p>Speech and Language Processing, An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition. Third Edition. Daniel Jurafsky, James H. Martin.</p>
+
+<p>Natural Language Processing, Jacob Eisenstein, 2018.</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section></div>
+    </div>
+    <script src="engine/index.js"></script>
+    <!--<script src="engine/d3v4.min.js" charset="utf-8"></script>
+    <script src="engine/charts.min.js" charset="utf-8"></script>
+    <script src="engine/billboard.min.js"></script>-->
+    <script src="engine/pptxgen.min.js"></script>
+                                                   <script src="engine/pptx.js"></script>
+    <script src="engine/published.js"></script>
+
+    <script>
+      Reveal.configure({
+        progress: true,
+        keyboard: true,
+        dependencies: [
+          {
+            src: "engine/highlight.js",
+            sync: true,
+            callback: function () {
+              hljs.initHighlightingOnLoad();
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>
