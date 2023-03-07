@@ -10,7 +10,7 @@ nav_order: 7
 
 ## Preparatory Reading Material
 
--  [Smell Pittsburgh: Engaging Community Citizen Science for Air Quality](https://arxiv.org/pdf/1912.11936.pdf). Yen-Chia Hsu et al. 2020. ACM Transactions on Interactive Intelligent Systems. 10, 4, Article 32. DOI:https://doi.org/10.1145/3369397.
+- [Smell Pittsburgh: Engaging Community Citizen Science for Air Quality](https://arxiv.org/pdf/1912.11936.pdf). Yen-Chia Hsu et al. 2020. ACM Transactions on Interactive Intelligent Systems. 10, 4, Article 32. DOI:https://doi.org/10.1145/3369397.
 - [Smell Pittsburgh: Data Analysis](https://smellpgh.org/analysis)
 
 ## Experience
