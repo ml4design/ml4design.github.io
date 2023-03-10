@@ -25,14 +25,14 @@ For the individual assignment, we will be utilizing the same design instructions
 ## Model training
 - Question: How do we know which model and parameters work better for our problem?
 What are your expectations?
-  - Hint 1: [Classification vs Regression](https://machinelearningmastery.com/classification-versus-regression-in-machine-learning/)
-  - Hint 2: [Supervised vs Unsupervised](https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms)
+  - Hint 1: [Classification vs Regression](https://ml4design.com/lectures/Lecture-2/)
+  - Hint 2: [Supervised vs Unsupervised](https://ml4design.com/lectures/Lecture-2/)
   - Hint 3: [Model selection](https://scikit-learn.org/stable/model_selection.html)
 
 ## Model evaluation
 - Question: Can you calculate the Precision and Recall of each class based on the confusion matrix? What’s more important when designing a system for predicting if a person has heart disease or not?
   - Hint: For the confusion matrix under the binary scenario, we have learnt from first tutorial at [https://ml4design.com/tutorials/teachable-machine-module/tutorial/#task-5-evaluation](https://ml4design.com/tutorials/teachable-machine-module/tutorial/#task-5-evaluation)
-  - Hint: Defition of precision and recall (https://en.wikipedia.org/wiki/Precision_and_recall)[https://en.wikipedia.org/wiki/Precision_and_recall]
+  - Hint: Defition of precision and recall [https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
 - Question:  What do the different columns and rows represent? Are the ''macro'' and ''weighted'' really needed? What do they show? Which evaluation metric fits our problem better?
   - Hint 'micro': Calculate metrics globally by counting the total true positives, false negatives and false positives.
   - Hint 'macro': Calculate metrics for each label, and find their unweighted mean. This does not take label imbalance into account.

@@ -25,25 +25,27 @@ We have used different tasks to guide you in creating machine learning models us
 |You did a great job in the tutorial by completing tasks on time and achieving impressive results. Some doctors in Switzerland and Hungary have heard about your work from their colleagues and now they want your help with processing data. They have given you two new datasets with information about 123 and 294 patients, respectively.|
 
 ## Task
-Please analyze the data sets located in the data folder, which are named "processed.switzerland.csv" and "processed.hungarian.csv". Then, train machine learning models using the data and assess their respective performances.
+**Please analyze the datasets located in the data folder on Replit, which are named "processed.switzerland.csv" and "processed.hungarian.csv".** Then, train machine learning models using the data and assess their respective performances.
 
 1. Please conduct a data analysis on the new datasets to answer the following questions:
    1. provide a thorough description of how the new data is distributed, including information about both the features and labels;
    2. based on what you learned from the lectures and the feature description ([https://archive.ics.uci.edu/ml/datasets/Heart+Disease](https://archive.ics.uci.edu/ml/datasets/Heart+Disease)), do you think there are any features that need to be reconstructed and explain why;
 
-        Hint: One-hot encoding
+      > Hint: One-hot encoding for categorical data
    3. based on how the labels are distributed, do you want to redefine the labels and provide a reason for your decision.
-2. Using the dataset you made in task 1, please develop machine learning models and respond to the following questions:
+
+      > Hint: Consider how we can address class imbalance in the tutorial
+2. Using the features you modified in task 1, please develop machine learning models and respond to the following questions:
    1. build models for each dataset, and give information about the models you selected as well as the hyper-parameters you adjusted to optimize the models. Additionally, clarify your reasoning for choosing those models and hyper-parameters;
    2. assess the machine learning models you developed using the evaluation metrics taught in the tutorial. Choose the model with the highest performance and explain why you selected that particular evaluation metric;
    3. evaluate how well the models you constructed perform on two additional datasets to determine if they are effective in handling new, unseen data. Provide an explanation of why they are functioning well or not.
 3. Please reflect on the process of analyzing the data and training the models and answer the following questions:
    1. does the feature importance produced by the random forests classifier correspond with your data analysis from Task 1? Explain how and why.
 
-        Hint: Feature variance or [https://scikit-learn.org/stable/modules/feature_selection.html](https://scikit-learn.org/stable/modules/feature_selection.html)
+      > Hint: Feature variance or [https://scikit-learn.org/stable/modules/feature_selection.html](https://scikit-learn.org/stable/modules/feature_selection.html)
     2. [***optional***] what is the method for balancing a skewed dataset in order to enhance classifier accuracy?
 
-        Hint: Data resample [https://towardsdatascience.com/heres-what-i-ve-learnt-about-sklearn-resample-ab735ae1abc4](https://towardsdatascience.com/heres-what-i-ve-learnt-about-sklearn-resample-ab735ae1abc4)
+       > Hint: Data resample [https://towardsdatascience.com/heres-what-i-ve-learnt-about-sklearn-resample-ab735ae1abc4](https://towardsdatascience.com/heres-what-i-ve-learnt-about-sklearn-resample-ab735ae1abc4)
 
 ## Deliverable
 Your final deliverable is the technical report that will be sent to the doctors. Always keep the design brief mentioned above in mind when writing the report. In the report, you need to explain how you completed the above-listed tasks and what the results are. **Specifically and importantly, your report MUST have the following sections, where we will assess your learning outcome based on the grading rubric at the end of this handout. Failing to have these sections will significantly and negatively impact your score.**
