@@ -31,13 +31,13 @@ What are your expectations?
 
 ## Model evaluation
 - Question: Can you calculate the Precision and Recall of each class based on the confusion matrix? What’s more important when designing a system for predicting if a person has heart disease or not?
-  - Hint: For the confusion matrix under the binary scenario, we have learnt from first tutorial at [https://ml4design.com/tutorials/teachable-machine-module/tutorial/#task-5-evaluation](https://ml4design.com/tutorials/teachable-machine-module/tutorial/#task-5-evaluation)
-  - Hint: Defition of precision and recall [https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
+  - Hint: For the confusion matrix under the binary scenario, we have learnt from first tutorial at [Task 5: Evaluation](https://ml4design.com/tutorials/teachable-machine-module/tutorial/#task-5-evaluation)
+  - Hint: Defition of [precision and recall](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
 - Question:  What do the different columns and rows represent? Are the ''macro'' and ''weighted'' really needed? What do they show? Which evaluation metric fits our problem better?
   - Hint 'micro': Calculate metrics globally by counting the total true positives, false negatives and false positives.
   - Hint 'macro': Calculate metrics for each label, and find their unweighted mean. This does not take label imbalance into account.
   - Hint 'weighted': Calculate metrics for each label, and find their average weighted by support (the number of true instances for each label). This alters ‘macro’ to account for label imbalance; it can result in an F-score that is not between precision and recall.
-- Cross- evaluation
+- Cross-validation
   - Question 1: Do you see a difference in your results? Do you understand the impact the way you split your data could have on your model performance?
   - Question 2: Why do we see three scores for each metric and not 4 (i.e., one for each of our class)? Which evaluation metric fits our problem better?
   - Hint: [https://scikit-learn.org/stable/modules/cross_validation.html](https://scikit-learn.org/stable/modules/cross_validation.html)
