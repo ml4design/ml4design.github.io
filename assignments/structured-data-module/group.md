@@ -35,7 +35,7 @@ We have used different tasks to guide you in creating machine learning models us
    3. based on how the labels are distributed, do you want to redefine the labels and provide a reason for your decision.
 
       > Hint: Consider how we can address class imbalance in the tutorial
-2. Using the features you modified in task 1, please develop machine learning models and respond to the following questions:
+2. Using the datasets (features and labels) you modified in task 1, please develop machine learning models and respond to the following questions:
    1. build models for each dataset, and give information about the models you selected as well as the hyper-parameters you adjusted to optimize the models. Additionally, clarify your reasoning for choosing those models and hyper-parameters;
    2. assess the machine learning models you developed using the evaluation metrics taught in the tutorial. Choose the model with the highest performance and explain why you selected that particular evaluation metric;
    3. evaluate how well the models you constructed perform on two additional datasets to determine if they are effective in handling new, unseen data. Provide an explanation of why they are functioning well or not.
