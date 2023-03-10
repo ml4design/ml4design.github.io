@@ -8,106 +8,36 @@ parent: "Assignment 3: Creating Machine Learning Models with Structured Data"
 
 # Individual Assignment
 
-In the individual assignment, you need to tweak parameters in the code to conduct a pilot experiment to understand if wind direction is a good feature for predicting the presence of bad smell. Also, you need to inspect if including the data from the previous hour is helpful. Specifically, you need to fill in the cells that have the question mark in the following table.
+For the individual assignment, we will be utilizing the same design instructions as the tutorial. Your objective is to respond to the questions we posed during the tutorial, which involve analyzing the dataset, pinpointing how machine learning can assist with their work, and clarifying the challenges and potential benefits associated with implementing this approach to tackle heart diseases.
 
-| Model         | Feature set                       | Number of hours to look back | Accuracy | Precision | Recall | F1-score |
-|---------------|-----------------------------------|------------------------------|----------|-----------|--------|----------|
-| Decision Tree | Hydrogen Sulfide                  | 0                            | ?        | ?         | ?      | ?        |
-| Decision Tree | Hydrogen Sulfide + Wind Direction | 0                            | ?        | ?         | ?      | ?        |
-| Decision Tree | Hydrogen Sulfide                  | 1                            | ?        | ?         | ?      | ?        |
-| Decision Tree | Hydrogen Sulfide + Wind Direction | 1                            | ?        | ?         | ?      | ?        |
-| Random Forest | Hydrogen Sulfide                  | 0                            | ?        | ?         | ?      | ?        |
-| Random Forest | Hydrogen Sulfide + Wind Direction | 0                            | ?        | ?         | ?      | ?        |
-| Random Forest | Hydrogen Sulfide                  | 1                            | ?        | ?         | ?      | ?        |
-| Random Forest | Hydrogen Sulfide + Wind Direction | 1                            | ?        | ?         | ?      | ?        |
+## Data analysis
+- Question: Do you understand what each column inside dataset represents?
+  - Hint: [https://archive.ics.uci.edu/ml/datasets/Heart+Disease](https://archive.ics.uci.edu/ml/datasets/Heart+Disease)
+- Question: How does the distribution look like for both labels and features?
+  ```python
+  # Hint 1: Visualize label distribution through pandas function
+  data.hist(column='label')
+  plt.savefig('img/hist.pdf')
+  # Hint 2: Get numeric summarization of data through pandas function
+  print(data.describe())
+  ```
 
-To add wind directions to the variable list, first find the following line in the code:
+## Model training
+- Question: How do we know which model and parameters work better for our problem?
+What are your expectations?
+  - Hint 1: [Classification vs Regression](https://machinelearningmastery.com/classification-versus-regression-in-machine-learning/)
+  - Hint 2: [Supervised vs Unsupervised](https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms)
+  - Hint 3: [Model selection](https://scikit-learn.org/stable/model_selection.html)
 
-```
-wanted_cols = ["DateTime", "3.feed_28.H2S_PPM"]
-```
-
-Then, add the variable that we want to use to the code. You will need to decide the variables in the group assignment. For the individual assignment, let us use the wind direction from the same monitoring station (feed 28) as the H2S measurement that is currently selected. After adding the variable, the above line should look like below:
-
-```
-wanted_cols = ["DateTime", "3.feed_28.H2S_PPM", "3.feed_28.SONICWD_DEG"]
-```
-
-Then, run the code. The console should display the features with wind directions now, as shown in the following:
-
-```
-Compute features...
-
-================================================
-Display features (X) and column names
-
-       3.feed_28.H2S_PPM  3.feed_28.SONICWD_DEG_cosine  ...  DayOfWeek  HourOfDay
-0              -0.426355                      2.125336  ...          0          3
-1              -0.426355                      2.144620  ...          0          4
-2              -0.426355                      2.158361  ...          0          5
-3              -0.426355                      2.036771  ...          0          6
-4              -0.426355                      1.621120  ...          0          7
-...                  ...                           ...  ...        ...        ...
-16762          -0.426355                      1.731267  ...          5         13
-16763          -0.426355                      1.561840  ...          5         14
-16764          -0.426355                     -0.027130  ...          5         15
-16765          -0.426355                      1.561840  ...          5         16
-16766          -0.426355                     -0.661948  ...          5         17
-
-[16767 rows x 9 columns]
-
-Column names below:
-['3.feed_28.H2S_PPM', '3.feed_28.SONICWD_DEG_cosine', '3.feed_28.SONICWD_DEG_sine', '3.feed_28.H2S_PPM_1h', '3.feed_28.SONICWD_DEG_cosine_1h', '3.feed_28.SONICWD_DEG_sine_1h', 'Day', 'DayOfWeek', 'HourOfDay']
-================================================
-```
-
-Notice that the wind direction is decomposed into the sine and cosine components. There are several reasons to do this instead of using the original wind direction degrees (that range from 0 to 360). First, by applying sine and cosine to the degrees, we can transform the original data to a continuous variable. The original data is not continuous since there are no values below 0 or above 360, and there is no information to tell that 0 degrees and 360 degrees are the same. Second, the decomposed sine and cosine components allow us to inspect the effect of wind on the north-south and east-west directions separately, which may help us explain the importance of wind directions.
-
-Next, we need to specify the number of hours that we want the model to look back. The original Python script uses the data from the current hour and the previous hour. To make the machine learning pipeline only use the data from the current hour (and no previous hour), find the following line:
-
-```
-look_back_hrs = 1
-```
-
-And change the number from 1 to 0, as shown in the following:
-
-```
-look_back_hrs = 0
-```
-
-Run the code again, and you should see the following message in the console:
-
-```
-Compute features...
-
-================================================
-Display features (X) and column names
-
-       3.feed_28.H2S_PPM  3.feed_28.SONICWD_DEG_cosine  ...  DayOfWeek  HourOfDay
-0              -0.426339                      2.124983  ...          0          2
-1              -0.426339                      2.124983  ...          0          3
-2              -0.426339                      2.144266  ...          0          4
-3              -0.426339                      2.158005  ...          0          5
-4              -0.426339                      2.036427  ...          0          6
-...                  ...                           ...  ...        ...        ...
-16763          -0.426339                      1.730956  ...          5         13
-16764          -0.426339                      1.561547  ...          5         14
-16765          -0.426339                     -0.027255  ...          5         15
-16766          -0.426339                      1.561547  ...          5         16
-16767          -0.426339                     -0.662006  ...          5         17
-
-[16768 rows x 6 columns]
-
-Column names below:
-['3.feed_28.H2S_PPM', '3.feed_28.SONICWD_DEG_cosine', '3.feed_28.SONICWD_DEG_sine', 'Day', 'DayOfWeek', 'HourOfDay']
-================================================
-```
-
-Notice that the pipeline does not use the data from the previous hour as the features now, as printed in the above message that shows the list of column names.
-
-You have learned how to change models, select variables, and define the number of hours that you want the model to consider the sensor data in the past. For the individual assignment, use the knowledge that you learned to conduct experiments and fill out the table provided before. After you conduct the experiments, answer the following questions:
-
-- Is including sensor data in the past a good idea to help improve model performance?
-- Is the wind direction from the air quality monitoring station (i.e., feed 28) that near the pollution source a good feature to predict bad smell?
-
-Remember to also check the feature importance when answering the above questions.
+## Model evaluation
+- Question: Can you calculate the Precision and Recall of each class based on the confusion matrix? What’s more important when designing a system for predicting if a person has heart disease or not?
+  - Hint: For the confusion matrix under the binary scenario, we have learnt from first tutorial at [https://ml4design.com/tutorials/teachable-machine-module/tutorial/#task-5-evaluation](https://ml4design.com/tutorials/teachable-machine-module/tutorial/#task-5-evaluation)
+  - Hint: Defition of precision and recall (https://en.wikipedia.org/wiki/Precision_and_recall)[https://en.wikipedia.org/wiki/Precision_and_recall]
+- Question:  What do the different columns and rows represent? Are the ''macro'' and ''weighted'' really needed? What do they show? Which evaluation metric fits our problem better?
+  - Hint 'micro': Calculate metrics globally by counting the total true positives, false negatives and false positives.
+  - Hint 'macro': Calculate metrics for each label, and find their unweighted mean. This does not take label imbalance into account.
+  - Hint 'weighted': Calculate metrics for each label, and find their average weighted by support (the number of true instances for each label). This alters ‘macro’ to account for label imbalance; it can result in an F-score that is not between precision and recall.
+- Cross- evaluation
+  - Question 1: Do you see a difference in your results? Do you understand the impact the way you split your data could have on your model performance?
+  - Question 2: Why do we see three scores for each metric and not 4 (i.e., one for each of our class)? Which evaluation metric fits our problem better?
+  - Hint: [https://scikit-learn.org/stable/modules/cross_validation.html](https://scikit-learn.org/stable/modules/cross_validation.html)

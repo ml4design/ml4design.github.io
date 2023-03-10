@@ -16,62 +16,55 @@ parent: "Assignment 3: Creating Machine Learning Models with Structured Data"
 {:toc}
 ---
 
-In the tutorial and individual assignments, you have learned the background of the Smell Pittsburgh application and the machine learning pipeline to build a model to predict the presence of bad smell based on sensor and weather data. In this group assignment, you will conduct more experiments to investigate the pipeline, as described below:
+We have used different tasks to guide you in creating machine learning models using examples from the heart disease dataset. These tasks were part of the preparation, tutorial, and individual assignment. Now, in the group assignment, you will apply the machine learning models you created to a scenario that builds upon what you learned in the tutorial session.
 
 |**Design brief.** |
-|Local citizens in Pittsburgh are organizing communities to advocate for changes in air pollution regulations. Their goal is to investigate the air pollution patterns in the city to understand the potential sources related to the bad odor. The communities rely on the Smell Pittsburgh application (as indicated in the figure below) to collect smell reports from citizens that live in the Pittsburgh region. Also, there are air quality and weather monitoring stations in the Pittsburgh city region that provide sensor measurements, including common air pollutants and wind information.|
-|![module-3-smellpgh-ui]({{site.baseurl}}/assets/images/module-3-smellpgh-ui.png)|
-|Machine learning scientists have developed several models that can be suitable to map the sensor data to bad smell events. However, the scientists who develop the model do not have sufficient domain and local knowledge to inspect and interpret the data. Your group has been working with the Pittsburgh local citizens closely for a long time, and therefore you know the meaning of each variable in the feature set that is used to train the machine learning model. The Pittsburgh community needs your help timely to deliver a report that can help them present evidence of air pollution to the municipality and explain the patterns to the general public.|
+|Doctors specialising in heart diseases decided that it is time to experiment with the technological advancements of Machine Learning. However, they do not know how Machine Learning could assist them in their work.|
+|![module-3-heart]({{site.baseurl}}/assets/images/structured-data/heart.jpg)|
+|To start with, decided to hire a team of designers - which is you - who have a good understanding of ML models. They want you to help them integrate such a system into their daily activities. They have provided you with some of their data and asked for your assistance. Your main objective is to explore the dataset, understand how machine learning can benefit their work, and explain to them the challenges and opportunities that come with implementing this approach.|
+|You did a great job in the tutorial by completing tasks on time and achieving impressive results. Some doctors in Switzerland and Hungary have heard about your work from their colleagues and now they want your help with processing data. They have given you two new datasets with information about 123 and 294 patients, respectively.|
 
-## Tasks
+## Task
+Please analyze the data sets located in the data folder, which are named "processed.switzerland.csv" and "processed.hungarian.csv". Then, train machine learning models using the data and assess their respective performances.
 
-The individual assignment provided a table for a predefined experiment. In this group assignment, you need to design your own experiment to answer the following question raised by the local Pittsburgh community:
+1. Please conduct a data analysis on the new datasets to answer the following questions:
+   1. provide a thorough description of how the new data is distributed, including information about both the features and labels;
+   2. based on what you learned from the lectures and the feature description ([https://archive.ics.uci.edu/ml/datasets/Heart+Disease](https://archive.ics.uci.edu/ml/datasets/Heart+Disease)), do you think there are any features that need to be reconstructed and explain why;
 
-|What are the possible pollution sources that are related to the bad odor in the Pittsburgh region?|
+        Hint: One-hot encoding
+   3. based on how the labels are distributed, do you want to redefine the labels and provide a reason for your decision.
+2. Using the dataset you made in task 1, please develop machine learning models and respond to the following questions:
+   1. build models for each dataset, and give information about the models you selected as well as the hyper-parameters you adjusted to optimize the models. Additionally, clarify your reasoning for choosing those models and hyper-parameters;
+   2. assess the machine learning models you developed using the evaluation metrics taught in the tutorial. Choose the model with the highest performance and explain why you selected that particular evaluation metric;
+   3. evaluate how well the models you constructed perform on two additional datasets to determine if they are effective in handling new, unseen data. Provide an explanation of why they are functioning well or not.
+3. Please reflect on the process of analyzing the data and training the models and answer the following questions:
+   1. does the feature importance produced by the random forests classifier correspond with your data analysis from Task 1? Explain how and why.
 
-To answer this question, you need to not only select proper variables but also fit the data to the model reasonably well. Consider the following aspects when designing the experiment:
+        Hint: Feature variance or [https://scikit-learn.org/stable/modules/feature_selection.html](https://scikit-learn.org/stable/modules/feature_selection.html)
+    2. [***optional***] what is the method for balancing a skewed dataset in order to enhance classifier accuracy?
 
-- What are the models that you want to use?
-  - Hint: use the knowledge that you learned in this module to choose a set of models that you want to investigate. Notice that this is a classification task, and a list of available models can be found at the link below:
-  - Link to models: [https://scikit-learn.org/stable/supervised_learning.html](https://scikit-learn.org/stable/supervised_learning.html)
-- What are the variables that you are inteeested in exploring?
-  - Hint: use the knowledge that you learned in this module to select different sets of variables and check how these sets affect model performance. A list of available variables is mentioned in the tutorial.
-  - Hint: change the “add_inter” parameter in the code to add interaction terms, such as H2S multiplied by wind direction.
-  - Hint: use the knowledge that you learned in this module to compute feature importance and inspect which are the important features.
-- What is your definition of a smell event (or multiple definitions)?
-  - Hint: change the “smell_thr” and “smell_predict_hrs” parameters in the code to define smell events. Check the comments in the code for information.
-- How many hours do the model need to look back to check the previous data?
-  - Hint: change the “look_back_hrs” parameter in the code to specify the number of hours that you want the model to look back.
-- How much data does the model need to predict bad odor reasonably well?
-  - Hint: change the “train_size” parameter to increase or decrease the amount of data records for training the machine learning model.
-- How often do you need to retrain the model using updated data?
-  - Hint: change the “test_size” parameter to indicate how often you want to retrain the model with updated data.
-
-When designing the experiment, please consider the computation time carefully. Keep in mind that if you have a very large set of features, training the machine learning model can take a very long time, and explaining the result can also be hard. Instead of doing the experiment with only one set of parameters that produce many features, it may be better to use multiple sets of parameters that produce a smaller number of features. For example, instead of including all the available variables in the experiment, it may be better to separate the variables into several groups, and then train the machine learning model on different groups with different sets of variables.
+        Hint: Data resample [https://towardsdatascience.com/heres-what-i-ve-learnt-about-sklearn-resample-ab735ae1abc4](https://towardsdatascience.com/heres-what-i-ve-learnt-about-sklearn-resample-ab735ae1abc4)
 
 ## Deliverable
+Your final deliverable is the technical report that will be sent to the doctors. Always keep the design brief mentioned above in mind when writing the report. In the report, you need to explain how you completed the above-listed tasks and what the results are. **Specifically and importantly, your report MUST have the following sections, where we will assess your learning outcome based on the grading rubric at the end of this handout. Failing to have these sections will significantly and negatively impact your score.**
 
-Your deliverable is the technical report that will be sent to the Pittsburgh local community to help them understand air pollution patterns and advocate for policy changes. Always keep the design brief mentioned above in mind when writing the report. In the report, you need to explain how you completed the above-listed tasks and what the results are.
-
-<p style="color:red">Specifically and importantly, your report MUST have the following sections, where we will assess your learning outcome based on the grading rubric at the end of this handout. Failing to have these sections will significantly and negatively impact your score.</p>
-
-- **Summary**
-    - Provide a summary of what you did and your findings. Maximum 150 words.
-- **Experiment Design and Implementation**
-  - Describe the machine learning models that you choose and explain why you choose them. The reasons may come from the knowledge that you learned in the lectures or the tutorial.
-  - Describe the set of features (or multiple sets if you have multiple groups of features) that you choose and why you choose them. The reasons may come from the insights that you learned when you explored the data during the preparation phase of this module.
-  - Describe how you define the smell events and what motivates you to define the events in this way. You can also have multiple definitions of smell events and conduct experiments using different definitions (i.e., change the “smell_thr” and “smell_predict_hrs” parameters).
-  - Describe the number of hours that you want the model to look back. You can have multiple settings with different numbers of hours and conduct experiments on all the settings (i.e., change the “look_back_hrs” parameter).
-  - Describe the amount of data that you use to train your model. You can also have different settings with different numbers of samples and conduct experiments on all the settings (i.e., change the “train_size” parameter).
-  - Describe how often you think the model needs to be re-trained using updated data. You can have multiple settings with different numbers of the testing set size and conduct experiments on all the settings (i.e., change the “test_size” parameter).
-  - Explain how you implement the experiment with one or multiple settings using Python code.
-- **Experiment Results**
-  - Produce one or multiple tables similar to the one provided in the individual assignment to show the results of your experiment. Make sure that you clearly describe what each column in the table means.
-- **Discussion**
-  - Explain your findings from the experiment. Keep in mind that the local community will read your findings, and they have limited knowledge of machine learning and data science. You need to explain the findings in a way that local citizens and policy-makers can understand.
-  - For example, from the experiment results, which pollutants are important to predict the presence of poor odor? How do the pollutants travel to the Pittsburgh region? For example, under what conditions of wind directions or speed will the pollutants with bad smell travel to the city region? Remember that you need to use the experiment result to support your argument, for example, the feature importance.
-  - Also, keep in mind that in the real world, one would need to provide convincing evidence to argue that the machine learning model fits the data reasonably well, for example, using the evaluation metrics mentioned in the tutorial. The findings will not be convincing if the model fits the data poorly, like the dummy classifier (which always predicts “no” smell events) that we used in the tutorial. Smell prediction is a hard task, so do not worry too much about the low performance of the model in this assignment. The assignment aims to let you do experiments and compare the results, not optimize performance.
-- **Distribution of Group Collaboration**
-  - Describe the distributions of effort in the groups. Make sure that you keep track of this information. It is not acceptable to simply say “all members work together” or “all members contributed equally”. If there are any problems with collaboration, please inform the course coordinator as soon as possible.
-
+1. Introduction
+   - provide a summary of what you did and your findings. Maximum 150 words.
+2. Data Preprocessing
+   - describe how you compute the distribution of the data. This could include calculating the mean, median, standard deviation, and other relevant measures (or visualize through a histogram);
+   - explain in detail which features need to be preprocessed and what changes will be made to the features after preprocessing;
+   - provide a detailed explanation of whether or not you changed the label of the dataset and why you made that decision.
+3. Model Training
+   - describe in detail which models you are using to fit the dataset, how you adjusted their hyper-parameters to improve model performance, and why you made those adjustments;
+   - provide a detailed description of which evaluation metrics you are using to assess the model's performance and explain why you selected those specific metrics;
+   - explain any additional steps you are taking to evaluate the models, such as cross-validation and random splitting, and describe why you chose those particular validation methods;
+   - describe the model's performance on two additional datasets and provide an explanation for any increases or decreases in performance;
+4. Discussion
+   - provide a detailed description of your observations regarding the relationship between feature importance and feature statistical analysis, and give a specific example to illustrate their relationship;
+   - [***optional***] describe in detail the method you are using to enhance the model's performance and explain why you chose this particular method.
+5. Distribution of Group Collaboration
+   - describe the distributions of effort in the groups. Make sure that you keep track of this information. It is not acceptable to simply say ''all members work together'' or ''all members contributed equally''. If there are any problems with collaboration, please inform the course coordinator as soon as possible.
+  
 In addition, if you read articles (e.g., online blogs, academic papers) and take their ideas, make sure that you cite and attribute the works in your technical report. It is essential to keep this integrity in scientific research.
+
+ 
