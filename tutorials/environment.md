@@ -25,13 +25,13 @@ In this environment, software developers:
 
 There are many software development environments available. Each supports one or several programming languages and different functionalities, including the three mentioned above. We need an **environment that supports the language Python** and does not require any setup or installation on our computer.
 
-Thus, we will use [Replit](https://repl.it), a software development environment that you access directly from your favourite web browser. In the following video, we guide you through the functionalities of _Replit_ that you will use in this series of Python programming assignments. We also describe each functionality in the following sections.
+Thus, we will use [Replit](https://repl.it){:target="_blank"}, a software development environment that you access directly from your favourite web browser. In the following video, we guide you through the functionalities of _Replit_ that you will use in this series of Python programming assignments. We also describe each functionality in the following sections.
 
 <!-- [TODO video hands-on guided tour] -->
 
 # Sign Up
 
-To use _Replit_, we need to create an account. Open [Replit](https://repl.it) and click on the button **SignUp** (top-right corner). Fill in the username of your choice with your email address and password. Then, click on the blue button **Sign Up** at the bottom to create your _Replit_ account.
+To use _Replit_, we need to create an account. Open [Replit](https://repl.it){:target="_blank"} and click on the button **SignUp** (top-right corner). Fill in the username of your choice with your email address and password. Then, click on the blue button **Sign Up** at the bottom to create your _Replit_ account.
 
 ![Replit Signup]({{site.baseurl}}/assets/images/ide_signup.png)
 
