@@ -19,7 +19,8 @@ nav_order: 6
 
 ## Lecture Slides
 
-- [Lecture 6 Slides (OLD, 2021/2022)]({{site.baseurl}}/assets/slides/ML4D-L6.pdf) (PDF - 6 Mb)
+- [Lecture 6 Slides]({{site.baseurl}}/assets/presentations/Lecture-6/Lecture6.htm) (Web)
+- [Lecture 6 PDF]({{site.baseurl}}/assets/slides/ML4D-L6-2223.pdf) (PDF - 7Mb)
 
 ## Lecture Notes
 
@@ -29,3 +30,4 @@ __Work in Progress__
 
 - [Word2Vec Tutorial - The Skip-Gram Model](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/)
 - [Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings](https://arxiv.org/abs/1607.06520)
+- [What Is ChatGPT Doing … and Why Does It Work?](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/)
