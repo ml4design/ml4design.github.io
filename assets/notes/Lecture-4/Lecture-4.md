@@ -4,7 +4,7 @@ title: Lecture 4 Notes
 nav_exclude: true
 ---
 
-# Lecture 4: Lecture Notes
+# Lecture 4: Machine Learning for Images. *Part 2*. Lecture Notes
 
 Version 1.0
 Date: 12/03/2023
@@ -19,12 +19,11 @@ Vision is one of the ways humans perceive the world. At its most basic, visual p
 
 ---
 
-	### Hubel and Wiesel, 1959
+### Hubel and Wiesel, 1959
+
 ![](media/hubelwiesel.gif)
 
-
 ![](media/wiesel.png)
-
 
 
 In 1962, Hubel & Wiesel[^1 David H Hubel and Torsten N Wiesel. Receptive fields, binocular interaction and functional architecture in the cat’s visual cortex. The Journal of Physiology, 160(1):106–154, 1962] set up an experiment to study the optical system of a cat. They recorded neurons while showing bright lines to a "wired" cat. They found that some specialized neurons fired only when the line was in a particular spot on the retina or if it had a specific orientation. If you open [this video](https://www.youtube.com/watch?v=IOHayh06LJ4) and turn up your volume, you can listen to the neuronal activity of the cat's visual cortex.
@@ -34,8 +33,8 @@ The experiments by Hubel and Wiesel are cornerstones of our understanding of how
 ---
 
 ### Neural Pathways
-![](media/visualsystem.png)
 
+![](media/visualsystem.png)
 
 Picture from https://nba.uth.tmc.edu/neuroscience/m/s2/chapter15.html
 
@@ -52,8 +51,8 @@ This is a relatively simplified description of how the visual system works. An i
 
 ### Neural Correlation
 #### of Objects & Scene Recognition
-![](media/recognition-faces.png)
 
+![](media/recognition-faces.png)
 
 The slides' pictures show how different brain areas get "activated" based on the visual stimuli shown - for instance, a face, an object, or a scene. 
 
@@ -67,14 +66,12 @@ Hubel and Wiesel’s discoveries inspired a Japanese engineer named Kunihiko Fuk
 ---
 
 ### The deformable and truncated cat
-![](media/deformablecat.png)
 
+![](media/deformablecat.png)
 
 ---
 
 ![](media/morecats.png)
-Background: media/true
-
 
 What’s so hard about computer vision? Scientists (a long time ago) believed that vision would be an easy problem to solve. There’s this famous AI [memo](https://dspace.mit.edu/handle/1721.1/6125) from Seymour Papert, who, in 1966, proposed a summer vision research project with interns to solve computer vision for a few months. He severely underestimated the task at hand.
 
@@ -88,7 +85,6 @@ Moreover, “cat pixels” might look like “dog pixels” or other animals. Un
 ---
 
 ![](media/strike-a-pose.png)
-Background: media/true
 
 
 All these representational variations make the problem of recognizing objects in computer vision very difficult. The image in the slide comes from a now classic paper [Strike (with) a Pose: Neural Networks Are Easily Fooled by Strange Poses of Familiar Objects](https://arxiv.org/pdf/1811.11553.pdf). As the title entails, the paper shows how non-canonical poses of ordinary objects can easily fool a neural network. 
@@ -101,7 +97,8 @@ The following slides summarise and explain some of the main challenges computer 
 ---
 
 #### Viewpoint Variation
-	A single instance of an object can be oriented in many ways to the camera.
+
+- A single instance of an object can be oriented in many ways to the camera.
 
 ![](media/viewpoint-variation.png)
 
@@ -111,36 +108,39 @@ Let us take, as an example, the task of recognizing objects in an image. Dependi
 ---
 
 #### Deformation
+
 ![](media/deformation.png)
 
-	Many objects of interest are not rigid bodies and can be deformed in extreme ways.
+- Many objects of interest are not rigid bodies and can be deformed in extreme ways.
 
 The same is true for *deformation*. Many objects (and animals, like cats) are not rigid. This means that they can be deformed in ways that, when captured in a picture, will create collections of pixels that are entirely unique. 
 
 ---
 
 #### Occlusion
+
 ![](media/occlusion.png)
 
-	The objects of interest can be occluded. Sometimes only a tiny portion of an object (as few pixels) could be visible.
+- The objects of interest can be occluded. Sometimes only a tiny portion of an object (as few pixels) could be visible.
 
 Sometimes only a relatively small portion of an object can be visible. For instance, because it is cost out of the image or because it is *occluded* by another object. In the picture, the cat is occluded by a wall.  
 
 ---
 
 #### Illumination Condition
-	The effects of illumination can be drastic on the pixel level.
-![](media/illumination.png)
 
+- The effects of illumination can be drastic on the pixel level.
+
+![](media/illumination.png)
 
 Look at the pictures in the slide, can you recognize what they show? The scene is the same but illuminated by different lights. Depending on where the light is projected, our understanding of the scene changes dramatically, as the organization of the pixels in the image. But it is precisely the same scene, pictured under the same viewpoint. This is to show an intricate interplay between materials and light that give rise to many different images despite showing precisely the same scene.
 
 ---
 
 #### Scale variation
-	- Visual classes often exhibit variation in their size
-		- Size in the real world
-		- Size in the image
+- Visual classes often exhibit variation in their size
+	- Size in the real world
+	- Size in the image
 
 ![](media/scale-variation.png)
 
@@ -150,17 +150,19 @@ Variations of the size of the object to be recognized also matter. Objects of th
 ---
 
 #### Background clutter
+
 ![](media/backgroun-clutter.png)
 
-	 The objects of interest may blend into their environment, making them hard to identify.
+- The objects of interest may blend into their environment, making them hard to identify.
 
 The recognition of an object in an image can be made more difficult by "visual distractions," that is, the background or elements of the image, such as patterns, textures, colors, shapes, or other objects that are visually similar to the object of interest or that overlap with it in some way.
 
 ---
 
 #### Intra-class variation
-	 - The classes of interest can often be relatively broad, such as chairs. 
-	 - There are many different types of these objects, each with their appearance.
+	 
+- The classes of interest can often be relatively broad, such as chairs. 
+- There are many different types of these objects, each with their appearance.
 
 ![](media/intra-class.png)
 
@@ -183,12 +185,13 @@ One of the characteristics of high dimensional data (e.g., images in a dataset) 
 ---
 
 ### Course of dimensionality
-	- High dimensionality
-		- A 1024×768 image has d = 786432! 
-		- A tiny 32×32 image has d = 1024
-	- Decision boundaries in pixel space are extremely complex
-	 - We will need “big” ML models with lots of parameters 
-		- For example, linear regressors need   d parameters
+
+- High dimensionality
+	- A 1024×768 image has d = 786432! 
+	- A tiny 32×32 image has d = 1024
+- Decision boundaries in pixel space are extremely complex
+ - We will need “big” ML models with lots of parameters 
+	- For example, linear regressors need   d parameters
 
 ![](media/dimensionality2.png)
 
@@ -201,8 +204,8 @@ Therefore, the first step after preprocessing the image is to simplify the image
 ---
 
 ### Downsampling
-![](media/downsampling.png)
 
+![](media/downsampling.png)
 
 **Downsampling** reduces the resolution of an image to make it more tractable from a computational perspective. It is common in CV applications to reduce images to 1024x1024 resolution or even 512x512. 
 
@@ -211,8 +214,8 @@ Downsampling allows for faster learning and processing time, but it also comes a
 ---
 
 ### Flattening
-![](media/flattening.png)
 
+![](media/flattening.png)
 
 In computer vision applications, we deal with images or video. A picture can be represented as a 2-dimensional matrix, a grid of pixels. 
 
@@ -227,16 +230,16 @@ Note that flattening is not **always** used as the first step in a machine-learn
 ---
 
 ### The “old days”: Feature Extraction
-	- **Feature**
-		- A relevant piece of information about the content of an image
-		-e.g., edges, corners, blobs (regions), ridges
-	- **A ==good== feature** 
-		- Repeatable
-		- Identifiable
-		- Can be easily tracked and compared
-		- Consistent across different scales, lighting conditions, and viewing angles
-		- Visible in noisy images or when only part of an object is visible
-		- Can distinguish objects from one another
+- **Feature**
+	- A relevant piece of information about the content of an image
+	-e.g., edges, corners, blobs (regions), ridges
+- **A ==good== feature** 
+	- Repeatable
+	- Identifiable
+	- Can be easily tracked and compared
+	- Consistent across different scales, lighting conditions, and viewing angles
+	- Visible in noisy images or when only part of an object is visible
+	- Can distinguish objects from one another
 
 ![](media/extraction.png)
 
@@ -258,10 +261,12 @@ Finally, an idea feature is also *consistent* across different conditions (sales
 ---
 
 ### The “old days”: Feature Engineering
-	- Machine learning models are only as good as the features you provide
+
+- Machine learning models are only as good as the features you provide
 	- To figure out which features you should use for a specific problem
-	 - Rely on domain knowledge (or partner with domain experts) 
-	 - Experiment to create features that make machine learning algorithms work better
+ 	- Rely on domain knowledge (or partner with domain experts) 
+	- Experiment to create features that make machine learning algorithms work better
+
 ![](media/feature-engineering.png)
 
 
@@ -278,6 +283,7 @@ These features are used as input to machine learning algorithms like (fully conn
 ---
 
 ### Feature Extraction Techniques 
+
 ![](media/feature-extraction.png)
 
 
@@ -290,6 +296,7 @@ Another technique is the **Scale Invariant Feature Transform** or SIFT. The SIFT
 ---
 
 ### Performance
+
 ![](media/performance.png)
 
 Credits: Ross Girshick (Facebook AI Research)
@@ -298,23 +305,21 @@ Feature engineering and "old" style feature extraction techniques have been the 
 
 Convolutional Neural Networks changed everything. 
 
-
-
 ---
 
 ### Convolutional Neural Networks
+
 ![](media/cnn.png)
 
-
-	- CNNs exploit image properties to reduce the number of model parameters drastically
-	- Feature maps
-		- Automatically extracted hierarchical 
-		- Retain spatial association between pixels
-	- Local interactions
-		- all processing happens within tiny image windows
-		- within each layer, far-away pixels cannot influence nearby pixels
-	- Translation invariance
-		- a dog is a dog even if its image is shifted by a few pixels
+- CNNs exploit image properties to reduce the number of model parameters drastically
+- Feature maps
+	- Automatically extracted hierarchical 
+	- Retain spatial association between pixels
+- Local interactions
+	- all processing happens within tiny image windows
+	- within each layer, far-away pixels cannot influence nearby pixels
+- Translation invariance
+	- a dog is a dog even if its image is shifted by a few pixels
 
 Convolutional Neural Networks (CNN) drive today’s deep-learning revolution in computer vision and other areas. CNNs were first proposed in the 1980s by the French computer scientist Yann LeCun, inspired by Fukushima’s neocognitron. The design of CNN is based on several critical insights about the brain’s visual system discovered by Hubel and Wiesel. 
 
@@ -338,8 +343,8 @@ The flattened feature vector is fed to the fully connected layers (a traditional
 ---
 
 ### Convolution & Feature Maps
-![](media/convolution-featuremap.png)
 
+![](media/convolution-featuremap.png)
 
 Each convolutional layer contains one or more **convolutional filters**. The number of filters in each convolutional layer determines the depth of the next layer because each filter produces its feature map (convolved image). 
 
@@ -352,67 +357,68 @@ Try this: https://cs.stanford.edu/people/karpathy/convnetjs/demo/mnist.html
 ---
 
 ### What CNNs learn?
-	[Deep Visualization Toolbox](https://www.youtube.com/watch?v=AgkfIQ4IGaM)
+
+[Deep Visualization Toolbox](https://www.youtube.com/watch?v=AgkfIQ4IGaM)
 
 ![](media/Deep Visualization Toolbox.mp4)
-
 
 Watch this [video](https://yosinski.com/deepvis). 
 
 ---
 
 ### Feature Visualisation
-![](media/feautre-vis.png)
 
+![](media/feautre-vis.png)
 
 In the following slides and pictures, we will give an impression of what a CNN learns through its convolutional layers.
 
 ---
 
 #### Layer 1
-![](media/layer1.jpg)
 
+![](media/layer1.jpg)
 
 For instance, the first layer of the CNN consists of edge-detecting units. This picture is taken from the paper: *Visualizing and Understanding Convolutional Network. Zeiler and Fergus, ECCV 2014*. 
 
 ---
 
 #### Layer 2
-![](media/layer2.jpg)
 
+![](media/layer2.jpg)
 
 The second layer can recognize more complex patterns and shapes.  
 
 ---
 
 #### Layer 3
-![](media/layer3.jpg)
 
+![](media/layer3.jpg)
 
 While the third layer can now capture the visual representation of more "abstract" concepts, like faces or wheels. 
 
 ---
 
 ### Network Dissection
-![](media/dissection.png)
 
+![](media/dissection.png)
 
 This image is taken from the [Network Dissection](http://netdissect.csail.mit.edu) dataset and related papers. It shows how specific concepts are "learned" by different CNN architectures. 
 
 ---
 
 ### Translation Invariance
+
 ![](media/translation-invariance.png)
 
-	 But not rotation and scaling invariance!
+- But not rotation and scaling invariance!
 
 Remember, CNN allows for *translation* invariance. They can recognize features (e.g., a wheel) even if it appears in different positions of an image. They are, however, **not** *rotation or scaling invariant*. Objects that are rotated or scaled w.r.t. their representation in the training data might not be recognized. 
 
 ---
 
 ### What about generalisation?
-![](media/generalisation.png)
 
+![](media/generalisation.png)
 
 As we often repeated, one of the main challenges in ML is to give the model the ability to *generalize* beyond the training data. However, what could be done if a CNN (or any network architecture) does not offer rotation or translation invariance? 
 
@@ -422,51 +428,50 @@ The answer is in **data augmentation techniques**.
 
 
 ### Data Augmentation
+
 ![](media/augmentation.png)
 
-
-	- Generate variations of the input data
-		- To improve generalisability (out-of-distribution inputs)
-		- Improve invariance (rotation, scaling, distortion)
+- Generate variations of the input data
+	- To improve generalisability (out-of-distribution inputs)
+	- Improve invariance (rotation, scaling, distortion)
 
 Data augmentation means expanding the training dataset with modified versions of the current images. Scaling, flipping, rotations, and other affine transformations are typically used to enlarge your dataset and expose the neural network to various variations of the training images. Alternatively, *color space augmentations* (photometric transformations), random cropping, or noise injection allow the network to be more robust and makes it more likely that your model will recognize objects when they appear in any form and shape.
 
 ---
 
 ### Data Augmentation
+
 ![](media/augmentation.png)
 
-
-	- Geometric
-		- Flipping, Cropping, Rotation, Translation, 
-	- Noise Injection
-	- Color space transformation
-	- Mixing Images
-	- Random erasing
-	- Adversarial training
-	- GAN-based image generation
+- Geometric
+	- Flipping, Cropping, Rotation, Translation, 
+- Noise Injection
+- Color space transformation
+- Mixing Images
+- Random erasing
+- Adversarial training
+- GAN-based image generation
 
 A good survey on state-of-the-art data augmentation techniques is: [A survey on Image Data Augmentation for Deep Learning. Shorten, Journal of Big Data, 2019](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-019-0197-0).
 
 ---
 
 ### Robustness to input variation
-![](media/robusteness-to-input.png)
 
+![](media/robusteness-to-input.png)
 
 Let's keep in mind that, despite all these attempts to extend the training datasets through data augmentations, computer vision models like CNN are still very brittle to variations of objects (and their representation) in images. The paper [Strike (with) a Pose: Neural Networks Are Easily Fooled by Strange Poses of Familiar Objects. Alcorn et al. 2019.](https://arxiv.org/pdf/1811.11553.pdf) describes this problem, although I encourage you to try using a tool like Teachable Machine. 
 
 ---
 
 ### Transfer Learning
+
 ![](media/transfer-learning.png)
 
-
-
-	- **Problem**: training custom ML models requires huge datasets
-	- **Transfer learning**: take a model trained on the same data type for a similar task and apply it to a specialised task using our custom data. 
-		- **Same data**: same data modality. same types of images (e.g., professional pictures vs. Social media pictures)
-		- **Similar tasks**: if you need a new object classification model, use a model pre-trained for object classification
+- **Problem**: training custom ML models requires huge datasets
+- **Transfer learning**: take a model trained on the same data type for a similar task and apply it to a specialised task using our custom data. 
+	- **Same data**: same data modality. same types of images (e.g., professional pictures vs. Social media pictures)
+	- **Similar tasks**: if you need a new object classification model, use a model pre-trained for object classification
 
 Transfer learning is one of the most important techniques that emerged from modern deep learning. Building a vision system to solve a specific problem requires collecting and label a vast amount of data to train your network. But what if this is not possible? 
 
@@ -486,13 +491,13 @@ Transfer learning is also frequently applied in image object detection, image st
 ---
 
 ### Generative Adversarial Networks
+
 ![](media/gan.png)
 
-
-	- Learn patterns from the training dataset and create new images that have a similar distribution of the training set
-	- Two deep neural networks that compete with each other
-		- The **generator** tries to convert random noise into observations that look as if they have been sampled from the original dataset
-		- The **discriminator** tries to predict whether an observation comes from the original dataset or is one of the generator’s forgeries
+- Learn patterns from the training dataset and create new images that have a similar distribution of the training set
+- Two deep neural networks that compete with each other
+	- The **generator** tries to convert random noise into observations that look as if they have been sampled from the original dataset
+	- The **discriminator** tries to predict whether an observation comes from the original dataset or is one of the generator’s forgeries
 
 Generative adversarial network (GAN) is a class of deep learning models [invented in 2014](https://arxiv.org/pdf/1406.2661.pdf) by Ian Goodfellow. This architecture is inspired by game theory. Two models, a **generator** and a **discriminator**, are competing while making each other stronger simultaneously.
 
@@ -500,12 +505,13 @@ GANs have shown remarkable results in many generative tasks to replicate real-wo
 
 ---
 
-	- The **generator**’s architecture looks like an inverted CNN that starts with a narrow input and is upsampled a few times until it reaches the desired size
+- The **generator**’s architecture looks like an inverted CNN that starts with a narrow input and is upsampled a few times until it reaches the desired size
+
 ![](media/GAN2.png)
 
 
-	- The **discriminator**
-	’s model is a typical classification neural network that aims to classify images generated by the generator as real or fake
+- The **discriminator**	’s model is a typical classification neural network that aims to classify images generated by the generator as real or fake
+
 ![](media/GAN3.png)
 
 
@@ -516,17 +522,18 @@ During the training process, the discriminator is provided with authentic images
 ---
 
 ### [Which face is real?](https://www.whichfaceisreal.com/)
-![](media/real-face.png)
 
+![](media/real-face.png)
 
 To give an example of how good GANs can be, try this [online "game"](https://thispersondoesnotexist.com/). Can you recognize which face is real? 
 
 ---
 
 ### Image super-resolution GAN
+
 ![](media/super-resolution-GAN.png)
 
-	- [A good technical summary](https://blog.paperspace.com/image-super-resolution/)
+- [A good technical summary](https://blog.paperspace.com/image-super-resolution/)
 
 Image Super-Resolution refers to enhancing an image's resolution from low resolution (LR) to high (HR). Thanks to generative technology, using an existing image at the input and using the network to generate new visually compatible pixels is possible. For instance, to enlarge it. Or to fix it. 
 
@@ -534,18 +541,17 @@ Image Super-Resolution refers to enhancing an image's resolution from low resolu
 
 ![](media/paitning.png)
 
-
-	- ML-generated painting sold for $432,500
-	- The network trained on a dataset of 15,000 portraits painted between the fourteenth and twentieth centuries
-	- Network “learned” the style and generated a new painting
+- ML-generated painting sold for $432,500
+- The network trained on a dataset of 15,000 portraits painted between the fourteenth and twentieth centuries
+- Network “learned” the style and generated a new painting
 
 GANs can also be used to learn the "style" of a specific set of paintings and to generate new ones in that style. An [image generated by a GAN](https://en.wikipedia.org/wiki/Edmond_de_Belamy) has been sold for good money. 
 
 ---
 
 ### Neural Style Transfer
-![](media/style-transfer.png)
 
+![](media/style-transfer.png)
 
 Neural style transfer transfers the style from one image to another. It consists of an optimization technique used to take two images: 1) a content image and 2) a style reference image, such as an artwork by a famous painter. Neural style transfer blends them, so the output image looks like the content image but is “painted” in the style reference image style. 
 
@@ -553,15 +559,14 @@ Neural style transfer transfers the style from one image to another. It consists
 
 ![](media/keanu.mp4)
 
-
 This is an example of style transfer applied on the portrait picture of Keanu Reeves. You can try yourself using this [API endpoint](https://replicate.com/rinongal/stylegan-nada).
 
 ---
 
 
 ### Text-To-Image Generation
-![](media/text-to-image.png)
 
+![](media/text-to-image.png)
 
 A **text-to-image** model is an example of a generative ML model where the input is a **text prompt**, and the output is an image *matching* the text.
 
@@ -571,11 +576,13 @@ Credits: [https://github.com/CompVis/latent-diffusion](https://github.com/CompVi
 
 ---
 
-	#### ==Design==
+#### ==Design==
+
 ![](media/A_dream_of_a_classroom_full_of_interested_design_students__Realistics__matte_painting__HQ__4k.png)
 
 
-	#### ==Computer Science==
+#### ==Computer Science==
+
 ![](media/A_dream_of_a_classroom_full_of_interested_computer_science_students__Realistics__matte_painting__HQ_.png)
 
 
@@ -586,7 +593,6 @@ You can try to generate images using the [Dreamstudio.ai](https://beta.dreamstud
 ---
 
 ![](media/modelfigure.png)
-
 
 The architecture of latent diffusion model. (Image source: [Rombach & Blattmann, et al. 2022](https://arxiv.org/abs/2112.01075)
 
@@ -606,8 +612,8 @@ New methods have been proposed to make the process much faster, but they are sti
 ---
 
 ### Image-to-Image Generation
-![](media/image-to-image.gif)
 
+![](media/image-to-image.gif)
 
 Video from: [https://github.com/CompVis/latent-diffusion](https://github.com/CompVis/latent-diffusion).
 
@@ -616,9 +622,10 @@ This video shows several examples of the application of diffusion models. For in
 ---
 
 ### Synthetic Video Generation
+
 ![](media/Introduction ML4D-25599.mp4)
 
-	Generated from [Synthesia.io](https://www.synthesia.io)
+Generated from [Synthesia.io](https://www.synthesia.io)
 
 To conclude this quick overview of advanced computer vision capabilities, let me show you a video I have created on the [Synthesia.io](https://www.synthesia.io). Combining several techniques makes it possible today to generate realistic videos (like the one in the slide) simply by selecting an avatar, and providing some text to speak. It is, of course, also possible to create an avatar of yourself or anyone. This capability opens an excellent design space of possibilities. 
 
@@ -629,23 +636,13 @@ editing, or updating scenes without re-shooting them.
 ---
 
 ### Deep Fakes
-	[Very realistic Tom Cruise Deepfake](https://www.youtube.com/watch?v=iyiOVUbsPcM)
+
+[Very realistic Tom Cruise Deepfake](https://www.youtube.com/watch?v=iyiOVUbsPcM)
 
 ![](media/Very realistic Tom Cruise Deepfake - AI Tom Cruise.mp4)
 
-
 But these techniques also raise many concerns. 
 **Deepfakes** (a term coined by combining *Deep Learning* and *fake*) are a form of synthesized media that can be created to simulate the presence of a real person in a media.  You can imagine this technology's risks in our current era of widespread online misinformation and deep polarisation. 
-
----
-
-# Machine Learning for Design
-## Lecture 4
-### Machine Learning for Images. *Part 2*
-
-Version 1.0
-Date: 12/03/2023
-Author: Alessandro Bozzon
 
 ---
 #### Credits
