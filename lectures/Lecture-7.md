@@ -12,6 +12,7 @@ nav_order: 7
 
 - [Smell Pittsburgh: Engaging Community Citizen Science for Air Quality](https://arxiv.org/pdf/1912.11936.pdf). Yen-Chia Hsu et al. 2020. ACM Transactions on Interactive Intelligent Systems. 10, 4, Article 32. DOI:https://doi.org/10.1145/3369397.
 - [Smell Pittsburgh: Data Analysis](https://smellpgh.org/analysis)
+- [Empowering local communities using artificial intelligence](https://doi.org/10.1016/j.patter.2022.100449). Yen-Chia Hsu, Ting-Hao ‘Kenneth’ Huang, Himanshu Verma, Andrea Mauri, Illah Nourbakhsh, Alessandro Bozzon. Patterns. Volume 3, Issue 3,2022.
 
 ## Experience
 
@@ -19,7 +20,9 @@ nav_order: 7
 
 ## Lecture Slides
 
-- [Lecture 7 Slides (OLD, 2021/2022)]({{site.baseurl}}/assets/slides/ML4D-L7.pdf) (PDF - 22 Mb)
+- [Lecture 7 Slides]({{site.baseurl}}/assets/presentations/Lecture-7/Lecture7.htm) (Web)
+- [Lecture 7 PDF]({{site.baseurl}}/assets/slides/ML4D-L7-2223.pdf) (PDF - 10Mb)
+- [Lecture 7 Smell Pittsburgh PDF]({{site.baseurl}}/assets/slides/ML4D-L7-SP-2223.pdf) (PDF - 20Mb)
 
 ## Lecture Notes
 
