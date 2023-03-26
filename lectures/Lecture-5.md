@@ -34,6 +34,7 @@ nav_order: 5
 ## Lecture Notes
 
 - [Lecture 5a Notes]({{site.baseurl}}/assets/notes/Lecture-5a/Lecture-5a) (Web)
+- [Lecture 5b Notes]({{site.baseurl}}/assets/notes/Lecture-5b/Lecture-5b) (Web)
 
 ## Additional Reading Material
 

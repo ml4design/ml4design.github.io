@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lecture 4 Notes
+title: Lecture 5a Notes
 nav_exclude: true
 ---
 
@@ -441,6 +441,7 @@ Though a single team is often responsible for building a machine-learning model 
 For instance, imagine a model that should identify defective products from images. The data science team wants to minimize standard accuracy metrics because it simplifies training. On the other hand, the product management team is more interested in reducing the number of defective products that are misclassified and sent to customers. Finally, the executive team might aim at minimizing the products that are misclassified as defective because that will lead at a revenue decrease. Each one of these goals has a different conceptualisation of *success*, and gives a different weight to *errors*. Balancing these differing needs within an organization can present a challenge. When defining the goals of a model, it is therefore important, as for many other design processes, to consider the needs of different teams across an organization and how each team’s needs relate to the model. 
 
 ---
+
 #### Credits
 	Grokking Machine Learning. Luis G. Serrano. Manning, 2021
 	[[CIS 419/519 Applied Machine Learning]](https://www.seas.upenn.edu/~cis519/spring2020/). Eric Eaton, Dinesh Jayaraman. 
