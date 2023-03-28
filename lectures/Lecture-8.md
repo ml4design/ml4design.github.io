@@ -17,8 +17,8 @@ nav_order: 8
 
 ## Lecture Slides
 
-- [Lecture 8 Slides (OLD, 2021/2022)]({{site.baseurl}}/assets/slides/ML4D-L8.pdf) (PDF - 4Mb)
-- [Lecture 8bis Slides (OLD, 2021/2022)]({{site.baseurl}}/assets/slides/ML4D-L8-Bis.pdf) (PDF - 2Mb)
+- [Lecture 8 Slides]({{site.baseurl}}/assets/presentations/Lecture-8/Lecture8.htm) (Web)
+- [Lecture 8 PDF]({{site.baseurl}}/assets/slides/ML4D-L8-2223.pdf) (PDF - 10Mb)
 
 ## Lecture Notes
 

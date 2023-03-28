@@ -16,7 +16,7 @@ nav_order: 9
 
 ## Lecture Slides
 
-- [Lecture 9 Slides (OLD, 2021/2022)]({{site.baseurl}}/assets/slides/ML4D-L9.pdf) (PDF - 3Mb)
+__Work in Progress__
 
 ## Lecture Notes
 
