@@ -24,7 +24,7 @@ nav_order: 6
 
 ## Lecture Notes
 
-__Work in Progress__
+- [Lecture 6 Notes]({{site.baseurl}}/assets/notes/Lecture-6/Lecture-6) (Web)
 
 ## Additional Reading Material
 
