@@ -1,12 +1,9 @@
----
-layout: default
-title: Lecture 6 Notes
-nav_exclude: true
----
+Lecture-6
+# Machine Learning for Design
+	Lecture 6
+	Natural Language Processing - Part *2*
 
-# Lecture 5b: Natural Language Processing - Part 2. Lecture Notes
-
-Version 0.8
+Version 1.0
 Date: 29/03/2023
 Author: Alessandro Bozzon
 
@@ -133,6 +130,7 @@ A previous slide showed how textual content could be represented in feature spac
 The first and arguably most important common denominator across all NLP tasks is how we represent words as input to any of our models. To perform well on most NLP tasks, two requirements must be satisfied: 
 - Words (discrete symbols) must be represented in a way a computer can process -- typically numbers. Neural networks are pure mathematical computation models that can only deal with numbers. They can’t do symbolic operations such as concatenating two strings and conjugating a verb to past tense unless they are all represented by numbers and arithmetic operations. 
 - There must be some notion of **similarity** and **difference** between words to allow comparison and, possibly, some other form of calculation. 
+
 ---
 
 ### A simple approach 
@@ -486,7 +484,7 @@ One last issue needs to be explored: how are these dense vectors, these contexts
 		- the probability that the output word is selected to be in the context window
 	- *Embeddings*: lower-dimensional representation of *context* of co-occurence
 
-**Skipgram** is an example of an algorithm that calculates *static embeddings*, fixed embedding for each word in the vocabulary. More recent approaches (like BERT) learn dynamic contextual embeddings, in which the vector for each word is different in different contexts.
+**Skipgram** is an example of an algorithm that calculates *static embeddings*, fixed embedding for each word in the vocabulary. These algorithms, while using the syntactical context of the word (that is, the words that occur nearby), they tend to normalise (or compress) different semantic contexts. For instance, the word “play” has different meaning if used in sentences like “They played games,” “I play Chopin,” “We play baseball,” and “Hamlet is a play by Shakespeare”. Assigning a single vector to the word "play" can make the use of embeddings in tasks like topic classification of limited advantage. More recent approaches (like [BERT](https://en.wikipedia.org/wiki/BERT_(language_model))) learn *dynamic contextual embeddings*, in which the vector for each word is different in different semantic contexts. With these representations, all the different use of the word “play” have different vectors assigned, helping downstream tasks disambiguate different uses of the word. 
 
 The intuition of behind the *skipgram* algorithm is that instead of counting how often each word $w$ occurs near another one, we train a classifier on a prediction task where for each word in the vocabulary we classify if it is likely (or not) to appear close $w$—the learned classifier weights as the word embeddings. Given a specific word in the middle of a sentence (the input word), the network predicts the probability for every word in the vocabulary of being the “nearby word”. The fascinating idea here is that, instead of using labeled data, the text is used to supervise the classifier's training. That is called **self-supervision** in machine learning lingo. 
 
@@ -494,7 +492,6 @@ The intuition of behind the *skipgram* algorithm is that instead of counting how
 
 ![](media/skipgram.png)
 Background: media/true
-
 
 
 // http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/
@@ -517,33 +514,44 @@ For every word in the language, their network is then able to calculate the prob
 ![](media/usingwordembeddings.png)
 
 
+Before the advent of deep learning and of large language model, NLP models were re-trained on each task, specifically for the type of task that they were trained for. For example,  a model trained for *sentiment analysis* would use a dataset annotated with the desired output (e.g., negative, neutral, and positive labels). The trained model would have bee used exclusively for sentiment analysis and not, for instance, for *part-of-speech* (POS) tagging, no matter how good the model was. Obviously, this is due to the task-specificity of the training dataset. However, there could have been some commonalities to be exploited. For instance adjectives (POS) like "beautiful" would have also use in the context of sentiment analysis: the language is the same, just its type of analysis is different.  
+
+This is where **word embeddings** can become useful. As they are used to represent words, while capturing the semantic relationship between words by exploiting similar contexts, it is possible to use them as *input* for multiple machine learning models - we called them *downstream tasks*. 
+Word embeddings can be **pretrained**, that is, *learned independently* of the downstream tasks. In this way, the model can focus on learning higher-level concepts that cannot be captured by word embeddings (e.g., phrases, syntax, and semantics), and on the task-specific patterns learned from the given annotated data. 
+
+There are three ways embedding can be used. 
+
 ---
 
 #### Scenario 1
 	- Train word embeddings and your model at the same time using the train set for the task
 
-![](media/usingwordembeddings.png)
-
+In the simplest scenario, the word embeddings are initially "empty", and trained together with the downstream task. This means that the activity of calculating the embeddings and the downstream models occur at the same time. This scenario can occur when there is no existing pre-trained model available, but some training dataset exists. So, in this way, it is possible to create embeddings that could be later reused. 
 
 ---
 
-#### Scenario 2
+#### Scenario 2: Fine-Tuning
 	- Initialise the model using the pre-trained word embeddings
 		- e.g., train on Wikipedia, or large Web corpora 
 	- Keep the embedding fixed while training the model for the task
 		- Another example of *transfer learning*
 
-![](media/usingwordembeddings.png)
+This second scenario is the classic **transfer learning** scenario. You might remember from previous lectures that transfer learning is technique in which the performance of a machine learning model are improved by used data and/or models trained in a different tasks.
 
+Transfer learning always consists of two or more steps. 
+- *pre-training*: a machine learning model is first trained for one task 
+- *fine-tuning*: the same model is used for both tasks. This is the Scenario 2 discussed in this slide. Alternatively, we have
+- *adaptation*: the same model is adjusted and used in another task. 
+
+In literature about ML, you might also encounter the term  **domain adaptation**. This is a technique, close to transfer learning, where the idea is to train a machine learning model in one domain (e.g., news) and adapt it to another domain (e.g., sport). **Domain adaptation** is typically performed with models that operate on the same task (e.g., text classification).
 
 ---
 
-#### Scenario 3
-	- Fine-tune the embeddings at the same time using the train set for the task
+#### Scenario 3: Adaptation
+	- The embeddings are adapted while the downstream model is trained, the train set for the task
 		- Same as *Scenario 2*, but the embeddings are now more *close* to the words distribution in your training set
 
-![](media/usingwordembeddings.png)
-
+As discussed above, in this scenario the training of the embedding does not start from skratch. The weights are adjusted (adapted) based on the properties of the language in the new training set. This adaptation work is usually pretty fast, as the assumption is that most of the properties of the original language hold also for the one in the training set. 
 
 ---
 
@@ -561,6 +569,14 @@ For every word in the language, their network is then able to calculate the prob
 		- It can take a long time to compute the accuracy
 		- Unclear if the subsystem is the problem or if it is an interaction with other subsystems
 
+We know that word embedding is *useful*. Bot, how do we know if they are *good*? How can we assess the quality of word embedding? 
+
+Basically, in two ways.
+
+**Intrinsically**, by testing if the representations they create align with our (as designers) intuitions about word meaning. The idea is to use a similarity function (e.g., Cosine Similarity) to evaluate if words that are related in the evaluation space are also close in the embedding space. When doing this evaluation, the size of the context window (that is, how many words around the specific words are considered to define the context of the use of the word) matters. Shorter context windows tend to lead to representations that are a bit more syntactic since the information is coming from immediately nearby words. The most similar words to a target word *w* are semantically similar words with the same parts of speech. More extended context windows group together words that are topically related but not similar.
+
+**Extrinsically**, by evaluating if using the embeddings improves the downstream tasks' performance. So, using error functions as a proxy for embedding quality. This is experimentally possible, as the learning task and the dataset do not change. 
+
 ---
 
 ### Intrinsic evaluation
@@ -570,6 +586,8 @@ For every word in the language, their network is then able to calculate the prob
 
 ![](media/analogy1.jpeg)
 
+
+A interesting semantic property of embeddings is their ability to capture **relational meanings**. A classical way intrinsically evaluate embeddings is by using the so-called **parallelogram model** to solve simple analogy problems of the form *$a$ is to $b$ as $c$ is to what?*. In such a context, given a problem like $man:woman::king:?$, i.e., *man is to woman as king is to ?*, a system should find the word *queen*.
 
 ---
 
@@ -582,9 +600,11 @@ For every word in the language, their network is then able to calculate the prob
 ![](media/analogy1.jpeg)
 
 
-// Let’s remember that the goal of this whole process is to find a numerical representation—a vector—for each word in the vocabulary, one that captures something of the semantics of the word. The hypothesis is that using such word vectors will result in high-performing neural networks for natural-language processing tasks. But to what extent does the “semantic space” created by word2vec actually capture word semantics? This question is hard to answer, because we can’t visualize the three-hundred-dimensional semantic space learned by word2vec. However, we can do a few things to glimpse into this space. The simplest approach is to take a given word and find the words that have ended up closest to it in the semantic space, by looking at the distances between word vectors.
-// 
-// Mitchell, Melanie. Artificial Intelligence (p. 193). Farrar, Straus and Giroux. Kindle Edition. 
+As vectors represent words in a vector space, it is possible to apply some vector operation (e.g., subtraction or sum) to *move* around the vector space and check for the words occupying the targeted destination space. Note that such a space might be occupied by words that are morphological variants of the original one - for instance, **queens** in the example or words that happen to be in that space due to statistical artefacts. 
+
+Note that this relational property work also for syntactic analogies.
+
+An important disclaimer: such an approach to navigating an embedding space is too simple to mimic the higher-level cognitive capabilities of humans, as analogies are formed in more complex ways. 
 
 ---
 
@@ -592,11 +612,22 @@ For every word in the language, their network is then able to calculate the prob
 ![](media/gender.png)
 
 
+As well as gender relations.
 ---
 
 #### Company - CEO
 ![](media/ceo.png)
 
+
+Association between people and the role they occupy in companies. 
+
+---
+
+#### Countries and their capital
+![](media/country.png)
+
+
+Entities having some relevant relations between each other, e.g. countries and their capitals. 
 
 ---
 
@@ -604,11 +635,7 @@ For every word in the language, their network is then able to calculate the prob
 ![](media/superlartives.png)
 
 
----
-
-#### Countries and their capital
-![](media/country.png)
-
+And morphological relations between words (e.g. superlatives and comparatives). 
 
 ---
 
@@ -618,7 +645,15 @@ For every word in the language, their network is then able to calculate the prob
 		- $Fish$ is to $water$ as $bird$ is to $hydrant$
 
 
-Several groups have shown that these word vectors, perhaps unsurprisingly, capture the biases inherent in the language data that produces them.
+Embeddings can also be a very useful tool. For instance, scholars used it to study how meaning changes over time,
+by computing multiple embedding spaces, each from texts written in a particular period. 
+
+---
+
+	Biases in word vectors might leak through to produce **unexpected**, **hard-to-predict** ==biases==
+
+
+While learning word meaning, embeddings can also learn (and reproduce) from the text implicit biases and stereotypes. 
 
 ---
 
@@ -627,6 +662,8 @@ Several groups have shown that these word vectors, perhaps unsurprisingly, captu
 	- $man$ is to $genius$ as $woman$ is to ==______==
 	- $woman$ is to $genius$ as $man$ is to ==______==
 
+Look for example at the four analogies in the slide. What are the right words to complete the analogies? 
+
 ---
 
 	- $man$ is to $woman$ as $computer~programmer$ is to ==homemaker==
@@ -634,10 +671,21 @@ Several groups have shown that these word vectors, perhaps unsurprisingly, captu
 	- $man$ is to $genius$ as $woman$ is to ==muse==
 	- $woman$ is to $genius$ as $man$ is to ==geniuses==
 
+The answers in this slide are evocative of how these embeddings could capture such biases. Several scholars discovered similar examples, highlighting how this way of capturing meaning could result in several types of harms, when the system is used in real-word application. For instance **allocation harm** when a system allocates resources unfairly to different groups. Or **representational harm***, which is harm caused by deafening or ignoring social groups. 
+
+It turns out that embeddings do not only reflect biases in the original text; they amplify them. For instance, gendered terms become **more** gendered in embedding spaces, and biases are more exaggerated. 
+
+A lot of work has been going into correcting these biases, but much work still needs to be done. Of course, one approach would be in better curate the data that is fed to learn embeddings, but this could be an impossible task given the size of the datasets. Other **debiasing** approaches work by transferring the embedding space ands removing some type of stereotypes, but empirical evidence shows that such bias is never fully eliminated. 
+
 ---
 
-	Biases in word vectors might leak through to produce **unexpected**, **hard-to-predict** ==biases==
+# Machine Learning for Design
+	Lecture 6
+	Natural Language Processing - Part *2*
 
+Version 1.0
+Date: 29/03/2023
+Author: Alessandro Bozzon
 ---
 #### Credits
 	CIS 419/519 Applied Machine Learning. Eric Eaton, Dinesh Jayaraman. https://www.seas.upenn.edu/~cis519/spring2020/

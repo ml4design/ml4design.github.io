@@ -161,7 +161,7 @@
 
       <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">8</div></div>
       <div class="layout-default" style="width: 100%; font-size: 1rem;">
-        <div style=""><h3 id="whatisalanguagemodel">What is a language model?</h3>
+        <div style=""><h3 id="whatisalanguagemodel">What is a <mark>language model</mark>?</h3>
 
 <ul>
 <li>A collection of statistics learned over a particular language</li>
@@ -182,9 +182,9 @@
 </div>
         <div style=""><ul>
 <li><p><strong>Measure</strong> how <em>important</em> (or descriptive) a word is in a given document collection</p>
-e.g. find the set of words that best describe multiple clusters (see Assignment 2)</li>
+e.g., find the set of words that best describe multiple clusters (see Assignment 2)</li>
 <li><p><strong>Predict</strong> how <em>likely</em> a sequence of words is to occur in a given context </p>
-e.g. find the words that are more likely to occur next</li>
+e.g., find the words that are more likely to occur next</li>
 </ul></div>
       </div>
       <div class="footnotes"></div>
@@ -194,7 +194,7 @@ e.g. find the words that are more likely to occur next</li>
       <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">10</div></div>
       <div class="layout-section" style="width: 100%; font-size: 1rem;">
         <div style="">
-          <h3 id="whatistheissuewithwordsrepresentation">What is the issue with words representation?</h3>
+          <h3 id="whatistheissuewithwordrepresentation">What is the issue with word representation?</h3>
         </div>
       </div>
       <div class="footnotes"></div>
@@ -335,13 +335,14 @@ e.g. find the words that are more likely to occur next</li>
       <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">17</div></div>
       <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.672rem;">
         <div style=""><ul>
-<li>Problems:
+<li>Problems with one-hot encoding:
 
 <ul>
 <li>The size of the vector can be <strong>huge</strong>
 
 <ul>
-<li>Remember Zip’s law? Easy to reach <span class="math katex-rendered"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">10^6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.8141em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span></span> words</li>
+<li>Do you Remember Zip’s law?</li>
+<li>Easy to reach <span class="math katex-rendered"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">10^6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.8141em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span></span> words</li>
 <li>But we can use <em>stemming</em>, <em>lemmatisation</em>, etc</li>
 </ul></li>
 </ul></li>
@@ -358,21 +359,32 @@ e.g. find the words that are more likely to occur next</li>
 </section><section class="variable-size-headings has-header dark default-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
 
       <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">18</div></div>
-      <div class="layout-default" style="width: 100%; font-size: 0.578rem;">
+      <div class="layout-default" style="width: 100%; font-size: 0.672rem;">
         <div style=""><h3 id="independentandidenticallydistributedwordsassumption"><em>Independent and identically distributed</em> words assumption</h3>
 
 <ul>
-<li>The simplest language models assume that each word in a text <strong>appears independently</strong> on the others
+<li>The simplest language models assume that each word in a text <strong>appears independently</strong> of the others
 
 <ul>
 <li>The text is modeled as generated by a sequence of independent events</li>
 </ul></li>
 <li>The <strong>probability</strong> of a <em>word</em> can be estimated as the <em>number of times</em> a word appears in a text corpus</li>
-<li>But high probability <strong>does not mean important</strong> (or descriptive)
+<li>But high probability <strong>does not mean important</strong> (or descriptive)</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">19</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><h3 id="backtotheterm-documentmatrix">Back to the <em>term-document</em> matrix</h3>
+
+<div class="single-image-wrapper"><img src="images/word-features.png" class=" size-contain position-center-center"></div>
 
 <ul>
 <li><em>How to measure</em> the importance of words?</li>
-</ul></li>
 </ul></div>
       </div>
       <div class="footnotes"></div>
@@ -380,7 +392,7 @@ e.g. find the words that are more likely to occur next</li>
       
 </section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">19</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">20</div></div>
       <div class="layout-v-split" style="width: 100%; font-size: 0.813rem;">
         <div style=""><h4 id="termfrequencytf"><strong>Term frequency</strong> <span class="math katex-rendered"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">tf</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.8889em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right: 0.1076em;">f</span></span></span></span></span></h4>
 
@@ -401,7 +413,7 @@ e.g. find the words that are more likely to occur next</li>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
 </section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">20</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">21</div></div>
       <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
         <div style=""><h4 id="inversedocumentfrequencyidf"><strong>Inverse document frequency</strong> <span class="math katex-rendered"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mi>D</mi><mi>F</mi></mrow><annotation encoding="application/x-tex">IDF</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.0785em;">I</span><span class="mord mathnormal" style="margin-right: 0.0278em;">D</span><span class="mord mathnormal" style="margin-right: 0.1389em;">F</span></span></span></span></span></h4>
 
@@ -415,7 +427,7 @@ e.g. find the words that are more likely to occur next</li>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
 </section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">21</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">22</div></div>
       <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
         <div style=""><h4 id="tf-idf"><span class="math katex-rendered"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>F</mi><mo>−</mo><mi>I</mi><mi>D</mi><mi>F</mi></mrow><annotation encoding="application/x-tex">TF-IDF</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.7667em; vertical-align: -0.0833em;"></span><span class="mord mathnormal" style="margin-right: 0.1389em;">TF</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.0785em;">I</span><span class="mord mathnormal" style="margin-right: 0.0278em;">D</span><span class="mord mathnormal" style="margin-right: 0.1389em;">F</span></span></span></span></span></h4>
 
@@ -426,9 +438,19 @@ e.g. find the words that are more likely to occur next</li>
       </div>
       <div class="footnotes"></div>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark section-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">23</div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="n-gramlanguagemodels">N-gram language models</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
 </section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">22</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">24</div></div>
       <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.672rem;">
         <div style=""><h3 id="n-gramlanguagemodels"><em>N-gram</em> language models</h3>
 
@@ -447,7 +469,7 @@ e.g. find the words that are more likely to occur next</li>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
 </section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">23</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">25</div></div>
       <div class="layout-v-split" style="width: 100%; font-size: 0.719rem;">
         <div style=""><h3 id="n-gramlanguagemodels"><em>N-gram</em> language models</h3>
 
@@ -485,9 +507,9 @@ e.g. find the words that are more likely to occur next</li>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
 </section><section class="variable-size-headings has-header dark default-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">24</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">26</div></div>
       <div class="layout-default" style="width: 100%; font-size: 0.719rem;">
-        <div style=""><h3 id="limitsofn-gramsbasedlanguagemodel">Limits of N-grams based Language Model</h3>
+        <div style=""><h3 id="limitsofn-grams-basedlanguagemodel">Limits of N-grams-based Language Model</h3>
 
 <ul>
 <li>Conditional probabilities are difficult to estimate
@@ -499,7 +521,7 @@ e.g. find the words that are more likely to occur next</li>
 <li>the corpus should be billions of documents big for a good estimation</li>
 </ul></li>
 </ul></li>
-<li>They <strong>do not generalise to unseen words sequences</strong></li>
+<li>They <strong>do not generalize to unseen words sequences</strong></li>
 </ul></div>
       </div>
       <div class="footnotes"></div>
@@ -507,7 +529,7 @@ e.g. find the words that are more likely to occur next</li>
       
 </section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" style="display: grid;" data-updated="true">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">25</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">27</div></div>
       <div class="layout-v-split" style="width: 100%; font-size: 0.625rem;">
         <div style=""><h3 id="representingwordsbytheircontexts">Representing words by their contexts</h3>
 
@@ -524,8 +546,8 @@ e.g. find the words that are more likely to occur next</li>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
 </section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">26</div></div>
-      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.953rem;">
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">28</div></div>
+      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.906rem;">
         <div style=""><div class="single-image-wrapper"><img src="images/tezguino.png" class=" size-contain position-center-center"></div>
 
 <ul>
@@ -546,7 +568,7 @@ e.g. find the words that are more likely to occur next</li>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
 </section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">27</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">29</div></div>
       <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.625rem;">
         <div style=""><h3 id="distributionalwordembeddings">Distributional Word Embeddings</h3>
 
@@ -575,7 +597,7 @@ e.g. find the words that are more likely to occur next</li>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
 </section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">28</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">30</div></div>
       <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.672rem;">
         <div style=""><h3 id="distributionalwordembeddings">Distributional Word Embeddings</h3>
 
@@ -607,23 +629,7 @@ e.g. find the words that are more likely to occur next</li>
       </div>
       <div class="footnotes"></div>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
-</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/wolfram1.png" style="display: grid;" data-updated="true">
-
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">29</div></div>
-      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
-        
-      </div>
-      <div class="footnotes"></div>
-      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
-</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/wolfram2.png" data-background-size="contain" style="display: grid;" data-updated="true">
-
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">30</div></div>
-      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
-        
-      </div>
-      <div class="footnotes"></div>
-      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
-</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/wolfram3.png" data-background-size="contain" style="display: grid;" data-updated="true">
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/wolfram1.png" data-background-size="contain" style="display: grid;" data-updated="true">
 
       <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">31</div></div>
       <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
@@ -631,9 +637,25 @@ e.g. find the words that are more likely to occur next</li>
       </div>
       <div class="footnotes"></div>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
-</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/wolfram2.png" data-background-size="contain" style="display: grid;" data-updated="true">
 
       <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">32</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/wolfram3.png" data-background-size="contain" style="display: grid;" data-updated="true">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">33</div></div>
+      <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">34</div></div>
       <div class="layout-default" style="width: 100%; font-size: 1rem;">
         <div style=""><h3 id="howtocalculatewordembeddings">How to calculate Word Embeddings?</h3>
 
@@ -651,7 +673,7 @@ e.g. find the words that are more likely to occur next</li>
       
 </section><section class="variable-size-headings has-header dark default-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">33</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">35</div></div>
       <div class="layout-default" style="width: 100%; font-size: 0.672rem;">
         <div style=""><h4 id="okjustasneakpeak">Ok, just a sneak peak</h4>
 
@@ -660,7 +682,7 @@ e.g. find the words that are more likely to occur next</li>
 <li><strong>Input</strong>: one-hot vector of the centre word
 
 <ul>
-<li>size of the vocabulary</li>
+<li>the size of the vocabulary</li>
 </ul></li>
 <li><strong>Output</strong>: one-hot vector of the output words
 
@@ -673,9 +695,9 @@ e.g. find the words that are more likely to occur next</li>
       <div class="footnotes"></div>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
       
-</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-size="contain" data-background-image="images/skipgram.png" style="display: grid;" data-updated="true">
+</section><section class="variable-size-headings has-header dark has-background-image grid-container present has-dark-background fitted" data-background-image="images/skipgram.png" data-background-size="contain" style="display: grid;" data-updated="true">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">34</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">36</div></div>
       <div class="layout-grid grid-items-0" style="width: 100%; font-size: 1rem;">
         
       </div>
@@ -683,7 +705,7 @@ e.g. find the words that are more likely to occur next</li>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
 </section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">35</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">37</div></div>
       <div class="layout-title" style="width: 100%; font-size: 1rem;">
         <div style=""><h2 id="usingwordembeddings">Using Word Embeddings</h2></div>
       </div>
@@ -692,7 +714,7 @@ e.g. find the words that are more likely to occur next</li>
       
 </section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">36</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">38</div></div>
       <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.859rem;">
         <div style=""><h3 id="howcanembeddingsbeusedwithnlpmodels">How can embeddings be used with NLP Models?</h3>
 
@@ -708,24 +730,24 @@ e.g. find the words that are more likely to occur next</li>
       </div>
       <div class="footnotes"></div>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
-</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">37</div></div>
-      <div class="layout-v-split media-grid" style="width: 100%; font-size: 1rem;">
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">39</div></div>
+      <div class="layout-default" style="width: 100%; font-size: 1rem;">
         <div style=""><h4 id="scenario1">Scenario 1</h4>
 
 <ul>
 <li>Train word embeddings and your model at the same time using the train set for the task</li>
 </ul></div>
-        <img src="images/usingwordembeddings.png" class=" size-contain position-center-center" style="">
       </div>
       <div class="footnotes"></div>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
-</section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
+      
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">38</div></div>
-      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.766rem;">
-        <div style=""><h4 id="scenario2">Scenario 2</h4>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">40</div></div>
+      <div class="layout-default" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><h4 id="scenario2:fine-tuning">Scenario 2: Fine-Tuning</h4>
 
 <ul>
 <li>Initialise the model using the pre-trained word embeddings
@@ -739,30 +761,30 @@ e.g. find the words that are more likely to occur next</li>
 <li>Another example of <em>transfer learning</em></li>
 </ul></li>
 </ul></div>
-        <img src="images/usingwordembeddings.png" class=" size-contain position-center-center" style="">
       </div>
       <div class="footnotes"></div>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
-</section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+      
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">39</div></div>
-      <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.859rem;">
-        <div style=""><h4 id="scenario3">Scenario 3</h4>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">41</div></div>
+      <div class="layout-default" style="width: 100%; font-size: 0.906rem;">
+        <div style=""><h4 id="scenario3:adaptation">Scenario 3: Adaptation</h4>
 
 <ul>
-<li>Fine-tune the embeddings at the same time using the train set for the task
+<li>The embeddings are adapted while the downstream model is trained, the train set for the task
 
 <ul>
 <li>Same as <em>Scenario 2</em>, but the embeddings are now more <em>close</em> to the words distribution in your training set</li>
 </ul></li>
 </ul></div>
-        <img src="images/usingwordembeddings.png" class=" size-contain position-center-center" style="">
       </div>
       <div class="footnotes"></div>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
 </section><section class="variable-size-headings has-header dark title-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">40</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">42</div></div>
       <div class="layout-title" style="width: 100%; font-size: 1rem;">
         <div style=""><h2 id="evaluatingwordembeddings">Evaluating Word Embeddings</h2></div>
       </div>
@@ -771,7 +793,7 @@ e.g. find the words that are more likely to occur next</li>
       
 </section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">41</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">43</div></div>
       <div class="layout-v-split" style="width: 100%; font-size: 0.719rem;">
         <div style=""><h3 id="howtoevaluatewordvectors">How to evaluate word vectors?</h3>
 
@@ -800,7 +822,7 @@ e.g. find the words that are more likely to occur next</li>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
 </section><section class="variable-size-headings has-header dark v-split-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">42</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">44</div></div>
       <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.906rem;">
         <div style=""><h3 id="intrinsicevaluation">Intrinsic evaluation</h3>
 
@@ -816,7 +838,7 @@ e.g. find the words that are more likely to occur next</li>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
 </section><section class="variable-size-headings has-header dark v-split-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">43</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">45</div></div>
       <div class="layout-v-split media-grid" style="width: 100%; font-size: 0.719rem;">
         <div style=""><h3 id="intrinsicevaluation">Intrinsic evaluation</h3>
 
@@ -838,7 +860,7 @@ e.g. find the words that are more likely to occur next</li>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
 </section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">44</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">46</div></div>
       <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
         <div style=""><h4 id="genderrelation">Gender relation</h4>
 
@@ -849,7 +871,7 @@ e.g. find the words that are more likely to occur next</li>
       
 </section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">45</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">47</div></div>
       <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
         <div style=""><h4 id="company-ceo">Company - CEO</h4>
 
@@ -860,18 +882,7 @@ e.g. find the words that are more likely to occur next</li>
       
 </section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">46</div></div>
-      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
-        <div style=""><h4 id="comparativesandsuperlatives">Comparatives and Superlatives</h4>
-
-<div class="single-image-wrapper"><img src="images/superlartives.png" class=" size-contain position-center-center"></div></div>
-      </div>
-      <div class="footnotes"></div>
-      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
-      
-</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
-
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">47</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">48</div></div>
       <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
         <div style=""><h4 id="countriesandtheircapital">Countries and their capital</h4>
 
@@ -882,7 +893,18 @@ e.g. find the words that are more likely to occur next</li>
       
 </section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">48</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">49</div></div>
+      <div class="layout-default media-grid" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="comparativesandsuperlatives">Comparatives and Superlatives</h4>
+
+<div class="single-image-wrapper"><img src="images/superlartives.png" class=" size-contain position-center-center"></div></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">50</div></div>
       <div class="layout-default" style="width: 100%; font-size: 0.859rem;">
         <div style=""><h3 id="thereareproblemsofcourse">There are problems, of course</h3>
 
@@ -900,7 +922,16 @@ e.g. find the words that are more likely to occur next</li>
       
 </section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">49</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">51</div></div>
+      <div class="layout-default" style="width: 100%; font-size: 1rem;">
+        <div style=""><p>Biases in word vectors might leak through to produce <strong>unexpected</strong>, <strong>hard-to-predict</strong> <mark>biases</mark></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">52</div></div>
       <div class="layout-default" style="width: 100%; font-size: 0.906rem;">
         <div style=""><ul>
 <li><span class="math katex-rendered"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>a</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">man</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal">man</span></span></span></span></span> is to <span class="math katex-rendered"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mi>o</mi><mi>m</mi><mi>a</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">woman</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal" style="margin-right: 0.0269em;">w</span><span class="mord mathnormal">o</span><span class="mord mathnormal">man</span></span></span></span></span> as <span class="math katex-rendered"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mi>o</mi><mi>m</mi><mi>p</mi><mi>u</mi><mi>t</mi><mi>e</mi><mi>r</mi><mtext>&nbsp;</mtext><mi>p</mi><mi>r</mi><mi>o</mi><mi>g</mi><mi>r</mi><mi>a</mi><mi>m</mi><mi>m</mi><mi>e</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">computer~programmer</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.8095em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">co</span><span class="mord mathnormal">m</span><span class="mord mathnormal">p</span><span class="mord mathnormal">u</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right: 0.0278em;">er</span><span class="mspace nobreak">&nbsp;</span><span class="mord mathnormal">p</span><span class="mord mathnormal">ro</span><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span><span class="mord mathnormal" style="margin-right: 0.0278em;">r</span><span class="mord mathnormal">amm</span><span class="mord mathnormal" style="margin-right: 0.0278em;">er</span></span></span></span></span> is to <mark>______</mark></li>
@@ -914,7 +945,7 @@ e.g. find the words that are more likely to occur next</li>
       
 </section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">50</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">53</div></div>
       <div class="layout-default" style="width: 100%; font-size: 0.813rem;">
         <div style=""><ul>
 <li><span class="math katex-rendered"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>a</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">man</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal">man</span></span></span></span></span> is to <span class="math katex-rendered"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mi>o</mi><mi>m</mi><mi>a</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">woman</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal" style="margin-right: 0.0269em;">w</span><span class="mord mathnormal">o</span><span class="mord mathnormal">man</span></span></span></span></span> as <span class="math katex-rendered"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mi>o</mi><mi>m</mi><mi>p</mi><mi>u</mi><mi>t</mi><mi>e</mi><mi>r</mi><mtext>&nbsp;</mtext><mi>p</mi><mi>r</mi><mi>o</mi><mi>g</mi><mi>r</mi><mi>a</mi><mi>m</mi><mi>m</mi><mi>e</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">computer~programmer</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.8095em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">co</span><span class="mord mathnormal">m</span><span class="mord mathnormal">p</span><span class="mord mathnormal">u</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right: 0.0278em;">er</span><span class="mspace nobreak">&nbsp;</span><span class="mord mathnormal">p</span><span class="mord mathnormal">ro</span><span class="mord mathnormal" style="margin-right: 0.0359em;">g</span><span class="mord mathnormal" style="margin-right: 0.0278em;">r</span><span class="mord mathnormal">amm</span><span class="mord mathnormal" style="margin-right: 0.0278em;">er</span></span></span></span></span> is to <mark>homemaker</mark></li>
@@ -926,18 +957,9 @@ e.g. find the words that are more likely to occur next</li>
       <div class="footnotes"></div>
       <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
       
-</section><section class="variable-size-headings has-header dark default-container present has-dark-background fitted" data-updated="true" style="display: grid;">
-
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">51</div></div>
-      <div class="layout-default" style="width: 100%; font-size: 1rem;">
-        <div style=""><p>Biases in word vectors might leak through to produce <strong>unexpected</strong>, <strong>hard-to-predict</strong> <mark>biases</mark></p></div>
-      </div>
-      <div class="footnotes"></div>
-      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
-      
 </section><section class="variable-size-headings has-header dark cover-container present has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">52</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">54</div></div>
       <div class="layout-cover" style="width: 100%; font-size: 1rem;">
         <div style=""><h1 id="machinelearningfordesign">Machine Learning for Design</h1>
 
@@ -950,7 +972,7 @@ e.g. find the words that are more likely to occur next</li>
       
 </section><section class="variable-size-headings has-header dark default-container present fit-warning has-dark-background fitted" data-updated="true" style="display: grid;">
 
-      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">53</div></div>
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing">55</div></div>
       <div class="layout-default" style="width: 100%; font-size: 0.485rem;">
         <div style=""><h4 id="credits">Credits</h4>
 

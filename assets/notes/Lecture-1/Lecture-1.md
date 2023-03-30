@@ -57,6 +57,7 @@ Just making a non-exhaustive example of applications of products where AI/ML pla
 ### Where is artificial Intelligence? 
 ![](media/smartbrush.png)
 
+
 ---
 
 ![](media/stats1.png)
