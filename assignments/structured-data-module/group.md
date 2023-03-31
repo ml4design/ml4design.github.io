@@ -29,7 +29,7 @@ We have used different tasks to guide you in creating machine learning models us
 
 1. Please conduct a data analysis on the new datasets to answer the following questions:
    1. provide a thorough description of how the new data is distributed, including information about both the features and labels;
-   2. based on what you learned from the lectures and the feature description ([https://archive.ics.uci.edu/ml/datasets/Heart+Disease](https://archive.ics.uci.edu/ml/datasets/Heart+Disease)), do you think there are any features that need to be reconstructed and explain why;
+   2. (Optional) based on what you learned from the lectures and the feature description ([https://archive.ics.uci.edu/ml/datasets/Heart+Disease](https://archive.ics.uci.edu/ml/datasets/Heart+Disease)), do you think there are any features that need to be reconstructed and explain why;
 
       > Hint: One-hot encoding for categorical data
    3. based on how the labels are distributed, do you want to redefine the labels and provide a reason for your decision.
