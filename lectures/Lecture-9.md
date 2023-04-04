@@ -16,7 +16,7 @@ nav_order: 9
 
 ## Lecture Slides
 
-__Work in Progress__
+- [Lecture 9 PDF]({{site.baseurl}}/assets/slides/ML4D-L9-2223.pdf) (PDF - 5Mb)
 
 ## Lecture Notes
 
