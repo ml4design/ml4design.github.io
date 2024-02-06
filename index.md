@@ -4,7 +4,7 @@ title: Home
 nav_order: 0
 ---
 
-# Welcome to the 2022/2023 Edition of the Machine Learning for Design Course
+# Welcome to the 2023/2024 Edition of the Machine Learning for Design Course
 
 <p align="center">
   <img src="/assets/images/ml4d_banner.png" />
