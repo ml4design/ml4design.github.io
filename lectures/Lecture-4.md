@@ -23,8 +23,8 @@ nav_order: 4
 
 ## Lecture Slides
 
-- [Lecture 4 Slides]({{site.baseurl}}/assets/presentations/Lecture-4/Lecture4.htm) (Web)
-- [Lecture 4 PDF]({{site.baseurl}}/assets/slides/ML4D-L4-2223.pdf) (PDF - 64Mb)
+- [Lecture 4 Slides (2022-2023)]({{site.baseurl}}/assets/presentations/Lecture-4/Lecture4.htm) (Web)
+- [Lecture 4 PDF (2022-2023)]({{site.baseurl}}/assets/slides/ML4D-L4-2223.pdf) (PDF - 64Mb)
 
 ## Lecture Notes
 

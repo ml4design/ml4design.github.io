@@ -20,9 +20,9 @@ nav_order: 7
 
 ## Lecture Slides
 
-- [Lecture 7 Slides]({{site.baseurl}}/assets/presentations/Lecture-7/Lecture7.htm) (Web)
-- [Lecture 7 PDF]({{site.baseurl}}/assets/slides/ML4D-L7-2223.pdf) (PDF - 10Mb)
-- [Lecture 7 Smell Pittsburgh PDF]({{site.baseurl}}/assets/slides/ML4D-L7-SP-2223.pdf) (PDF - 20Mb)
+- [Lecture 7 Slides (2022-2023)]({{site.baseurl}}/assets/presentations/Lecture-7/Lecture7.htm) (Web)
+- [Lecture 7 PDF (2022-2023)]({{site.baseurl}}/assets/slides/ML4D-L7-2223.pdf) (PDF - 10Mb)
+- [Lecture 7 Smell Pittsburgh PDF (2022-2023)]({{site.baseurl}}/assets/slides/ML4D-L7-SP-2223.pdf) (PDF - 20Mb)
 
 ## Lecture Notes
 

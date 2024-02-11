@@ -21,8 +21,8 @@ nav_order: 3
 
 ## Lecture Slides
 
-- [Lecture 3 Slides]({{site.baseurl}}/assets/presentations/Lecture-3/Lecture3.htm) (Web)
-- [Lecture 3 PDF]({{site.baseurl}}/assets/slides/ML4D-L3-2223.pdf) (PDF - 45Mb)
+- [Lecture 3 Slides (2022-2023)]({{site.baseurl}}/assets/presentations/Lecture-3/Lecture3.htm) (Web)
+- [Lecture 3 PDF (2022-2023)]({{site.baseurl}}/assets/slides/ML4D-L3-2223.pdf) (PDF - 45Mb)
 
 ## Lecture Notes
 
