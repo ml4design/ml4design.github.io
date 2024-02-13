@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Lecture 2: Ideationg Machine Learning-Enabled Solutions"
+title: "Lecture 2: Ideating Machine Learning-Enabled Solutions"
 has_children: false
 parent: "Lectures"
 nav_order: 2
 ---
 
-# Ideationg Machine Learning-Enabled Solutions
+# Ideating Machine Learning-Enabled Solutions
 
 ## Preparatory Reading Material
 
