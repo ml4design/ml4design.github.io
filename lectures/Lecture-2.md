@@ -1,29 +1,26 @@
 ---
 layout: default
-title: "Lecture 2: Fundamentals of ML"
+title: "Lecture 2: Ideationg Machine Learning-Enabled Solutions"
 has_children: false
 parent: "Lectures"
 nav_order: 2
 ---
 
-# Fundamentals of Machine Learning
+# Ideationg Machine Learning-Enabled Solutions
 
 ## Preparatory Reading Material
 
-- [I, Pencil](https://en.wikisource.org/wiki/I,_Pencil)
+- [Mix & Match Machine Learning: An Ideation Toolkit to Design Machine Learning-Enabled Solutions](https://dl.acm.org/doi/pdf/10.1145/3569009.3572739)
 
 
 ## Experience
 
-- [Ask Delphi](https://delphi.allenai.org)
-   - Delphi is a research prototype designed to model people’s moral judgments on a variety of everyday situations. This demo shows the abilities and limitations of state-of-the-art models today.
-- [NVIDIA AI Demos](https://www.nvidia.com/en-us/research/ai-demos/)
-   - Several cool demos from the NVIDIA research team
+- [Mix and Match ML Tookit](https://mixmatchmltoolkit.github.io)
+   - It will be used during the Friday's lecture
 
 ## Lecture Slides
 
-- [Lecture 2 Slides (2022-2023)]({{site.baseurl}}/assets/presentations/Lecture-2/Lecture2.htm) (Web)
-- [Lecture 2 PDF (2022-2023)]({{site.baseurl}}/assets/slides/ML4D-L2-2223.pdf) (PDF - 45Mb)
+- *To be published*
 
 ## Lecture Notes
 
