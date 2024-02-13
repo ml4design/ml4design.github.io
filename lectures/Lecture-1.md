@@ -42,7 +42,7 @@ nav_order: 1
 
 - [Lecture 1 PDF]({{site.baseurl}}/assets/slides/ML4D-L1-2324.pdf) (PDF - 45Mb)
 - [Additional Slides]({{site.baseurl}}/assets/slides/ML4D-L2-2223.pdf) (PDF - 45Mb)
-  - They contain additional information about data (types) and categories of ML models
+  - They contain additional information about data (types) and categories of ML models. Useful in preparation for Lecture 2
   
 
 ## Lecture Notes
