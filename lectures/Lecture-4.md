@@ -28,7 +28,7 @@ nav_order: 4
 
 ## Lecture Notes
 
-- [Lecture 4 Notes]({{site.baseurl}}/assets/notes/Lecture-4/Lecture-4) (Web)
+- [Lecture Notes](https://surfdrive.surf.nl/files/index.php/s/RyBCGg8LJ1HgXFG) (Web)
 
 ## Additional Reading Material
 
