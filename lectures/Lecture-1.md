@@ -23,14 +23,6 @@ nav_order: 1
 - [AI Myths](https://www.aimyths.org)
 - [I, Pencil](https://en.wikisource.org/wiki/I,_Pencil)
 
-## Experience
-
-- [Ask Delphi](https://delphi.allenai.org)
-   - Delphi is a research prototype designed to model people’s moral judgments on a variety of everyday situations. This demo shows the abilities and limitations of state-of-the-art models today.
-- [NVIDIA AI Demos](https://www.nvidia.com/en-us/research/ai-demos/)
-   - Several cool demos from the NVIDIA research team
-
-
 ## Warming Up
 
 - Use your TU Delft credentials to log-in and access [this Miro board](https://miro.com/app/board/uXjVOPzwy3E=/). The board is password protected. You can find the password on Brightspace. 
@@ -40,10 +32,7 @@ nav_order: 1
 
 ## Lecture Slides
 
-- [Lecture 1 PDF]({{site.baseurl}}/assets/slides/ML4D-L1-2324.pdf) (PDF - 60Mb)
-- [Additional Slides]({{site.baseurl}}/assets/slides/ML4D-L2-2223.pdf) (PDF - 11Mb)
-  - They contain additional information about data (types) and categories of ML models. Useful in preparation for Lecture 2
-  
+- [Lecture 1 PDF]({{site.baseurl}}/assets/slides/ML4D-L1-2324.pdf) (PDF - 60Mb)  
 
 ## Lecture Notes
 
