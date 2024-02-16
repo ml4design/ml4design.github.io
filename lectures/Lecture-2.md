@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Lecture 2: Ideating Machine Learning-Enabled Solutions"
+title: "Lecture 2: Fundamentals of Machine Learning"
 has_children: false
 parent: "Lectures"
 nav_order: 2
 ---
 
-# Ideating Machine Learning-Enabled Solutions
+# Fundamentals of Machine Learning
 
 ## Preparatory Reading Material
 
@@ -33,5 +33,5 @@ nav_order: 2
 ## Additional Reading Material
 
 - [Trustworthy Machine Learning: Machine Learning Lifecycle](http://www.trustworthymachinelearning.com/trustworthymachinelearning-02.htm)
- - [Machine Learning + Design](https://machinelearning.design/)
+- [Machine Learning + Design](https://machinelearning.design/)
    - Pointers to several interesting resource, developed by designers for designers 
