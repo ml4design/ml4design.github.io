@@ -67,7 +67,7 @@ Here, we primarily focus on four issues that result in imperfect datasets: missi
 > - **Non-representative data**: If the dataset is not representative of the target population, the model may not be able to generalize to new data, leading to reduced performance.
 
 ## Task 4 & 5 - Preparation
-The aim of the following tasks is to distinguish between emergency vehicles and normal vehicles, utilizing a subset of [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m){:target="_blank"}. Please fork the code on Replit at [https://replit.com/@machine-learning-for-design/teachable-machine](https://replit.com/@machine-learning-for-design/teachable-machine){:target="_blank"}.
+The aim of the following tasks is to distinguish between emergency vehicles and normal vehicles, utilizing a subset of [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m){:target="_blank"}. Please fork the code on Replit at [https://replit.com/@ML4Design/teachable-machine-2024](https://replit.com/@ML4Design/teachable-machine-2024){:target="_blank"}.
 
 > Hint: Replit is expected to install several packages automatically, which include opencv-python, keras, tensorflow, and scikit-learn. In case these packages are not installed automatically, click on the Run button. Our program will take care of installing any missed packages, and you need to wait until the installation process is finished before proceeding to the next step.
 
