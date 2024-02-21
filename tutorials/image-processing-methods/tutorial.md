@@ -65,13 +65,19 @@ Then, go to the following page to copy your Hugging Face API token. You should a
 
 ![replit how to]({{site.baseurl}}/assets/images/image18.png)
 
-Next, find the following line in the Python script. Replace the [PLACE_HOLDER] part with the copied API token. You need to also replace everything inside the quotation marks.
+<!-- Next, find the following line in the Python script. Replace the [PLACE_HOLDER] part with the copied API token. You need to also replace everything inside the quotation marks. -->
+Next, let's input the API Token into Replit. Go to your replit code and on the bottom left of your screen under "Tools" you will have a tool named "Secrets". Click on it and it will open the Secrets tab in the right column. 
+
+![replit how to]({{site.baseurl}}/assets/images/image-processing/tools-secret.png)  
+Click on the "New Secret" button and it will ask you to fill in a Key and a Value. In the Key field input `API_TOKEN` and in the Value field input your HuggingFace API Token.  
+
+![replit how to]({{site.baseurl}}/assets/images/image-processing/secrets.gif)
 
 <!-- |API_TOKEN = "[PLACE_HOLDER]"|  -->
 
-```python
+<!-- ```python
 API_TOKEN = "[PLACE_HOLDER]"
-```
+``` -->
 More information about how to use the API can be found in the following page:
 
  - [https://api-inference.huggingface.co/docs/python/html/quicktour.html](https://api-inference.huggingface.co/docs/python/html/quicktour.html){:target="_blank"}
