@@ -23,7 +23,7 @@ Specifically, use the knowledge and method that you learned in the preparation a
 To better understand the effects of various issues that datasets can have, such as **missing labels, inconsistent labels, incomplete datasets, and imbalanced datasets**, please follow the tutorial and create a dataset with these issues. Afterward, upload the imperfect datasets to Teachable Machine and observe the resulting outcomes.
 
 ### Noisy Images
-In the repository for replit that can be found in the given link ([https://replit.com/@machine-learning-for-design/teachable-machine](https://replit.com/@machine-learning-for-design/teachable-machine)), we have included functions that can modify the **"Noise", "Brightness", and "Part"** aspects of an image. You can use these functions to make changes to an image, and then test the resulting performance by uploading the modified image to Teachable Machine.
+In the repository for replit that can be found in the given link [here](https://replit.com/@machine-learning-for-design/image-processing-tutorial-2024), we have included functions that can modify the **"Noise", "Brightness", and "Part"** aspects of an image. You can use these functions to make changes to an image, and then test the resulting performance by uploading the modified image to Teachable Machine.
 
 > How to save the modified image through python code? Please copy the following code block to main.py:
 > ```python
