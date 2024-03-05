@@ -25,7 +25,7 @@ This section explains the tasks you will perform during the tutorial session wit
 | ![brief]({{site.baseurl}}/assets/images/text-processing/tutorial-brief.png)| 
 |Unfortunately, the deadline of this project is approaching, so reading and interpreting manually each students’ input will be too slow. Use your newly acquired text-processing skills towards analyzing all the collected data and based on your findings suggest ways to improve the student’s experience in these difficult times. Please, keep in mind, some of these answers are translated from Dutch to English, so there may be translation artifacts.|
 
-To begin with, [check the code on Replit](https://replit.com/@machine-learning-for-design/text-processing-tutorial-2024#main.py). This repl contains the code and text data that we are going to use in this task. Press the fork button and it will copy the code and data to your own Replit project. The “main.py” file contains the main body of code. This is the only file that you will need to edit during the tutorial, individual assignment, and group assignment. Together we will also explore the other files (e.g. “preprocessing.py” and “topic_modelling.py”) and discuss them. In the following sections of this document, we provide a summary of the tutorial along with some questions that aim to help you understand the usefulness and importance of each task.
+To begin with, [check the code on Replit](https://replit.com/@machine-learning-for-design/text-processing-tutorial-2024#main.py){:target="_blank"}. This repl contains the code and text data that we are going to use in this task. Press the fork button and it will copy the code and data to your own Replit project. The “main.py” file contains the main body of code. This is the only file that you will need to edit during the tutorial, individual assignment, and group assignment. Together we will also explore the other files (e.g. “preprocessing.py” and “topic_modelling.py”) and discuss them. In the following sections of this document, we provide a summary of the tutorial along with some questions that aim to help you understand the usefulness and importance of each task.
 Press the fork button and it will copy the code and images to your own Replit project.  
 
 ![replit how to]({{site.baseurl}}/assets/images/text-processing/fork_button.png)
@@ -34,7 +34,7 @@ Press the fork button and it will copy the code and images to your own Replit pr
 
 In this task we will show you how you can read large Comma-separated values (CSV) files in Python. CSV files are delimited text files that use commas to separate values. Basically, each line of the file is a data record. Each record consists of one or more fields, separated by commas. CSV is one of the most used file formats and it is very often used to store replies to questionnaires or surveys.  
 
-In the first part of the “main.py” code, you can see how to read the data using a Python library called Pandas. Within this course, we are not going to delve into the interesting world of Pandas but if you want to learn more, Google is your friend ([https://pandas.pydata.org/docs/getting_started/intro_tutorials/](https://pandas.pydata.org/docs/getting_started/intro_tutorials/)).  
+In the first part of the “main.py” code, you can see how to read the data using a Python library called Pandas. Within this course, we are not going to delve into the interesting world of Pandas but if you want to learn more, Google is your friend ([https://pandas.pydata.org/docs/getting_started/intro_tutorials/](https://pandas.pydata.org/docs/getting_started/intro_tutorials/){:target="_blank"}).  
 
 This line allows you to read the data from the directory:  
 ```python 
@@ -230,7 +230,7 @@ this line will show you N text documents for one particular topic set in topic_i
 
 Think if the topic is well assigned to the students’ input. Try to run again the LDA model using a different number of `num_of_topics` and the `word_num_per_topic` and reflect on the results and the influence of these two variables on them.
 
-<sup>1</sup>[https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation)  
-<sup>2</sup>[https://cran.r-project.org/web/packages/stm/stm.pdf](https://cran.r-project.org/web/packages/stm/stm.pdf)
+<sup>1</sup>[https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation){:target="_blank"}
+<sup>2</sup>[https://cran.r-project.org/web/packages/stm/stm.pdf](https://cran.r-project.org/web/packages/stm/stm.pdf){:target="_blank"}
 
 [Next: Assignments]({{site.baseurl}}/assignments/text-processing-module/){: .btn .btn-purple }
