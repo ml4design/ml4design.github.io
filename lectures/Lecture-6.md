@@ -19,8 +19,7 @@ nav_order: 6
 
 ## Lecture Slides
 
-- [Lecture 6 Slides (2022-2023)]({{site.baseurl}}/assets/presentations/Lecture-6/Lecture6.htm) (Web)
-- [Lecture 6 PDF (2022-2023)]({{site.baseurl}}/assets/slides/ML4D-L6-2223.pdf) (PDF - 7Mb)
+- [Lecture 6 PDF]({{site.baseurl}}/assets/slides/ML4D-L6-2324.pdf) (PDF - 7Mb)
 
 ## Lecture Notes
 
@@ -31,3 +30,5 @@ nav_order: 6
 - [Word2Vec Tutorial - The Skip-Gram Model](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/)
 - [Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings](https://arxiv.org/abs/1607.06520)
 - [What Is ChatGPT Doing … and Why Does It Work?](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/)
+- [The GPT-3 Architecture, on a Napkin](https://dugas.ch/artificial_curiosity/GPT_architecture.html#:~:text=Of%20course%2C%20the%20embedding%20dimensions,a%2012288%20dimension%20embedding%20vector.)
+- [How tokenizers work](https://huggingface.co/docs/transformers/tokenizer_summary)
