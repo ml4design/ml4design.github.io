@@ -17,9 +17,4 @@ nav_order: 8
 
 ## Lecture Slides
 
-- [Lecture 8 Slides (2022-2023)]({{site.baseurl}}/assets/presentations/Lecture-8/Lecture8.htm) (Web)
-- [Lecture 8 PDF (2022-2023)]({{site.baseurl}}/assets/slides/ML4D-L8-2223.pdf) (PDF - 5Mb)
-
-## Lecture Notes
-
-__Work in Progress__
+- [Lecture 8 PDF]({{site.baseurl}}/assets/slides/ML4D-L8-2324.pdf) (PDF - 5Mb)
