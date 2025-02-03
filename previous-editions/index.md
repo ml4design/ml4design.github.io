@@ -11,3 +11,4 @@ You can find the previous editions of the Machine Learning for Design course her
 
 - [2021/2022](https://ml4design.com/ml4design.2021-2022/)
 - [2022/2023](https://ml4design.com/ml4design.2022-2023/)
+- [2023/2024](https://ml4design.com/ml4design.2023-2024/)
