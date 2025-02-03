@@ -3,7 +3,9 @@ layout: default
 title: "Tutorial 3: Creating Machine Learning Models with Structured Data"
 has_children: true
 nav_order: 4
-parent: "Tutorials"
+# parent: "Tutorials"
+nav_exclude: true
+search_exclude: true
 ---
 
 # Tutorial 3: Creating Machine Learning Models with Structured Data

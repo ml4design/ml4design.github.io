@@ -1,4 +1,5 @@
 GEM
+  remote: https://rubygems.org/
   specs:
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
@@ -64,10 +65,11 @@ GEM
     unicode-display_width (1.7.0)
 
 PLATFORMS
+  x86_64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
   just-the-docs
 
 BUNDLED WITH
-   2.3.0
+   2.4.6
