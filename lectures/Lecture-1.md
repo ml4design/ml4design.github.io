@@ -18,7 +18,7 @@ nav_order: 1
 
 
 - [Design for AI Symposium 2024](https://designandai.nl/#/)
-- [Design for AI Symposium 2023]([https://designandai.nl/#/](https://www.tudelft.nl/en/ide/news/conferences-and-symposia/designai-symposium-2023))
+- [Design for AI Symposium 2023](https://www.tudelft.nl/en/ide/news/conferences-and-symposia/designai-symposium-2023)
 - [Design for AI Symposium 2022](https://www.tudelft.nl/en/ide/news/conferences-and-symposia/design4ai-symposium-2022)
   - Inspirational videos from the 2022 Design for AI symposium. What can Design do for AI? 
 - [What is the role of an AI Designer?](https://amandalinden.medium.com/what-is-the-role-of-an-a-i-designer-6943711046ec)
