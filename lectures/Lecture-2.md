@@ -24,7 +24,7 @@ nav_order: 2
 
 ## Lecture Slides
 
-- [Lecture 2 PDF]({{site.baseurl}}/assets/slides/ML4D-L2-2324.pdf) (PDF - 60Mb)
+- [Lecture 2 PDF (23/24)]({{site.baseurl}}/assets/slides/ML4D-L2-2324.pdf) (PDF - 60Mb)
 
 ## Lecture Notes
 

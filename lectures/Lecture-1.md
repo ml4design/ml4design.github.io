@@ -17,7 +17,9 @@ nav_order: 1
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Qw8YAcsv250?si=-XgX19FeDD_O55ER" title="onversations on Design & AI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
-- [Design for AI Symposium 2022](https://www.tudelft.nl/en/ide/news/conferences-and-symposia/design4ai-symposium)
+- [Design for AI Symposium 2024](https://designandai.nl/#/)
+- [Design for AI Symposium 2023]([https://designandai.nl/#/](https://www.tudelft.nl/en/ide/news/conferences-and-symposia/designai-symposium-2023))
+- [Design for AI Symposium 2022](https://www.tudelft.nl/en/ide/news/conferences-and-symposia/design4ai-symposium-2022)
   - Inspirational videos from the 2022 Design for AI symposium. What can Design do for AI? 
 - [What is the role of an AI Designer?](https://amandalinden.medium.com/what-is-the-role-of-an-a-i-designer-6943711046ec)
 - [AI Myths](https://www.aimyths.org)
@@ -32,7 +34,7 @@ nav_order: 1
 
 ## Lecture Slides
 
-- [Lecture 1 PDF]({{site.baseurl}}/assets/slides/ML4D-L1-2425.pdf) (PDF - 60Mb)  
+- [Lecture 1 PDF (23/24)]({{site.baseurl}}/assets/slides/ML4D-L1-2324.pdf) (PDF - 60Mb)  
 
 ## Lecture Notes
 
