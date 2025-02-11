@@ -87,7 +87,7 @@ After that go to the "Query"  section of the notebook and run this code block th
 
 ![colab how to]({{site.baseurl}}/assets/images/image20_2025.png)
 
-It should give you the following result in the below the code cell:
+It should give you the following result below the code cell:
 
 ```
 [{'label': 'Egyptian cat', 'score': 0.9374415874481201}, {'label': 'tabby, tabby cat', 'score': 0.03844254091382027}, {'label': 'tiger cat', 'score': 0.01441141776740551}, {'label': 'lynx, catamount', 'score': 0.003274336690083146}, {'label': 'Siamese cat, Siamese', 'score': 0.0006795947556383908}]
@@ -153,7 +153,7 @@ The output should look similar to the screenshot below. Notice that, different f
 
 You have interacted with the web interface of the object detection model. Now, we are going to teach you how to change the model to get its output in the Python code on Colab.
 
-First, we go to a new code cell and define the `API_URL` which indicates the URL to the model that we use, and use the query function to make the call.
+First, we go to a new code cell and define the `API_URL` which indicates the URL that points to the model that we use, and use the query function invoke the use of the model.
 
 ```python
 API_URL = "https://api-inference.huggingface.co/models/facebook/detr-resnet-50"
@@ -162,7 +162,7 @@ data = query(my_image, API_URL, API_TOKEN)
 print(data)
 ```
 
-Run the code again by clicking on the Play icon on the left of the code cell. The output of the code cell should appear below and print the model output, as shown below:
+Run the code by clicking on the Play icon on the left of the code cell. The output of the code cell should appear below and print the model output, as shown below:
 
 ```
 [{'score': 0.6458637714385986, 'label': 'bicycle', 'box': {'xmin': 72, 'ymin': 256,   'xmax': 274, 'ymax': 533}}, {'score': 0.771637499332428, 'label': 'car', 'box': {'xmin': 291, 'ymin': 157, 'xmax': 377, 'ymax': 194}}, {'score': 0.9968470931053162, 'label': 'bicycle', 'box': {'xmin': 333, 'ymin': 216, 'xmax': 522, 'ymax': 531}}, {'score': 0.9547538757324219, 'label': 'bicycle', 'box': {'xmin': 695, 'ymin': 227, 'xmax': 813, 'ymax': 507}}, {'score': 0.6936916708946228, 'label': 'car', 'box': {'xmin': 10, 'ymin': 156, 'xmax': 57, 'ymax': 188}}, {'score': 0.9529551863670349, 'label': 'truck', 'box': {'xmin': 11, 'ymin': 154, 'xmax': 60, 'ymax': 187}}, {'score': 0.8967233896255493, 'label': 'car', 'box': {'xmin': 0, 'ymin': 170, 'xmax': 15, 'ymax': 193}}, {'score': 0.5774039030075073, 'label': 'car', 'box': {'xmin': 10, 'ymin': 171, 'xmax': 53, 'ymax': 201}}, {'score': 0.9960638880729675, 'label': 'person', 'box': {'xmin': 14, 'ymin': 171, 'xmax': 40, 'ymax': 227}}, {'score': 0.9935134053230286, 'label': 'car', 'box': {'xmin': 605, 'ymin': 156, 'xmax': 640, 'ymax': 179}}, {'score': 0.9795882701873779, 'label': 'truck', 'box': {'xmin': 289, 'ymin': 157, 'xmax': 380, 'ymax': 195}}, {'score': 0.9957656860351562, 'label': 'bicycle', 'box': {'xmin': 175, 'ymin': 220, 'xmax': 356, 'ymax': 540}}, {'score': 0.9895235896110535, 'label': 'bicycle', 'box': {'xmin': 73, 'ymin': 255, 'xmax': 226, 'ymax': 529}}, {'score': 0.944420576095581, 'label': 'bicycle', 'box': {'xmin': 574, 'ymin': 211, 'xmax': 711, 'ymax': 523}}, {'score': 0.8902162909507751, 'label': 'bicycle', 'box': {'xmin': 443, 'ymin': 232, 'xmax': 579, 'ymax': 492}}, {'score': 0.9557524919509888, 'label': 'bicycle', 'box': {'xmin': 576, 'ymin': 211, 'xmax': 797, 'ymax': 523}}, {'score': 0.6270663738250732, 'label': 'truck', 'box': {'xmin': 607, 'ymin': 156, 'xmax': 640, 'ymax': 180}}]
