@@ -23,21 +23,18 @@ Specifically, use the knowledge and method that you learned in the preparation a
 To better understand the effects of various issues that datasets can have, such as **missing labels, inconsistent labels, incomplete datasets, and imbalanced datasets**, please follow the tutorial and create a dataset with these issues. Afterward, upload the imperfect datasets to Teachable Machine and observe the resulting outcomes.
 
 ### Noisy Images
-In the repository for replit that can be found in the given link [here](https://replit.com/@machine-learning-for-design/image-processing-tutorial-2024), we have included functions that can modify the **"Noise", "Brightness", and "Part"** aspects of an image. You can use these functions to make changes to an image, and then test the resulting performance by uploading the modified image to Teachable Machine.
+In the Google colab notebook that can be found in the given link [here](https://colab.research.google.com/drive/1suZjA8M0dAIVATdPBXBTS5sLaX-jSiLm?usp=sharing), we have included functions that can modify the **"Noise", "Brightness", and "Part"** aspects of an image. You can use these functions to make changes to an image, and then test the resulting performance by uploading the modified image to Teachable Machine.
 
-> How to save the modified image through python code? Please copy the following code block to main.py:
+> How to save the modified image through python code? Please copy the following code block to a python code cell after running code to add noise to an image:
 > ```python
-> # save_image is the parameter to indicate whether you would like to save the image (True or False)
-> # image_name is the parameter to set the name of the image, which you could modify by yourself (with .png extension)
-> # By default, you will find the saved image with the name 'saved_image.png' shown in 'Files' tab
-> tm.plot(noise, save_image=True, image_name='saved_image.png')
+> plot(noise, save_image=True)
 > ```
 
 Also, please combine different adjustments by changing the input image of these modification functions, and observe the effects.
 For example, 
 ``` python
 # you could change the input parameter (image) from the original image to a modified image (with noise)
-partial = tm.adjust_partial(noise, percentage=0)
+partial = adjust_partial(noise, percentage=0)
 ```
 
 After completing the tasks mentioned above, please take some time to document your observations. Once you have written them down, you can then share your thoughts and findings with the rest of the members of your group.

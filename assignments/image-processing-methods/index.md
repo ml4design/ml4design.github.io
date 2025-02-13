@@ -3,8 +3,8 @@ layout: default
 title: "Assignment 1: Image Processing"
 has_children: true
 nav_order: 1
-# parent: "Assignments"
-nav_exclude: true
+parent: "Assignments"
+# nav_exclude: true
 ---
 
 # Image Processing
