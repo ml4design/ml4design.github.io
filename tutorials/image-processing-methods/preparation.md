@@ -72,7 +72,7 @@ Next, write down what you observe. Is the model making correct predictions with 
 
 In this task, you will use an alternative pre-trained model to process the trash bin images. First, go to the following page with a different deployed model:
 
- - Link to another model: [https://huggingface.co/deepmind/vision-perceiver-learned](https://huggingface.co/deepmind/vision-perceiver-learned){:target="_blank"}
+ - Link to another model: [https://huggingface.co/microsoft/resnet-50](https://huggingface.co/microsoft/resnet-50){:target="_blank"}
 
 Then, use the web interface to again classify ALL images in the"data/trash-bin/2/" folder. Check the outputs from this alternative model. Like the previous task, write down what you observe, considering the aspects that were mentioned in the previous task. Pay specific attention to the images that work on only one of the models or do not work on both models.
 
