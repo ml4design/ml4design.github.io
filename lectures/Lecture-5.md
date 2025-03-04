@@ -23,8 +23,8 @@ nav_order: 5
 
 ## Lecture Slides
 
-- [Lecture 5a PDF]({{site.baseurl}}/assets/slides/ML4D-L5a-2324.pdf) (PDF - 2Mb)
-- [Lecture 5b PDF]({{site.baseurl}}/assets/slides/ML4D-L5b-2324.pdf) (PDF - 19Mb)
+- [Lecture 5a PDF](https://www.icloud.com/iclouddrive/0f5CKoBOEOAVrOzrkMi5r-Pkw#ML4D-L5a-2425) (PDF - 2Mb)
+- [Lecture 5b PDF](https://www.icloud.com/iclouddrive/0fddAILmvr4dQIzDRkn8Rqrdg#ML4D-L5b-2425) (PDF - 20Mb)
 
 
 ## Lecture Notes
