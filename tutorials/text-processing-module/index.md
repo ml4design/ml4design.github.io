@@ -3,8 +3,8 @@ layout: default
 title: "Tutorial 2: Text Processing"
 has_children: true
 nav_order: 3
-# parent: "Tutorials"
-nav_exclude: true
+parent: "Tutorials"
+# nav_exclude: true
 ---
 
 # Tutorial 2: Text Processing
