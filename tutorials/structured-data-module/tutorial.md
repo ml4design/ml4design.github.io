@@ -42,14 +42,14 @@ This section explains the tasks you will perform during the tutorial session wit
 
 ## Task 3: Getting the code  
 
-Let’s begin with [checking the code on Replit](https://replit.com/@machine-learning-for-design/Tutorial-3-Machine-Learning-with-Structured-DataVM#main.py){:target="_blank"}. This repl contains the code and text data that we are going to use in this task. Press the fork button and it will copy the code and data to your own Replit project. The “main.py” file contains the main body of code. This is the only file that you will need to edit during the tutorial, individual assignment, and group assignment. In the following sections of this document, we provide a summary of the tutorial along with some questions that aim to help you understand the usefulness and importance of each task. 
+Let’s begin with [checking the code on Colab](https://colab.research.google.com/drive/1Fi7be5Zn_GxeB2v5NtNJolO4GzHSKpTH?usp=sharing){:target="_blank"}. This notebook contains the code and text data that we are going to use in this task. Press the `Copy to Drive` button and it will copy the code and data to your own Colab project. In the following sections of this document, we provide a summary of the tutorial along with some questions that aim to help you understand the usefulness and importance of each task. 
  <!--image here  -->
- ![replit how to]({{site.baseurl}}/assets/images/structured-data/image17.jpg)
+ <!-- ![replit how to]({{site.baseurl}}/assets/images/structured-data/image17.jpg) -->
 
 ## Task 4 : Reading data
 
 In this task we will show you how to read large Comma-separated values (CSV) files in Python. CSV files are delimited text files that use commas to separate values. Basically, each line of the file is a data record. Each record consists of one or more fields, separated by commas. CSV is one of the most used file formats and it is very often used to store many different types of data.
-In the first part of the “main.py” code, you can see how to read the data using a Python library called Pandas. Within this course, we are not going to delve into the interesting world of Pandas but if you want to learn more, Google is your friend ([https://pandas.pydata.org/docs/getting_started/intro_tutorials/](https://pandas.pydata.org/docs/getting_started/intro_tutorials/){:target="_blank"}).  
+In the first part of the code, you can see how to read the data using a Python library called Pandas. Within this course, we are not going to delve into the interesting world of Pandas but if you want to learn more, Google is your friend ([https://pandas.pydata.org/docs/getting_started/intro_tutorials/](https://pandas.pydata.org/docs/getting_started/intro_tutorials/){:target="_blank"}).  
 
 This line allows you to read the data from the directory:
 
@@ -60,7 +60,7 @@ And this line prints the first 5 records of your data
 ```python
 print(data.head(5).to_string())
 ```
-Run the code and you will see something like the following on the right side of your screen:  
+Run the code and you will see something like the following below the code cell:  
 <!-- image here -->
  ![replit how to]({{site.baseurl}}/assets/images/structured-data/image8.png)
 As you can observe, our data has an excel-like format: one line per data record (based on each patient) and columns that contain different types of information (e.g. age, sex,  chest pain type…).  
@@ -72,7 +72,7 @@ As you can observe, our data has an excel-like format: one line per data record 
 
 ## Task 5: Data Distribution  
 
-The distribution of our data can significantly affect the quality of our model. Thus, before we start training our model it’s important to understand how well-represented each class is in our dataset. The first simple way to do so is to create a histogram. For that, you need to uncomment the following two lines. The first line calculates the histogram and the second one saves it as a pdf image under the folder “img”.
+The distribution of our data can significantly affect the quality of our model. Thus, before we start training our model it’s important to understand how well-represented each class is in our dataset. The first simple way to do so is to create a histogram. For that, you need to run the following two lines. The first line calculates the histogram and the second one saves it as a pdf image under the folder “img”.
 
 ```python
 data.hist(column='label')
@@ -82,13 +82,13 @@ plt.savefig('img/hist.pdf')
 - **What potential issues do you foresee?**
 
 ## Task 6: Splitting
-Now it’s time to train our model. To train a machine learning model we need to split it into a training and a testing set (**why?**).  An easy way to do that is to use the [train_test_split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html){:target="_blank"} function from **sklearn.model_selection**. This function receives as input the feature data and the label data  and returns feature and label data for training and for testing. To split your data uncomment the following line:
+Now it’s time to train our model. To train a machine learning model we need to split it into a training and a testing set (**why?**).  An easy way to do that is to use the [train_test_split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html){:target="_blank"} function from **sklearn.model_selection**. This function receives as input the feature data and the label data  and returns feature and label data for training and for testing. To split your data run the following line:
 ```python
 X_train, X_test, y_train, y_test = train_test_split(
   X, y, random_state=0, test_size=0.3) # 70% training and 30% test
 ```
 
-The “test_size” determines what percentage of your data you will use for testing. To see how many records you use for training and testing after the split uncomment the following print statements:
+The “test_size” determines what percentage of your data you will use for testing. To see how many records you use for training and testing after the split run the following code:
 ```python
 print("Training Features shape (X_train): " + str(X_train.shape))
 print("Training Labels shape (y_train): " + str(y_train.shape))
@@ -96,23 +96,16 @@ print("Testing Features shape (X_test): " + str(X_test.shape))
 print("Testing Labels shape (y_test): " + str(y_test.shape))
 ```
 
-But how many records do we use per class in our training and testing datasets? To find out uncomment the following lines: 
+But how many records do we use per class in our training and testing datasets? To find out run the following lines: 
 ```python
 print("\n ####  Save Histogram of Train/Test Label Counts ####")
-plt.clf() # clear plot
 y_train.hist()
 y_test.hist()
 plt.savefig('img/y_train_test_count.pdf')
 print("Histogram Saved")
-
-print("\n ####  Training Dataset -- Label Counts ####")
-print(y_train.value_counts())
-
-print("\n ####  Test Dataset -- Label Counts ####")
-print(y_test.value_counts())
 ```
 
-In the console, you can now see how many records are used per class. In addition, in your “img” folder you can check the **y_train_test_count.pdf** to see how the distribution of your labels looks like in the train and test datasets.  
+In the output, you can now see how many records are used per class. In addition, in your “img” folder you can check the **y_train_test_count.pdf** to see how the distribution of your labels looks like in the train and test datasets.  
 Feel free to change the **test_size** variable when splitting your data.  
 
 **Q: Do you see a difference in your results? Do you understand the impact  the way you split your data could have on your model performance?**
@@ -129,7 +122,7 @@ Now we can train our model. But which model should we train? Let’s start with 
 
 > Hint: Is our dataset labeled or unlabeled?  
 
-Based on these questions we can scope down the potential models that we could use. Nowadays there is an abundance of available models and often researchers experiment with different ones. Here we will try 3 different models. To try these models you can comment/uncomment one of the following lines:
+Based on these questions we can scope down the potential models that we could use. Nowadays there is an abundance of available models and often researchers experiment with different ones. Here we will try 3 different models. To try these models you can use one of the following lines:
 ```python
 clf = DummyClassifier(strategy="constant", constant=0)
 
@@ -144,7 +137,7 @@ Different models have different parameters that can be tuned. Feel free to exper
 - **What are your expectations?**
 
 ## Task 8: Evaluation of the Model(s): **Confusion Matrix**  
-So let’s start evaluating our model. A good start is to calculate the confusion Matrix. Uncomment the following lines to calculate the confusion matrix and store it as an image under the “img” folder:
+So let’s start evaluating our model. A good start is to calculate the confusion Matrix. Run the following lines to calculate the confusion matrix and store it as an image under the “img” folder:
 ```python
 plt.clf() # clear plot
 fig = plt.figure(figsize=(6, 4))
@@ -162,7 +155,7 @@ Fresh up your memory:
  ![replit how to]({{site.baseurl}}/assets/images/structured-data/image11.png)
 
 ## Task 9: Evaluation of the Model(s): **Evaluation Metrics**  
-What other metrics can we use to evaluate our model? As you already know, there are a variety of metrics that can be used. To select the one that fits your problem it is important to know how to “read” each metric. Sklearn has made it quite easy for us to calculate a group of the most often-used metrics. To do so uncomment the following line:  
+What other metrics can we use to evaluate our model? As you already know, there are a variety of metrics that can be used. To select the one that fits your problem it is important to know how to “read” each metric. Sklearn has made it quite easy for us to calculate a group of the most often-used metrics. To do so run the following line:  
 ```python
 print(classification_report(y_test, y_pred, target_names=labels))
 ```
@@ -178,7 +171,7 @@ Feel free to change the variables you have used above (e.g., how you split the d
 
 ## Task 10: Evaluation of the Model(s): **Cross-Validation**
 Do we exploit all our data? Wouldn’t it be better if we could train our model based on all the data?  
-Cross-validation allows us to train and test our model on the entire dataset. To perform cross-validation we do not need to split our dataset, but only separate the features from the labels. Uncomment the following lines to perform cross-validation and print the evaluation metrics of your model.
+Cross-validation allows us to train and test our model on the entire dataset. To perform cross-validation we do not need to split our dataset, but only separate the features from the labels. Run the following lines to perform cross-validation and print the evaluation metrics of your model.
 ```python
 scores = cross_validate(clf, X, y, cv=3, scoring=('accuracy', 'precision_micro', 'recall_macro',
  'f1_micro', 'f1_macro'), return_train_score=True)
