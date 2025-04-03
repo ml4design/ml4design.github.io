@@ -67,19 +67,16 @@ Here, we primarily focus on four issues that result in imperfect datasets: missi
 > - **Non-representative data**: If the dataset is not representative of the target population, the model may not be able to generalize to new data, leading to reduced performance.
 
 ## Task 4 & 5 - Preparation
-The aim of the following tasks is to distinguish between emergency vehicles and normal vehicles, utilizing a subset of [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m){:target="_blank"}. Please fork the code on Replit at [https://replit.com/@ML4Design/teachable-machine-2024](https://replit.com/@ML4Design/teachable-machine-2024){:target="_blank"}.
+The aim of the following tasks is to distinguish between emergency vehicles and normal vehicles, utilizing a subset of [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m){:target="_blank"}. Please copy this notebook on Google Colab located [here](https://colab.research.google.com/drive/1suZjA8M0dAIVATdPBXBTS5sLaX-jSiLm?usp=sharing){:target="_blank"}.
 
-> Hint: Replit is expected to install several packages automatically, which include opencv-python, keras, tensorflow, and scikit-learn. In case these packages are not installed automatically, click on the Run button. Our program will take care of installing any missed packages, and you need to wait until the installation process is finished before proceeding to the next step.
-
-The replit repository includes three folders, including:
+The code cells in the setup section of this Google Colab Notebook downloads a few folders folders, including:
 - dataset: The folder contains data from the [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m){:target="_blank"} and has two subdirectories, one for the training data (train) and the other for the testing data (test).
-- library: The folder includes a file named "teachable_machine.py" which provides functions that can be utilized in the main script "main.py."
 - model: The folder holds the obtained Teachable Machine model (keras_model.h5), the corresponding class labels (labels.txt), and model project file (project.tm).
   - The trained model could be accessed at [https://teachablemachine.withgoogle.com/models/fVdKoKYt6/](https://teachablemachine.withgoogle.com/models/fVdKoKYt6/){:target="_blank"};
   - Also, if you desire to re-create the model on the Teachable Machine website, you can upload the model project file (project.tm) to [https://teachablemachine.withgoogle.com/train/](https://teachablemachine.withgoogle.com/train/){:target="_blank"}.
   - For information on how to export or download the Teachable Machine Model, please refer to the tutorial available at [https://www.youtube.com/watch?v=n-zeeRLBgd0&ab_channel=ExperimentswithGoogle](https://www.youtube.com/watch?v=n-zeeRLBgd0&ab_channel=ExperimentswithGoogle){:target="_blank"}.
   
-The "main.py" script is the core of Tasks 5 and 6, encompassing the introduction of noise to images and metrics to assess the performance of the Teachable Machine model.
+The "Function" section of the notebook is the core of Tasks 5 and 6, encompassing the introduction of noise to images and metrics to assess the performance of the Teachable Machine model.
 
 ## Task 4: Noisy Image
 We have discovered the consequences of constructing a dataset in an incorrect manner. However, what if the images themselves contain irrelevant or inconsistent information? This can also impact the performance of the model and lead to inaccurate predictions. The presence of noisy or irrelevant information can confuse the model, causing it to learn incorrect relationships between the data and the labels. Please follow the steps to modify the image according to the specified noise types.
@@ -88,14 +85,19 @@ We have discovered the consequences of constructing a dataset in an incorrect ma
 
     ![noise]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/3-task_4-noise.png)
 
-    Please first remove the comment symbols from the following lines of code, and then adjust the value of "amount" to observe how the image will change:
+    Navigate to the Noise section of the Colab notebook, and adjust the value of "amount" to observe how the image will change:
 
-        # # Adding salt and pepper noises to the image.
-        # # By adjusting the value of the "amount" parameter, you can observe the effect on the image,
-        # # where higher values indicate a greater amount of noise added to the image.
-        # noise = tm.adjust_noise(image, amount=0)
-        # # Plotting the image with added noise on the output tab
-        # tm.plot(noise)
+        # A function reads an image from the dataset/test/ folder.
+        image = cv2.imread('/content/teachablemachine/dataset/test/1.jpg')
+
+        # Adding salt and pepper noises to image.
+        # By adjusting the value of the "amount" parameter, you can observe the effect on the image,
+        # where higher values indicate a greater amount of noise added to the image.
+        noise = adjust_noise(image, amount=10)
+        # Plotting the image with added noise on the output tab
+        plot(noise)
+        # Save the image as 'saved_image.png' under Files tab by default.
+        plot(noise, save_image=True)
     
     After adding noise to the image, please upload it to Teachable Machine to observe how the prediction is affected.
 
@@ -103,14 +105,15 @@ We have discovered the consequences of constructing a dataset in an incorrect ma
 
     ![noise]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/3-task_4-brightness.png)
 
-    Please first remove the comment symbols from the following lines of code, and then adjust the value of "beta" to observe how the image will change:
+    Navigate to the brightness section of the Colab notebook, and then adjust the value of “beta” to observe how the image will change:
 
-        # # Adjusting the brightness of the image.
+        # # Adjusting the brightness of image.
         # # By adjusting the value of the "beta" parameter, you can observe the effect on the image,
         # # where higher values indicate a brighter image.
-        # bright = tm.adjust_brightness(image, beta=0)
+        bright = adjust_brightness(image, beta=50)
         # # Plotting the image with different brightness on the output tab
-        # tm.plot(bright)
+        plot(bright)
+        plot(bright, True)
 
     After adjusting the brightness of the image, please upload it to Teachable Machine to observe how the prediction is affected.
 
@@ -118,14 +121,15 @@ We have discovered the consequences of constructing a dataset in an incorrect ma
 
     ![noise]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/3-task_4-partial.png)
 
-    Please first remove the comment symbols from the following lines of code, and then adjust the value of "percentage" to observe how the image will change:
+     Navigate to the brightness section of the Colab notebook, and then adjust the value of "percentage" to observe how the image will change:
 
         # # Adjusting the covered areas of image.
         # # By adjusting the value of the "percentage" parameter, you can observe the effect on the image,
         # # where higher values indicate larger covered areas.
-        # partial = tm.adjust_partial(image, percentage=0)
+        partial = adjust_partial(image, percentage=60)
         # # Plotting the image with different covered areas on the output tab
-        # tm.plot(partial)
+        plot(partial)
+        plot(partial, save_image=True)  
 
     After adjusting the partial covered areas of the image, please upload it to Teachable Machine to observe how the prediction is affected.
 
@@ -193,13 +197,21 @@ Here is a list of the actual results and the predictions made by the model for t
     truth = ['Emergency vehicle', 'Emergency vehicle', 'Emergency vehicle', 'Emergency vehicle', 'Emergency vehicle', 'Emergency vehicle', 'Emergency vehicle', 'Emergency vehicle', 'Emergency vehicle', 'Emergency vehicle', 'Normal vehicle', 'Normal vehicle', 'Normal vehicle', 'Normal vehicle', 'Normal vehicle', 'Normal vehicle', 'Normal vehicle', 'Normal vehicle', 'Normal vehicle', 'Normal vehicle']
     predicted = ['Normal vehicle', 'Emergency vehicle', 'Emergency vehicle', 'Emergency vehicle', 'Emergency vehicle', 'Emergency vehicle', 'Emergency vehicle', 'Emergency vehicle', 'Normal vehicle', 'Normal vehicle', 'Normal vehicle', 'Normal vehicle', 'Normal vehicle', 'Normal vehicle', 'Normal vehicle', 'Normal vehicle', 'Normal vehicle', 'Emergency vehicle', 'Emergency vehicle', 'Normal vehicle']
 
-To create a visualization of the confusion matrix based on the results, the sklearn package can be utilized with the following code:
+To create a visualization of the confusion matrix based on the results, navigate to the Evaluation section of the Colab notebook:
 
-    # To show confusion matrix
-    fig = plt.figure(figsize=(6, 4))
-    ax = fig.add_subplot(111)
-    ConfusionMatrixDisplay.from_predictions(truth, predicted, cmap='Blues', ax=ax)
-    plt.show()
+        # # Load a Teachable Machine model
+        model, class_names = model_info(
+            "/content/teachablemachine/model/keras_model.h5", 
+            "/content/teachablemachine/model/labels.txt")
+        # # Evaluate the model performance based on images from the folder of dataset/test/,
+        # # where 1.jpg-10.jpg are emergency vehicles and 11.jpg-20.jpg are normal vehicles
+        test_image_dir = '/content/teachablemachine/dataset/test/'
+        class_size = {'0 Emergency vehicle': 10, '1 Normal vehicle': 10}
+        truth, predicted = prediction_result(test_image_dir, model, class_names, class_size)
+        print("Ground truth is:", truth)
+        print("Predicted result is", predicted)
+        # # To show confusion matrix
+        plot_confusion_matrix(truth, predicted)
 
 The visualized confusion matrix is shown in the following image. 
 

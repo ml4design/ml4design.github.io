@@ -16,7 +16,7 @@ nav_order: 9
 
 ## Lecture Slides
 
-- [Lecture 9 PDF (2022-2023)]({{site.baseurl}}/assets/slides/ML4D-L9-2223.pdf) (PDF - 5Mb)
+- [Lecture 9 PDF](https://www.icloud.com/iclouddrive/0fd7xlejd94FeRY97I9wrR_3A#ML4D-L9-2425) (PDF - 18Mb)
 
 ## Lecture Notes
 

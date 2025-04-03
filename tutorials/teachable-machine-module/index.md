@@ -3,8 +3,8 @@ layout: default
 title: "Tutorial 1b: Teachable Machine"
 has_children: true
 nav_order: 2
-# parent: "Tutorials"
-nav_exclude: true
+parent: "Tutorials"
+# nav_exclude: true
 ---
 
 # Tutorial 1b: Teachable Machine

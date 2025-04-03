@@ -25,7 +25,7 @@ We have used different tasks to guide you in creating machine learning models us
 |You did a great job in the tutorial by completing tasks on time and achieving impressive results. Some doctors in Switzerland and Hungary have heard about your work from their colleagues and now they want your help with processing data. They have given you two new datasets with information about 123 and 294 patients, respectively.|
 
 ## Task
-**Please analyze the datasets located in the data folder on Replit, which are named "processed.switzerland.csv" and "processed.hungarian.csv".** Then, train machine learning models using the data and assess their respective performances.
+**Please analyze the datasets located in the data folder on Colab, which are named "processed.switzerland.csv" and "processed.hungarian.csv".** Then, train machine learning models using the data and assess their respective performances.
 
 1. Please conduct a data analysis on the new datasets to answer the following questions:
    1. provide a thorough description of how the new data is distributed, including information about both the features and labels;

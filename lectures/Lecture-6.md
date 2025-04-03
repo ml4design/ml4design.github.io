@@ -19,7 +19,7 @@ nav_order: 6
 
 ## Lecture Slides
 
-- [Lecture 6 PDF]({{site.baseurl}}/assets/slides/ML4D-L6-2324.pdf) (PDF - 7Mb)
+- [Lecture 6 PDF (**UPDATED**)](https://www.icloud.com/iclouddrive/0fbxuYlpyWWsUx6eNy-IpKDmg#ML4D-L6-2425-V2) (PDF - 7Mb)
 
 ## Lecture Notes
 

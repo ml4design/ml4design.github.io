@@ -25,23 +25,22 @@ This section explains the tasks you will perform during the tutorial session wit
 | ![brief]({{site.baseurl}}/assets/images/text-processing/tutorial-brief.png)| 
 |Unfortunately, the deadline of this project is approaching, so reading and interpreting manually each students’ input will be too slow. Use your newly acquired text-processing skills towards analyzing all the collected data and based on your findings suggest ways to improve the student’s experience in these difficult times. Please, keep in mind, some of these answers are translated from Dutch to English, so there may be translation artifacts.|
 
-To begin with, [check the code on Replit](https://replit.com/@machine-learning-for-design/text-processing-tutorial-2024#main.py){:target="_blank"}. This repl contains the code and text data that we are going to use in this task. Press the fork button and it will copy the code and data to your own Replit project. The “main.py” file contains the main body of code. This is the only file that you will need to edit during the tutorial, individual assignment, and group assignment. Together we will also explore the other files (e.g. “preprocessing.py” and “topic_modelling.py”) and discuss them. In the following sections of this document, we provide a summary of the tutorial along with some questions that aim to help you understand the usefulness and importance of each task.
-Press the fork button and it will copy the code and images to your own Replit project.  
+To begin with, [check the code on Colab](https://colab.research.google.com/drive/1_vIk122JjzuQyFPXmWind2s-NKrkq022?usp=sharing){:target="_blank"}. This Notebook contains the code and text data that we are going to use in this task. Copy this notebook to your own Google Drive. Together we will also explore the other files (e.g. “preprocessing.py” and “topic_modelling.py”) and discuss them. In the following sections of this document, we provide a summary of the tutorial along with some questions that aim to help you understand the usefulness and importance of each task.
 
-![replit how to]({{site.baseurl}}/assets/images/text-processing/fork_button.png)
+<!-- ![replit how to]({{site.baseurl}}/assets/images/text-processing/fork_button.png) -->
 
 ## Task 5: Reading data
 
 In this task we will show you how you can read large Comma-separated values (CSV) files in Python. CSV files are delimited text files that use commas to separate values. Basically, each line of the file is a data record. Each record consists of one or more fields, separated by commas. CSV is one of the most used file formats and it is very often used to store replies to questionnaires or surveys.  
 
-In the first part of the “main.py” code, you can see how to read the data using a Python library called Pandas. Within this course, we are not going to delve into the interesting world of Pandas but if you want to learn more, Google is your friend ([https://pandas.pydata.org/docs/getting_started/intro_tutorials/](https://pandas.pydata.org/docs/getting_started/intro_tutorials/){:target="_blank"}).  
+In the section for Task 5 in the Colab Notebook, you can see how to read the data using a Python library called Pandas. Within this course, we are not going to delve into the interesting world of Pandas but if you want to learn more, Google is your friend ([https://pandas.pydata.org/docs/getting_started/intro_tutorials/](https://pandas.pydata.org/docs/getting_started/intro_tutorials/){:target="_blank"}).  
 
 This line allows you to read the data from the directory:  
 ```python 
 students_data = pd.read_csv("data/students_data.csv") 
 ```
 
-Run the code and you will see something like the following on the right side of your screen:  
+Run the code and you will see something like the following below the code cell:  
 
 ![replit how to]({{site.baseurl}}/assets/images/text-processing/task5-1.png)
 
@@ -52,10 +51,9 @@ print(students_data.head(3))
 ```
 Lastly, since we are mostly interested in what people wrote about their feelings (the “Feelings” column) we create a large list that only contains the students’ comments. This list will include the main text we are going to analyze within this tutorial. To keep only the “Feelings” column you need to uncomment the following line:  
 ```python 
-students_data = students_data['Feelings'].loc[students_data['Feelings'].notna(
-)]
+students_data = students_data['Feelings'].loc[students_data['Feelings'].notna()]
 ```
-This line will select the column “Feelings and will apply the filter to remove rows with NaN values (those cells are empty).  
+This line will select the column “Feelings and will apply the filter to remove rows with NaN values (those cells are empty).
 
 Then you will need to merge all the different lines of the "comments" column into one big corpus. Basically, you will transform all the comment-lines into one big list, by uncommenting the following lines:  
 ```python
@@ -73,17 +71,25 @@ Within this task we learned how to read a CSV document, filter out the lines of 
 
 Are we ready to analyze our text yet? We are close, but not yet. First, we need to preprocess our text. This step is very important. Text is often messy, containing many words that while they are very commonly used carry very little useful information such as “and” or “a”. In this task, we will show you how to preprocess your text so that you can later analyze it. We will focus on: making all words lowercase, word tokenizing all sentences, removing stopwords, punctuations, and digits, and reducing inflected words to their word stem (stemming).  
 
-To preprocess and print your text you need to uncomment the following lines:
+To preprocess and print your text run the follwing code cell:
 ```python
-tokens = [preprocess(sentence, lower=True, rem_punc=True, word_tokenization=True,
-    rem_numb=True, rem_stopwords=True, stem=True, extra_stopwords = []) for sentence in
-    students_data.to_list()]
+tokens = [
+    preprocess(sentence,
+               lower=True,
+               word_tokenization=True,
+               rem_punc=True,
+               rem_numb=True,
+               rem_stopwords=True,
+               extra_stopwords=["one", "two"],
+               stem=True,
+               lem=False) for sentence in corpus
+]
 print(tokens)
 ```
 Run the code again and you will see a large piece of text that looks like the following:  
 ![replit how to]({{site.baseurl}}/assets/images/text-processing/task6.png)
 
-Each of the original sentences has been preprocessed and transformed into a list of words. For instance, the [sport, physic, connect] refers to a preprocessed answer of a student.  
+Each of the original sentences has been preprocessed and transformed into a list of words. For instance, the `['anxious', 'tire', 'sleep', 'depriv']` refers to a preprocessed answer of a student.  
 
 Feel free to change some of the variables from “**True**” to “**False**”. Do you see the difference in your results? Do you understand why preprocessing is important? If you want to dive even deeper into how the preprocessing step works you can look at the “preprocessing.py” file (optional). 
 
@@ -98,7 +104,7 @@ This function needs two things from you:
 2. the name of the picture it will generate and save to your directory
 3. a number of words to show  
 
-![replit how to]({{site.baseurl}}/assets/images/text-processing/task7-1.png)  
+<!-- ![replit how to]({{site.baseurl}}/assets/images/text-processing/task7-1.png)   -->
 
 Text processing often requires working with examples, because words are often contextual and it is difficult to understand what is happening in your text collection. For this purpose, you can find documents by pieces of texts. 
 
@@ -128,7 +134,7 @@ This function requires:
 min_len = None
 #min_len = 5
 
-sent_result = calculate_sentiment(tokens,min_len=min_len)
+sent_result = calculate_sentiment(tokens, min_len=min_len)
 print(sent_result)
 ```
 
@@ -152,7 +158,7 @@ These lines will return this output:
 Since sentiment analysis is sensitive to text length, it is important to set a minimum text length to ensure that the analysis is based on texts with enough content to provide meaningful sentiment results. By default, if min_len is not provided, all texts will be considered for sentiment analysis. However, by setting a minimum text length, we can filter out texts that are too short for meaningful sentiment analysis results, and focus on analyzing texts that are more likely to provide useful insights.
 
 ## Task 9: Topic modeling
-What common needs do students talk about? In this last section, we will show you how to identify the discussed topics within an entire selection of texts. For this we will use the latent Dirichlet allocation (LDA) is a generative statistical model that allows sets of observations to be explained by unobserved groups that explain why some parts of the data are similar<sup>1</sup>. In this final task, we will apply the LDA model to our text and try to identify common topics.  
+What common feelings do students talk about? In this last section, we will show you how to identify the discussed topics within an entire selection of texts. For this we will use the latent Dirichlet allocation (LDA) is a generative statistical model that allows sets of observations to be explained by unobserved groups that explain why some parts of the data are similar<sup>1</sup>. In this final task, we will apply the LDA model to our text and try to identify common topics.  
 
 Basically, each document in our data (i.e. each student’s input) is represented as a distribution of topics (e.g. 30% of topic 1, 20% of topic 2, and 50% of topic 3). Each topic is represented as a distribution of words that are more likely to occur together. We call this process clustering.  
 
@@ -206,7 +212,7 @@ Changing `word_num_per_topic` will not affect the model itself -- only the outpu
 
 As above-mentioned, each document in the text collection is represented as a distribution of the identified topics. It means that topics better represent some texts than others. When text is the most probable for the topic, it means this text most likely reflects the topic. To interpret the topics, you can generate examples of the most probable texts for each topic.
 
-This line will generate a CSV file "examples_of_topics.csv" which will store N text documents for each topic. In this case, 5 text documents for each topic.  
+This line will generate a CSV file `examples_of_topics.csv` which will store N text documents for each topic. In this case, 5 text documents for each topic.  
 ```python
 num_of_examples = 5  #will show 10 most probable examples for each topic
 
@@ -221,10 +227,7 @@ topic_id = 1
 show_example_sentences_by_topic(corpus,tokens,lda_model,word_num_per_topic, topic_to_check=topic_id, num_of_examp_to_show=num_of_examples,min_len=min_len)
 ```
 
-this line will show you N text documents for one particular topic set in topic_id variable. Run the code and you will see a number of examples and the main topic that was assigned to them, like the following:
-
-
-this line will show you N text documents for one particular topic set in topic_id variable. Run the code and you will see a number of examples and the main topic that was assigned to them, like the following: 
+This line will show you N text documents for one particular topic set in `topic_id` variable. Run the code and you will see a number of examples and the main topic that was assigned to them, like the following: 
 
 ![replit how to]({{site.baseurl}}/assets/images/text-processing/task9-2.png)
 

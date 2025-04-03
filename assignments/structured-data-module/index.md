@@ -3,8 +3,8 @@ layout: default
 title: "Assignment 3: Creating Machine Learning Models with Structured Data"
 has_children: true
 nav_order: 3
-# parent: "Assignments"
-nav_exclude: true
+parent: "Assignments"
+# nav_exclude: true
 ---
 
 # Creating Machine Learning Models with Structured Data

@@ -3,8 +3,8 @@ layout: default
 title: "Assignment 2: Text Processing"
 has_children: true
 nav_order: 2
-# parent: "Assignments"
-nav_exclude: true
+parent: "Assignments"
+# nav_exclude: true
 ---
 
 # Text Processing

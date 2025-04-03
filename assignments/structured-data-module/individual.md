@@ -32,7 +32,7 @@ What are your expectations?
 ## Model evaluation
 - Question: Can you calculate the Precision and Recall of each class based on the confusion matrix? What’s more important when designing a system for predicting if a person has heart disease or not?
   - Hint: For the confusion matrix under the binary scenario, we have learnt from first tutorial at [Task 5: Evaluation](https://ml4design.com/tutorials/teachable-machine-module/tutorial/#task-5-evaluation)
-  - Hint: Defition of [precision and recall](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
+  - Hint: Definition of [precision and recall](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
 - Question:  What do the different columns and rows represent? Are the ''macro'' and ''weighted'' really needed? What do they show? Which evaluation metric fits our problem better?
   - Hint 'micro': Calculate metrics globally by counting the total true positives, false negatives and false positives.
   - Hint 'macro': Calculate metrics for each label, and find their unweighted mean. This does not take label imbalance into account.

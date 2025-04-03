@@ -32,7 +32,7 @@ Your quest is to explore this dataset. Instead of providing you with steps on ho
 
 
 ## Task 2
-1. Take a look at the methods used to split your dataset into train and test sets using the Python library scikit-learn ([https://scikit-learn.org/stable/modules/classes.html#module-sklearn.model_selection](https://scikit-learn.org/stable/modules/classes.html#module-sklearn.model_selection){:target="_blank"}).
+1. Take a look at the methods used to split your dataset into train and test sets using the Python library scikit-learn ([https://scikit-learn.org/stable/user_guide.html](https://scikit-learn.org/stable/user_guide.html){:target="_blank"}).
 **Do they look familiar? Try to identify the ones we have already discussed in class.**  
 
 2. Also, take a look at the evaluation metrics that are mentioned in the Python Library scikit-learn ([https://scikit-learn.org/stable/modules/model_evaluation.html](https://scikit-learn.org/stable/modules/model_evaluation.html){:target="_blank"}). 

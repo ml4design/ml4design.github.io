@@ -21,7 +21,7 @@ In the next four Tasks, we will help you familiarize yourself with some simple t
 ### Warm-up Game: Before everything let’s try to think like a … machine!  
   
 
- - Go to [https://huggingface.co/gpt2](https://huggingface.co/gpt2). Remember, you have already used the Hugging Face tool in the image-processing tutorial. Here, we will see how we could use it for text-processing tasks.
+ - Go to [https://huggingface.co/gpt2](https://huggingface.co/gpt2){:target="_blank"}. Remember, you have already used the Hugging Face tool in the image-processing tutorial. Here, we will see how we could use it for text-processing tasks.
  - On the right side of your screen, you will see written “**Hosted Inference API**” and below a text box where you can insert  **TEXT**. If you insert some text in the text box and press “**Compute**” a  GPT-2 model will try to guess the next words and sentences.
  - Your first task is simple: **make the model say “design”** (as indicated in the model output in the following screenshot). Keep in mind that you are not allowed to use the word “design” or any of its derivatives. If you succeed, note down the text you used so you can share it during the tutorial session.
  - Reflect on the reasoning you followed in order to accomplish this task.
@@ -33,7 +33,7 @@ This section prepares you for the text-processing tutorial. As a designer, you a
 
 In tasks 2-4 we learn how to easily analyze a collection of texts. This tool allows you to understand the content of the collection without a lot of preparation. But keep in mind! Everything comes at a cost. With relative ease, you lose the opportunity to obtain deeper insights and tailor the tool for your needs.  
 
-We would like you to use a web-based reading and analysis environment for digital texts called **voyant** ([https://voyant-tools.org](https://voyant-tools.org)) to explore different types of texts. When you go to the voyant web page you will see a box where you could type in text or the url of another website. Additionally, it has an “upload” button which you could use to upload a document you already have.
+We would like you to use a web-based reading and analysis environment for digital texts called **voyant** ([https://voyant-tools.org](https://voyant-tools.org){:target="_blank"}) to explore different types of texts. When you go to the voyant web page you will see a box where you could type in text or the url of another website. Additionally, it has an “upload” button which you could use to upload a document you already have.
 
  ![voyant]({{site.baseurl}}/assets/images/text-processing/task1-2.jpg)
 
@@ -44,11 +44,11 @@ On the left, you will see a *word cloud*. A world cloud is a visual representati
  ![voyant]({{site.baseurl}}/assets/images/text-processing/task1-3.jpg)
 
 ## Task 2
-Go to [https://voyant-tools.org](https://voyant-tools.org) and load the following text:  
+Go to [https://voyant-tools.org](https://voyant-tools.org){:target="_blank"} and load the following text:  
 
 |“In this essay, I explore several facets of research through design in order to contribute to discussions about how the approach should develop. The essay has three parts. In the first, I review two influential theories from the Philosophy of Science to help reflect on the nature of design theory, concluding that research through design is likely to produce theories that are provisional, contingent, and aspirational. In the second part, I discuss three possible interpretations for the diversity of approaches to research through design, and suggest that this variation need not be seen as a sign of inadequate standards or a lack of cumulative progress in the field, but may be natural for a generative endeavour. In the final section, I suggest that, rather than aiming to develop increasingly comprehensive theories of design, practice based research might better view theory as annotation of realised design examples, and particularly portfolios of related pieces. Overall, I suggest that the design research community should be wary of impulses towards convergence and standardisation, and instead take pride in its aptitude for exploring and speculating, particularising and diversifying, and - especially - its ability to manifest the results in the form of new, conceptually rich artefacts.”|  
 
-This text is an abstract of a paper you could find [here](https://doi-org.tudelft.idm.oclc.org/10.1145/2207676.2208538), if you want to experiment you can actually upload the entire paper in Voyant (or any other document you wish to analyze).  
+This text is an abstract of a paper you could find [here](https://doi-org.tudelft.idm.oclc.org/10.1145/2207676.2208538){:target="_blank"}, if you want to experiment you can actually upload the entire paper in Voyant (or any other document you wish to analyze).  
 
 Try to understand how the Voyant tool could be useful when you analyze large amounts of textual data. Reflect on the following:
  1. How do **word clouds** help you to get a quick idea of the subject of the text? How do you understand it?
