@@ -3,6 +3,7 @@ layout: default
 title: Lectures
 has_children: True
 nav_order: 1
+nav_exclude: true
 ---
 # Lectures
 
