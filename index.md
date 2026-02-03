@@ -7,7 +7,7 @@ nav_order: 0
 # Welcome to the 2025/2026 Edition of the Machine Learning for Design Course
 
 <p align="center">
-  <img src="/assets/images/ml4d_banner.png" />
+  <img src="/assets/images/ml4d-2025-2026-banner.png" />
 </p>
 
 ## The Course
