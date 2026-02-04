@@ -80,7 +80,7 @@ API_TOKEN = "[PLACE_HOLDER]"
 ``` -->
 More information about how to use the API can be found in the following page:
 
- - [https://api-inference.huggingface.co/docs/python/html/quicktour.html](https://api-inference.huggingface.co/docs/python/html/quicktour.html){:target="_blank"}
+ - [https://huggingface.co/docs/inference-providers/en/providers/hf-inference](https://huggingface.co/docs/inference-providers/en/providers/hf-inference){:target="_blank"}
 
 After finishing the above steps, click on the play button of the first few code cells to copy files into the workspace, import packages, and define the query function.
 After that go to the "Query"  section of the notebook and run this code block there:
@@ -156,7 +156,7 @@ You have interacted with the web interface of the object detection model. Now, w
 First, we go to a new code cell and define the `API_URL` which indicates the URL that points to the model that we use, and use the query function invoke the use of the model.
 
 ```python
-API_URL = "https://api-inference.huggingface.co/models/facebook/detr-resnet-50"
+API_URL = "https://router.huggingface.co/hf-inference/models/facebook/detr-resnet-50"
 my_image = "/content/image-processing-tutorial/data/bike/1/271758547_496887881809012_1375450742634622577_n.jpg"
 data = query(my_image, API_URL, API_TOKEN)
 print(data)
