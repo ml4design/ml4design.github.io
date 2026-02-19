@@ -67,7 +67,7 @@ Here, we primarily focus on four issues that result in imperfect datasets: missi
 > - **Non-representative data**: If the dataset is not representative of the target population, the model may not be able to generalize to new data, leading to reduced performance.
 
 ## Task 4 & 5 - Preparation
-The aim of the following tasks is to distinguish between emergency vehicles and normal vehicles, utilizing a subset of [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m){:target="_blank"}. Please copy this notebook on Google Colab located [here](https://colab.research.google.com/drive/1suZjA8M0dAIVATdPBXBTS5sLaX-jSiLm?usp=sharing){:target="_blank"}.
+The aim of the following tasks is to distinguish between emergency vehicles and normal vehicles, utilizing a subset of [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m){:target="_blank"}. Please copy this notebook on Google Colab located [here](https://colab.research.google.com/drive/1aHJr5O7fMElyImRzpMPdVzBsN6ry8ehn?usp=sharing){:target="_blank"}.
 
 The code cells in the setup section of this Google Colab Notebook downloads a few folders folders, including:
 - dataset: The folder contains data from the [AV Emergency Vehicle Classification Dataset](https://www.kaggle.com/datasets/amanjakhetiya/av-emergency-vehicle-classification-dataset?select=train_SOaYf6m){:target="_blank"} and has two subdirectories, one for the training data (train) and the other for the testing data (test).
@@ -199,22 +199,37 @@ Here is a list of the actual results and the predictions made by the model for t
 
 To create a visualization of the confusion matrix based on the results, navigate to the Evaluation section of the Colab notebook:
 
-        # # Load a Teachable Machine model
-        model, class_names = model_info(
-            "/content/teachablemachine/model/keras_model.h5", 
-            "/content/teachablemachine/model/labels.txt")
-        # # Evaluate the model performance based on images from the folder of dataset/test/,
-        # # where 1.jpg-10.jpg are emergency vehicles and 11.jpg-20.jpg are normal vehicles
-        test_image_dir = '/content/teachablemachine/dataset/test/'
-        class_size = {'0 Emergency vehicle': 10, '1 Normal vehicle': 10}
-        truth, predicted = prediction_result(test_image_dir, model, class_names, class_size)
-        print("Ground truth is:", truth)
-        print("Predicted result is", predicted)
-        # # To show confusion matrix
-        plot_confusion_matrix(truth, predicted)
+        # --- 5. Predict all images and prepare for confusion matrix ---
+        folder_path = "/content/teachable-machine/dataset/test"  # Folder with images 1.jpg to 20.jpg
+        y_true = []
+        y_pred = []
+
+        for i in range(1, 21):
+            img_file = os.path.join(folder_path, f"{i}.jpg")
+            
+            # Determine true label
+            if i <= 10:
+                true_label = labels[0]  # First class
+            else:
+                true_label = labels[1]  # Second class
+            
+            predicted_label, confidence = predict_image(img_file)
+            # print(f"{img_file} -> Predicted: {predicted_label}, Confidence: {confidence:.4f}")
+            
+            y_true.append(true_label)
+            y_pred.append(predicted_label)
+
+        # --- 6. Confusion matrix ---
+        cm = confusion_matrix(y_true, y_pred, labels=labels)
+        disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=labels)
+
+        fig, ax = plt.subplots(figsize=(6,6))
+        disp.plot(ax=ax, cmap=plt.cm.Blues, values_format='d')
+        plt.title("Confusion Matrix")
+        plt.show()
 
 The visualized confusion matrix is shown in the following image. 
 
-![confusion matrix]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/4-task_5-confusion_matrix.png){:target="_blank"}
+![confusion matrix]({{site.baseurl}}/assets/images/teachable-machine/images-Tutorial/4-task_5-confusion_matrixv2.png){:target="_blank"}
 
 [Next: Assignments]({{site.baseurl}}/assignments/image-processing-methods/){: .btn .btn-purple }
