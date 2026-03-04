@@ -29,11 +29,11 @@ To begin with, [check the code on Colab](https://colab.research.google.com/drive
 
 <!-- ![replit how to]({{site.baseurl}}/assets/images/text-processing/fork_button.png) -->
 
-## Task 5: Reading data
+## Task 4: Reading data
 
 In this task we will show you how you can read large Comma-separated values (CSV) files in Python. CSV files are delimited text files that use commas to separate values. Basically, each line of the file is a data record. Each record consists of one or more fields, separated by commas. CSV is one of the most used file formats and it is very often used to store replies to questionnaires or surveys.  
 
-In the section for Task 5 in the Colab Notebook, you can see how to read the data using a Python library called Pandas. Within this course, we are not going to delve into the interesting world of Pandas but if you want to learn more, Google is your friend ([https://pandas.pydata.org/docs/getting_started/intro_tutorials/](https://pandas.pydata.org/docs/getting_started/intro_tutorials/){:target="_blank"}).  
+In the section for Task 4 in the Colab Notebook, you can see how to read the data using a Python library called Pandas. Within this course, we are not going to delve into the interesting world of Pandas but if you want to learn more, Google is your friend ([https://pandas.pydata.org/docs/getting_started/intro_tutorials/](https://pandas.pydata.org/docs/getting_started/intro_tutorials/){:target="_blank"}).  
 
 This line allows you to read the data from the directory:  
 ```python 
@@ -67,7 +67,7 @@ Then, you will see a big list with all the filtered comments (basically the comm
 ![replit how to]({{site.baseurl}}/assets/images/text-processing/task5-2.png)
 Within this task we learned how to read a CSV document, filter out the lines of interest and create a big list that contains all the filtered text.
 
-## Task 6: Preprocessing
+## Task 5: Preprocessing
 
 Are we ready to analyze our text yet? We are close, but not yet. First, we need to preprocess our text. This step is very important. Text is often messy, containing many words that while they are very commonly used carry very little useful information such as “and” or “a”. In this task, we will show you how to preprocess your text so that you can later analyze it. We will focus on: making all words lowercase, word tokenizing all sentences, removing stopwords, punctuations, and digits, and reducing inflected words to their word stem (stemming).  
 
@@ -93,7 +93,7 @@ Each of the original sentences has been preprocessed and transformed into a list
 
 Feel free to change some of the variables from “**True**” to “**False**”. Do you see the difference in your results? Do you understand why preprocessing is important? If you want to dive even deeper into how the preprocessing step works you can look at the “preprocessing.py” file (optional). 
 
-## Task 7: Word Frequencies
+## Task 6: Word Frequencies
 Word frequencies calculation is the most basic tool in text processing yet it gives a comprehensive picture of the content in your text collection. One the most ways to visualize word frequencies is WordCloud (which you've already seen if you opened Voyant) 
 ```python
 wordcloud(words = tokens, name_of_output = 'wordcloud', num = 10)
@@ -120,7 +120,7 @@ And it will return examples of texts that include this word:
 
 ![replit how to]({{site.baseurl}}/assets/images/text-processing/task7-2.png)  
 
-## Task 8: Sentiment Analysis
+## Task 7: Sentiment Analysis
 
 The aim of sentiment analysis is to calculate how emotional your texts are and what is the valence of these texts. In our example we use VADER (Valence Aware Dictionary and sEntiment Reasoner) but you can find other various sentiment analysis tools on the internet. VADER calculated how positive, neutral, and negative a text is. It also calculates a compound score which considers all three metrics to give you a precise measurement of the sentiment.  
 
@@ -157,7 +157,7 @@ These lines will return this output:
 
 Since sentiment analysis is sensitive to text length, it is important to set a minimum text length to ensure that the analysis is based on texts with enough content to provide meaningful sentiment results. By default, if min_len is not provided, all texts will be considered for sentiment analysis. However, by setting a minimum text length, we can filter out texts that are too short for meaningful sentiment analysis results, and focus on analyzing texts that are more likely to provide useful insights.
 
-## Task 9: Topic modeling
+## Task 8: Topic modeling
 What common feelings do students talk about? In this last section, we will show you how to identify the discussed topics within an entire selection of texts. For this we will use the latent Dirichlet allocation (LDA) is a generative statistical model that allows sets of observations to be explained by unobserved groups that explain why some parts of the data are similar<sup>1</sup>. In this final task, we will apply the LDA model to our text and try to identify common topics.  
 
 Basically, each document in our data (i.e. each student’s input) is represented as a distribution of topics (e.g. 30% of topic 1, 20% of topic 2, and 50% of topic 3). Each topic is represented as a distribution of words that are more likely to occur together. We call this process clustering.  
