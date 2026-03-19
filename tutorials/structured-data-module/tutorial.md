@@ -42,7 +42,7 @@ This section explains the tasks you will perform during the tutorial session wit
 
 ## Task 3: Getting the code  
 
-Let’s begin with [checking the code on Colab](https://colab.research.google.com/drive/1Fi7be5Zn_GxeB2v5NtNJolO4GzHSKpTH?usp=sharing){:target="_blank"}. This notebook contains the code and text data that we are going to use in this task. Press the `Copy to Drive` button and it will copy the code and data to your own Colab project. In the following sections of this document, we provide a summary of the tutorial along with some questions that aim to help you understand the usefulness and importance of each task. 
+Let’s begin with [checking the code on Colab](https://colab.research.google.com/drive/1FBFjfMByrotguyvIFmnHysd-Z785dHjK?usp=sharing){:target="_blank"}. This notebook contains the code and text data that we are going to use in this task. Press the `Copy to Drive` button and it will copy the code and data to your own Colab project. In the following sections of this document, we provide a summary of the tutorial along with some questions that aim to help you understand the usefulness and importance of each task. 
  <!--image here  -->
  <!-- ![replit how to]({{site.baseurl}}/assets/images/structured-data/image17.jpg) -->
 
